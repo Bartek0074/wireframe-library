@@ -1,21 +1,24 @@
-export interface PlaceholderProps {
-  /** Label displayed inside the placeholder block */
-  label?: string;
-  /** Width class (Tailwind), e.g. "w-full" or "w-64" */
-  width?: string;
-  /** Height class (Tailwind), e.g. "h-32" or "h-64" */
-  height?: string;
-}
+import clsx from "clsx";
+
+type PlaceholderProps = {
+  label: string;
+  className?: {
+    wrapper?: string;
+  };
+};
 
 export default function Placeholder({
-  label = "Placeholder",
-  width = "w-full",
-  height = "h-32",
+  label,
+  className
 }: PlaceholderProps) {
+  const wrapperClassName = clsx(
+    "flex p-4 items-center justify-center rounded-md border-2 border-dashed border-gray-300 bg-gray-50 text-sm font-medium text-gray-400",
+    className?.wrapper
+  );
+
+
   return (
-    <div
-      className={`${width} ${height} flex items-center justify-center rounded-md border-2 border-dashed border-gray-300 bg-gray-50 text-sm font-medium text-gray-400`}
-    >
+    <div className={wrapperClassName}>
       {label}
     </div>
   );
