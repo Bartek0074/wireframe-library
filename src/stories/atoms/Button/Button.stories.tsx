@@ -3,10 +3,10 @@ import { ArrowRight, Check, Download, Plus } from "feather-icons-react";
 import { Button } from "../../../components/atoms/Button/index";
 
 const iconOptions = {
-    Plus: <Plus size={16} aria-hidden="true" />,
-    Check: <Check size={16} aria-hidden="true" />,
-    Download: <Download size={16} aria-hidden="true" />,
-    ArrowRight: <ArrowRight size={16} aria-hidden="true" />,
+    Plus: <Plus />,
+    Check: <Check />,
+    Download: <Download />,
+    ArrowRight: <ArrowRight />,
 } as const;
 
 type IconOption = keyof typeof iconOptions;
@@ -127,8 +127,20 @@ export const WithBothIcons: Story = {
     },
 };
 
+export const WithOnlyLeadingIcon: Story = {
+    name: "With Icons / Only Icon",
+    render: renderButton,
+    args: {
+        variant: "default",
+        label: undefined,
+        leadingIconOption: "Plus",
+        trailingIconOption: undefined,
+    },
+};
+
+
 export const Small: Story = {
-    name: "Icon Variants / Small",
+    name: "Sizes / Small",
     render: renderButton,
     args: {
         size: "sm",
@@ -139,7 +151,7 @@ export const Small: Story = {
 };
 
 export const Medium: Story = {
-    name: "Icon Variants / Medium",
+    name: "Sizes / Medium",
     render: renderButton,
     args: {
         size: "md",
@@ -150,7 +162,7 @@ export const Medium: Story = {
 };
 
 export const Large: Story = {
-    name: "Icon Variants / Large",
+    name: "Sizes / Large",
     render: renderButton,
     args: {
         size: "lg",
@@ -160,19 +172,8 @@ export const Large: Story = {
     },
 };
 
-export const WithHref: Story = {
-    name: "Icon Variants / With Href",
-    render: renderButton,
-    args: {
-        href: "/",
-        label: "Go to Home",
-        leadingIconOption: undefined,
-        trailingIconOption: "ArrowRight",
-    },
-};
-
 export const Disabled: Story = {
-    name: "Icon Variants / Disabled",
+    name: "States / Disabled",
     render: renderButton,
     args: {
         disabled: true,

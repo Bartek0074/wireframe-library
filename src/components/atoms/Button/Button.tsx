@@ -1,4 +1,9 @@
-import type { ButtonHTMLAttributes, ComponentProps, MouseEventHandler, ReactNode } from "react";
+import type {
+    ButtonHTMLAttributes,
+    ComponentProps,
+    MouseEventHandler,
+    ReactNode,
+} from "react";
 import Link from "next/link";
 import clsx from "clsx";
 
@@ -16,7 +21,10 @@ type BaseButtonProps = {
 };
 
 type LinkButtonProps = BaseButtonProps &
-    Omit<ComponentProps<typeof Link>, "href" | "className" | "children" | "onClick"> & {
+    Omit<
+        ComponentProps<typeof Link>,
+        "href" | "className" | "children" | "onClick"
+    > & {
         href: string;
         onClick?: MouseEventHandler<HTMLAnchorElement>;
         type?: never;
@@ -31,8 +39,10 @@ type NativeButtonProps = BaseButtonProps &
 export type ButtonProps = LinkButtonProps | NativeButtonProps;
 
 const variantClasses: Record<ButtonVariant, string> = {
-    default: "border-2 border-dashed border-gray-300 bg-gray-50 text-gray-600 hover:bg-gray-100",
-    primary: "border-2 border-dashed border-primary-400 bg-primary-50 text-primary-700 hover:bg-primary-100",
+    default:
+        "border-2 border-dashed border-gray-300 bg-gray-50 text-gray-600 hover:bg-gray-100",
+    primary:
+        "border-2 border-dashed border-primary-400 bg-primary-50 text-primary-700 hover:bg-primary-100",
 };
 
 const sizeClasses: Record<ButtonSize, string> = {
@@ -45,6 +55,12 @@ const noLabelSizeClasses: Record<ButtonSize, string> = {
     sm: "h-8 w-8 p-0",
     md: "h-10 w-10 p-0",
     lg: "h-12 w-12 p-0",
+};
+
+const iconSizeClasses: Record<ButtonSize, string> = {
+    sm: "h-3.5 w-3.5",
+    md: "h-4 w-4",
+    lg: "h-5 w-5",
 };
 
 const Button = ({
@@ -65,10 +81,13 @@ const Button = ({
         hasLabel ? sizeClasses[size] : noLabelSizeClasses[size],
         disabled && "pointer-events-none opacity-50",
         hasLabel && "gap-2",
-        className
+        className,
     );
 
-    const iconClassName = "flex shrink-0 items-center justify-center";
+    const iconClassName = clsx(
+        "flex shrink-0 items-center justify-center [&_svg]:h-full [&_svg]:w-full",
+        iconSizeClasses[size],
+    );
 
     const content = (
         <>
