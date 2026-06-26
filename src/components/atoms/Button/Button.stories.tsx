@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/nextjs-vite";
 import { ArrowRight, Check, Download, Plus } from "feather-icons-react";
-import { Button } from "../../../components/atoms/Button/index";
+import { Button } from "./index";
 
 const iconOptions = {
     Plus: <Plus />,
