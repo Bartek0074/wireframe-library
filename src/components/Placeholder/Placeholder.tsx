@@ -7,15 +7,14 @@ type PlaceholderProps = {
   };
 };
 
-export default function Placeholder({
+const Placeholder = ({
   label,
   className
-}: PlaceholderProps) {
+}: PlaceholderProps) => {
   const wrapperClassName = clsx(
     "flex p-4 items-center justify-center rounded-md border-2 border-dashed border-gray-300 bg-gray-50 text-sm font-medium text-gray-400",
     className?.wrapper
   );
-
 
   return (
     <div className={wrapperClassName}>
@@ -23,3 +22,5 @@ export default function Placeholder({
     </div>
   );
 }
+
+export default Placeholder;
