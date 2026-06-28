@@ -1,6 +1,5 @@
 import {
     forwardRef,
-    useId,
     type InputHTMLAttributes,
     type ReactNode,
 } from "react";
@@ -15,17 +14,12 @@ export type InputProps = Omit<
 > & {
     size?: InputSize;
     state?: InputState;
-    label?: string;
-    message?: string;
     leadingIcon?: ReactNode;
     trailingIcon?: ReactNode;
     fullWidth?: boolean;
     className?: string;
     classNames?: {
-        wrapper?: string;
         input?: string;
-        label?: string;
-        message?: string;
     };
 };
 
@@ -76,20 +70,6 @@ const stateClasses: Record<InputState, string> = {
         "border-error-400 hover:border-error-500 focus:border-error-600 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-error-100 focus-visible:ring-offset-1 focus-visible:ring-offset-gray-50",
 };
 
-const labelColorClasses: Record<InputState, string> = {
-    default: "text-gray-700",
-    success: "text-success-700",
-    warning: "text-warning-700",
-    error: "text-error-700",
-};
-
-const messageColorClasses: Record<InputState, string> = {
-    default: "text-gray-600",
-    success: "text-success-600",
-    warning: "text-warning-600",
-    error: "text-error-600",
-};
-
 const iconColorClasses: Record<InputState, string> = {
     default:
         "text-gray-400 group-hover:text-gray-500 group-focus-within:text-primary-500",
@@ -106,35 +86,21 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
         {
             size = "md",
             state = "default",
-            label,
-            message,
             leadingIcon,
             trailingIcon,
             fullWidth = false,
             className,
             classNames,
-            id: idProp,
             disabled,
             readOnly,
             ...props
         },
         ref,
     ) => {
-        const generatedId = useId();
-        const id = idProp ?? generatedId;
-        const messageId = `${id}-message`;
-
-        const wrapperClassName = clsx(
-            "inline-flex flex-col gap-1",
-            fullWidth ? "w-full" : "w-fit",
-            disabled && "pointer-events-none opacity-50",
-            className,
-            classNames?.wrapper,
-        );
-
         const inputWrapperClassName = clsx(
             "group relative inline-flex items-center",
             fullWidth ? "w-full" : "w-fit",
+            disabled && "pointer-events-none opacity-50",
         );
 
         const inputClassName = clsx(
@@ -146,19 +112,8 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
             trailingIcon && iconPaddingTrailing[size],
             fullWidth ? "w-full" : "w-fit",
             readOnly && "cursor-default",
+            className,
             classNames?.input,
-        );
-
-        const labelClassName = clsx(
-            "text-sm font-medium",
-            labelColorClasses[state],
-            classNames?.label,
-        );
-
-        const messageClassName = clsx(
-            "text-sm",
-            messageColorClasses[state],
-            classNames?.message,
         );
 
         const iconBaseClassName = clsx(
@@ -167,58 +122,39 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
         );
 
         return (
-            <div className={wrapperClassName}>
-                {label ? (
-                    <label
-                        htmlFor={id}
-                        className={labelClassName}
+            <div className={inputWrapperClassName}>
+                {leadingIcon ? (
+                    <span
+                        aria-hidden="true"
+                        className={clsx(
+                            iconBaseClassName,
+                            iconInsetLeading[size],
+                            iconColorClasses[state],
+                        )}
                     >
-                        {label}
-                    </label>
+                        {leadingIcon}
+                    </span>
                 ) : null}
 
-                <div className={inputWrapperClassName}>
-                    {leadingIcon ? (
-                        <span
-                            aria-hidden="true"
-                            className={clsx(
-                                iconBaseClassName,
-                                iconInsetLeading[size],
-                                iconColorClasses[state],
-                            )}
-                        >
-                            {leadingIcon}
-                        </span>
-                    ) : null}
+                <input
+                    ref={ref}
+                    disabled={disabled}
+                    readOnly={readOnly}
+                    aria-invalid={state === "error" ? true : undefined}
+                    className={inputClassName}
+                    {...props}
+                />
 
-                    <input
-                        ref={ref}
-                        id={id}
-                        disabled={disabled}
-                        readOnly={readOnly}
-                        aria-describedby={message ? messageId : undefined}
-                        aria-invalid={state === "error" ? true : undefined}
-                        className={inputClassName}
-                        {...props}
-                    />
-
-                    {trailingIcon ? (
-                        <span
-                            aria-hidden="true"
-                            className={clsx(
-                                iconBaseClassName,
-                                iconInsetTrailing[size],
-                                iconColorClasses[state],
-                            )}
-                        >
-                            {trailingIcon}
-                        </span>
-                    ) : null}
-                </div>
-
-                {message ? (
-                    <span id={messageId} className={messageClassName}>
-                        {message}
+                {trailingIcon ? (
+                    <span
+                        aria-hidden="true"
+                        className={clsx(
+                            iconBaseClassName,
+                            iconInsetTrailing[size],
+                            iconColorClasses[state],
+                        )}
+                    >
+                        {trailingIcon}
                     </span>
                 ) : null}
             </div>
