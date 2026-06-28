@@ -125,7 +125,7 @@ const P2 = ({ children, className }: PlaceholderProps) => {
 
 const P3 = ({ children, className }: PlaceholderProps) => {
     const textClassName = clsx(
-        "text-xs sm:text-sm font-body <text-gray-9></text-gray-9>00",
+        "text-xs sm:text-sm font-body text-gray-900",
         className?.text
     );
 
