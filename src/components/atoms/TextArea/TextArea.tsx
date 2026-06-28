@@ -34,9 +34,9 @@ export type TextAreaProps = Omit<
 };
 
 const sizeClasses: Record<TextAreaSize, string> = {
-    sm: "min-h-8 px-3 py-1.5 text-sm",
-    md: "min-h-10 px-4 py-2 text-base",
-    lg: "min-h-12 px-5 py-2.5 text-lg",
+    sm: "h-8 px-3 py-1.5 text-sm leading-4",
+    md: "h-10 px-4 py-2 text-base leading-5",
+    lg: "h-12 px-5 py-2.5 text-lg leading-6",
 };
 
 const stateClasses: Record<TextAreaState, string> = {
