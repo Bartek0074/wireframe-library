@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/nextjs-vite";
 import { ArrowRight, Check, Download, Plus } from "feather-icons-react";
 import { Button } from "./index";
+import { Typography } from "../Typography";
 
 const iconOptions = {
     Plus: <Plus />,
@@ -200,6 +201,23 @@ export const Disabled: Story = {
                 disabled
                 leadingIcon={<Download />}
             />
+        </div>
+    ),
+};
+
+export const UsageExample: Story = {
+    name: "Usage Example",
+    // eslint-disable-next-line
+    render: (_: any) => (
+        <div className="inline-flex flex-col gap-4 items-start max-w-xl">
+            <Typography.P2>
+                Ready to publish your release notes?
+            </Typography.P2>
+
+            <div className="inline-flex gap-3">
+                <Button intent="default" style="outline" label="Save Draft" />
+                <Button intent="primary" style="solid" label="Publish" trailingIcon={<ArrowRight />} />
+            </div>
         </div>
     ),
 };

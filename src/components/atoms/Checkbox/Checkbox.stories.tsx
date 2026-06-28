@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/nextjs-vite";
 import { Checkbox } from "./index";
+import { FormField } from "../../molecules";
 
 type StoryArgs = React.ComponentProps<typeof Checkbox>;
 
@@ -107,5 +108,30 @@ export const TextVariations: Story = {
             <Checkbox label="Checkbox" description="This is a checkbox with a description." />
             <Checkbox label="Checkbox" />
         </div>
+    ),
+};
+
+export const UsageExample: Story = {
+    name: "Usage Example",
+    // eslint-disable-next-line
+    render: (_) => (
+        <FormField
+            label="Notification Preferences"
+            message="Choose at least one channel for product updates."
+            state="default"
+            layout="vertical"
+        >
+            <div className="inline-flex flex-col gap-3 items-start">
+                <Checkbox
+                    defaultChecked
+                    label="Product updates"
+                    description="New features and release highlights."
+                />
+                <Checkbox
+                    label="Billing alerts"
+                    description="Invoices, payment issues, and subscription changes."
+                />
+            </div>
+        </FormField>
     ),
 };
