@@ -21,9 +21,13 @@ const meta: Meta<StoryArgs> = {
     component: Button,
     tags: ["autodocs"],
     argTypes: {
-        variant: {
+        intent: {
             control: "inline-radio",
-            options: ["default", "primary"],
+            options: ["default", "primary", "accent", "danger"],
+        },
+        style: {
+            control: "inline-radio",
+            options: ["solid", "dashed", "outline", "ghost"],
         },
         size: {
             control: "inline-radio",
@@ -35,14 +39,20 @@ const meta: Meta<StoryArgs> = {
         href: {
             control: "text",
         },
+        loading: {
+            control: "boolean",
+        },
+        disabled: {
+            control: "boolean",
+        },
         leadingIconOption: {
             control: "select",
-            options: Object.keys(iconOptions),
+            options: [undefined, ...Object.keys(iconOptions)],
             name: "leadingIcon",
         },
         trailingIconOption: {
             control: "select",
-            options: Object.keys(iconOptions),
+            options: [undefined, ...Object.keys(iconOptions)],
             name: "trailingIcon",
         },
         onClick: {
@@ -54,8 +64,11 @@ const meta: Meta<StoryArgs> = {
     },
     args: {
         label: "Button",
-        variant: "default",
+        intent: "default",
+        style: "solid",
         size: "md",
+        loading: false,
+        disabled: false,
         leadingIconOption: undefined,
         trailingIconOption: undefined,
     },
@@ -73,112 +86,138 @@ const renderButton = ({ leadingIconOption, trailingIconOption, ...args }: StoryA
 );
 
 export const Default: Story = {
-    name: "Basic / Default",
+    name: "Default",
     render: renderButton,
     args: {
-        variant: "default",
-        label: "Default Button",
+        intent: "default",
+        style: "solid",
+        label: "Default",
         leadingIconOption: undefined,
         trailingIconOption: undefined,
     },
 };
 
-export const Primary: Story = {
-    name: "Basic / Primary",
+export const PrimarySolid: Story = {
+    name: "Primary Solid",
     render: renderButton,
     args: {
-        variant: "primary",
-        label: "Primary Button",
+        intent: "primary",
+        style: "solid",
+        label: "Primary Action",
         leadingIconOption: undefined,
+        trailingIconOption: undefined,
+    },
+};
+
+export const AccentOutline: Story = {
+    name: "Accent Outline",
+    render: renderButton,
+    args: {
+        intent: "accent",
+        style: "outline",
+        label: "Accent Outline",
+        leadingIconOption: undefined,
+        trailingIconOption: undefined,
+    },
+};
+
+export const DangerGhost: Story = {
+    name: "Danger Ghost",
+    render: renderButton,
+    args: {
+        intent: "danger",
+        style: "ghost",
+        label: "Delete",
+        leadingIconOption: undefined,
+        trailingIconOption: undefined,
+    },
+};
+
+export const PrimaryDashed: Story = {
+    name: "Primary Dashed",
+    render: renderButton,
+    args: {
+        intent: "primary",
+        style: "dashed",
+        label: "Dashed Action",
+        leadingIconOption: undefined,
+        trailingIconOption: undefined,
+    },
+};
+
+export const LoadingSolid: Story = {
+    name: "Loading / Solid",
+    render: renderButton,
+    args: {
+        intent: "primary",
+        style: "solid",
+        label: "Saving",
+        loading: true,
+        leadingIconOption: "Download",
+        trailingIconOption: "Check",
+    },
+};
+
+export const LoadingOutline: Story = {
+    name: "Loading / Outline",
+    render: renderButton,
+    args: {
+        intent: "accent",
+        style: "outline",
+        label: "Submitting",
+        loading: true,
+        leadingIconOption: "Plus",
+        trailingIconOption: "ArrowRight",
+    },
+};
+
+export const LoadingGhost: Story = {
+    name: "Loading / Ghost",
+    render: renderButton,
+    args: {
+        intent: "danger",
+        style: "ghost",
+        label: "Removing",
+        loading: true,
+        leadingIconOption: undefined,
+        trailingIconOption: "ArrowRight",
+    },
+};
+
+export const IconOnlyLoading: Story = {
+    name: "Loading / Icon Only",
+    render: renderButton,
+    args: {
+        intent: "primary",
+        style: "solid",
+        label: undefined,
+        loading: true,
+        leadingIconOption: "Plus",
         trailingIconOption: undefined,
     },
 };
 
 export const WithLeadingIcon: Story = {
-    name: "With Icons / Leading Icon",
+    name: "Extras / With Leading Icon",
     render: renderButton,
     args: {
-        variant: "default",
+        intent: "default",
+        style: "solid",
         label: "Add Item",
         leadingIconOption: "Plus",
         trailingIconOption: undefined,
     },
 };
 
-export const WithTrailingIcon: Story = {
-    name: "With Icons / Trailing Icon",
+export const LinkButton: Story = {
+    name: "Extras / Link",
     render: renderButton,
     args: {
-        variant: "primary",
-        label: "Continue",
+        intent: "primary",
+        style: "outline",
+        href: "/",
+        label: "Go Home",
         leadingIconOption: undefined,
         trailingIconOption: "ArrowRight",
-    },
-};
-
-export const WithBothIcons: Story = {
-    name: "With Icons / Both Icons",
-    render: renderButton,
-    args: {
-        variant: "primary",
-        label: "Download File",
-        leadingIconOption: "Download",
-        trailingIconOption: "Check",
-    },
-};
-
-export const WithOnlyLeadingIcon: Story = {
-    name: "With Icons / Only Icon",
-    render: renderButton,
-    args: {
-        variant: "default",
-        label: undefined,
-        leadingIconOption: "Plus",
-        trailingIconOption: undefined,
-    },
-};
-
-
-export const Small: Story = {
-    name: "Sizes / Small",
-    render: renderButton,
-    args: {
-        size: "sm",
-        label: "Small Button",
-        leadingIconOption: undefined,
-        trailingIconOption: undefined,
-    },
-};
-
-export const Medium: Story = {
-    name: "Sizes / Medium",
-    render: renderButton,
-    args: {
-        size: "md",
-        label: "Medium Button",
-        leadingIconOption: undefined,
-        trailingIconOption: undefined,
-    },
-};
-
-export const Large: Story = {
-    name: "Sizes / Large",
-    render: renderButton,
-    args: {
-        size: "lg",
-        label: "Large Button",
-        leadingIconOption: undefined,
-        trailingIconOption: undefined,
-    },
-};
-
-export const Disabled: Story = {
-    name: "States / Disabled",
-    render: renderButton,
-    args: {
-        disabled: true,
-        label: "Disabled Button",
-        leadingIconOption: undefined,
-        trailingIconOption: undefined,
     },
 };
