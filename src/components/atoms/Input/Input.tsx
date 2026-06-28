@@ -67,27 +67,38 @@ const iconInsetTrailing: Record<InputSize, string> = {
 
 const stateClasses: Record<InputState, string> = {
     default:
-        "border-gray-300 hover:border-gray-500 focus:border-gray-500 focus-visible:outline-none",
+        "border-gray-300 hover:border-gray-400 focus:border-primary-500 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-primary-100 focus-visible:ring-offset-1 focus-visible:ring-offset-gray-50",
     success:
-        "border-green-400 hover:border-green-600 focus:border-green-600 focus-visible:outline-none",
+        "border-success-400 hover:border-success-500 focus:border-success-600 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-success-100 focus-visible:ring-offset-1 focus-visible:ring-offset-gray-50",
     warning:
-        "border-amber-400 hover:border-amber-600 focus:border-amber-600 focus-visible:outline-none",
+        "border-warning-400 hover:border-warning-500 focus:border-warning-600 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-warning-100 focus-visible:ring-offset-1 focus-visible:ring-offset-gray-50",
     error:
-        "border-red-400 hover:border-red-600 focus:border-red-600 focus-visible:outline-none",
+        "border-error-400 hover:border-error-500 focus:border-error-600 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-error-100 focus-visible:ring-offset-1 focus-visible:ring-offset-gray-50",
 };
 
 const labelColorClasses: Record<InputState, string> = {
-    default: "text-gray-900",
-    success: "text-green-700",
-    warning: "text-amber-700",
-    error: "text-red-700",
+    default: "text-gray-700",
+    success: "text-success-700",
+    warning: "text-warning-700",
+    error: "text-error-700",
 };
 
 const messageColorClasses: Record<InputState, string> = {
-    default: "text-gray-400",
-    success: "text-green-600",
-    warning: "text-amber-600",
-    error: "text-red-600",
+    default: "text-gray-600",
+    success: "text-success-600",
+    warning: "text-warning-600",
+    error: "text-error-600",
+};
+
+const iconColorClasses: Record<InputState, string> = {
+    default:
+        "text-gray-400 group-hover:text-gray-500 group-focus-within:text-primary-500",
+    success:
+        "text-success-500 group-hover:text-success-600 group-focus-within:text-success-600",
+    warning:
+        "text-warning-500 group-hover:text-warning-600 group-focus-within:text-warning-600",
+    error:
+        "text-error-500 group-hover:text-error-600 group-focus-within:text-error-600",
 };
 
 const Input = forwardRef<HTMLInputElement, InputProps>(
@@ -122,12 +133,12 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
         );
 
         const inputWrapperClassName = clsx(
-            "relative inline-flex items-center",
+            "group relative inline-flex items-center",
             fullWidth ? "w-full" : "w-fit",
         );
 
         const inputClassName = clsx(
-            "inline-flex items-center rounded-md border-2 border-dashed bg-gray-50 text-gray-700 font-body outline-none transition-colors duration-150 ease-out",
+            "inline-flex items-center rounded-md border-2 border-dashed bg-gray-50 text-gray-700 font-body outline-none transition-colors duration-300 ease-out",
             "placeholder:text-gray-400",
             sizeClasses[size],
             stateClasses[state],
@@ -151,7 +162,7 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
         );
 
         const iconBaseClassName = clsx(
-            "pointer-events-none absolute top-1/2 -translate-y-1/2 flex shrink-0 items-center justify-center [&_svg]:h-full [&_svg]:w-full",
+            "pointer-events-none absolute top-1/2 -translate-y-1/2 flex shrink-0 items-center justify-center [&_svg]:h-full [&_svg]:w-full transition-colors duration-300 ease-out",
             iconSizeClasses[size],
         );
 
@@ -173,6 +184,7 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
                             className={clsx(
                                 iconBaseClassName,
                                 iconInsetLeading[size],
+                                iconColorClasses[state],
                             )}
                         >
                             {leadingIcon}
@@ -196,6 +208,7 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
                             className={clsx(
                                 iconBaseClassName,
                                 iconInsetTrailing[size],
+                                iconColorClasses[state],
                             )}
                         >
                             {trailingIcon}

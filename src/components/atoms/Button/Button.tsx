@@ -76,7 +76,7 @@ const Button = ({
     const hasLabel = label !== undefined && label !== null && label !== "";
 
     const buttonClassName = clsx(
-        "inline-flex items-center justify-center rounded-md font-medium uppercase focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-400 focus-visible:ring-offset-1 focus-visible:ring-offset-gray-50 cursor-pointer transition-colors duration-150 ease-out",
+        "inline-flex items-center justify-center rounded-md font-medium uppercase focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-400 focus-visible:ring-offset-1 focus-visible:ring-offset-gray-50 cursor-pointer transition-colors duration-300 ease-out",
         variantClasses[variant],
         hasLabel ? sizeClasses[size] : noLabelSizeClasses[size],
         disabled && "pointer-events-none opacity-50",
