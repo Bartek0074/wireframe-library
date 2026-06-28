@@ -30,13 +30,13 @@ export type RadioProps = Omit<
 
 const radioStateClasses: Record<RadioState, string> = {
     default:
-        "border-gray-300 group-hover:border-gray-400 peer-focus-visible:border-primary-500 peer-focus-visible:ring-1 peer-focus-visible:ring-primary-100 peer-focus-visible:ring-offset-1 peer-focus-visible:ring-offset-gray-50 peer-checked:border-primary-500",
+        "border-gray-300 group-hover:border-primary-300 peer-focus-visible:border-primary-600 peer-focus-visible:ring-1 peer-focus-visible:ring-primary-300 peer-checked:border-primary-500",
     success:
-        "border-success-400 group-hover:border-success-500 peer-focus-visible:border-success-600 peer-focus-visible:ring-1 peer-focus-visible:ring-success-100 peer-focus-visible:ring-offset-1 peer-focus-visible:ring-offset-gray-50 peer-checked:border-success-500",
+        "border-success-400 group-hover:border-success-500 peer-focus-visible:border-success-600 peer-focus-visible:ring-1 peer-focus-visible:ring-success-300 peer-checked:border-success-500",
     warning:
-        "border-warning-400 group-hover:border-warning-500 peer-focus-visible:border-warning-600 peer-focus-visible:ring-1 peer-focus-visible:ring-warning-100 peer-focus-visible:ring-offset-1 peer-focus-visible:ring-offset-gray-50 peer-checked:border-warning-500",
+        "border-warning-400 group-hover:border-warning-500 peer-focus-visible:border-warning-600 peer-focus-visible:ring-1 peer-focus-visible:ring-warning-300 peer-checked:border-warning-500",
     error:
-        "border-error-400 group-hover:border-error-500 peer-focus-visible:border-error-600 peer-focus-visible:ring-1 peer-focus-visible:ring-error-100 peer-focus-visible:ring-offset-1 peer-focus-visible:ring-offset-gray-50 peer-checked:border-error-500",
+        "border-error-400 group-hover:border-error-500 peer-focus-visible:border-error-600 peer-focus-visible:ring-1 peer-focus-visible:ring-error-300 peer-checked:border-error-500",
 };
 
 const dotColorClasses: Record<RadioState, string> = {
@@ -62,24 +62,24 @@ const descriptionColorClasses: Record<RadioState, string> = {
 
 const blockOutlineStateClasses: Record<RadioState, string> = {
     default:
-        "border-gray-300 bg-gray-50 text-gray-700 group-hover:bg-gray-100 group-hover:text-gray-800 peer-focus-visible:ring-1 peer-focus-visible:ring-primary-100 peer-focus-visible:ring-inset peer-checked:border-primary-400 peer-checked:bg-primary-50 peer-checked:text-primary-700 peer-checked:group-hover:bg-primary-100 peer-checked:group-hover:text-primary-800",
+        "border-gray-300 bg-gray-50 text-gray-700 group-hover:bg-gray-100 group-hover:text-gray-800 group-active:bg-primary-100 group-active:text-primary-900 peer-focus-visible:border-primary-600 peer-focus-visible:ring-1 peer-focus-visible:ring-primary-300 peer-focus-visible:ring-inset peer-checked:border-primary-500 peer-checked:bg-primary-50 peer-checked:text-primary-700 peer-checked:group-hover:bg-primary-100 peer-checked:group-hover:text-primary-700 peer-checked:group-active:bg-primary-100 peer-checked:group-active:text-primary-900",
     success:
-        "border-success-400 bg-gray-50 text-success-700 group-hover:bg-success-50 group-hover:text-success-800 peer-focus-visible:ring-1 peer-focus-visible:ring-success-100 peer-focus-visible:ring-inset peer-checked:border-success-500 peer-checked:bg-success-50 peer-checked:text-success-700 peer-checked:group-hover:bg-success-100 peer-checked:group-hover:text-success-800",
+        "border-success-400 bg-gray-50 text-success-700 group-hover:bg-success-50 group-hover:text-success-800 group-active:bg-success-100 group-active:text-success-900 peer-focus-visible:border-success-600 peer-focus-visible:ring-1 peer-focus-visible:ring-success-300 peer-focus-visible:ring-inset peer-checked:border-success-500 peer-checked:bg-success-50 peer-checked:text-success-700 peer-checked:group-hover:bg-success-100 peer-checked:group-hover:text-success-700 peer-checked:group-active:bg-success-100 peer-checked:group-active:text-success-900",
     warning:
-        "border-warning-400 bg-gray-50 text-warning-700 group-hover:bg-warning-50 group-hover:text-warning-800 peer-focus-visible:ring-1 peer-focus-visible:ring-warning-100 peer-focus-visible:ring-inset peer-checked:border-warning-500 peer-checked:bg-warning-50 peer-checked:text-warning-700 peer-checked:group-hover:bg-warning-100 peer-checked:group-hover:text-warning-800",
+        "border-warning-400 bg-gray-50 text-warning-700 group-hover:bg-warning-50 group-hover:text-warning-800 group-active:bg-warning-100 group-active:text-warning-900 peer-focus-visible:border-warning-600 peer-focus-visible:ring-1 peer-focus-visible:ring-warning-300 peer-focus-visible:ring-inset peer-checked:border-warning-500 peer-checked:bg-warning-50 peer-checked:text-warning-700 peer-checked:group-hover:bg-warning-100 peer-checked:group-hover:text-warning-700 peer-checked:group-active:bg-warning-100 peer-checked:group-active:text-warning-900",
     error:
-        "border-error-400 bg-gray-50 text-error-700 group-hover:bg-error-50 group-hover:text-error-800 peer-focus-visible:ring-1 peer-focus-visible:ring-error-100 peer-focus-visible:ring-inset peer-checked:border-error-500 peer-checked:bg-error-50 peer-checked:text-error-700 peer-checked:group-hover:bg-error-100 peer-checked:group-hover:text-error-800",
+        "border-error-400 bg-gray-50 text-error-700 group-hover:bg-error-50 group-hover:text-error-800 group-active:bg-error-100 group-active:text-error-900 peer-focus-visible:border-error-600 peer-focus-visible:ring-1 peer-focus-visible:ring-error-300 peer-focus-visible:ring-inset peer-checked:border-error-500 peer-checked:bg-error-50 peer-checked:text-error-700 peer-checked:group-hover:bg-error-100 peer-checked:group-hover:text-error-700 peer-checked:group-active:bg-error-100 peer-checked:group-active:text-error-900",
 };
 
 const blockSolidStateClasses: Record<RadioState, string> = {
     default:
-        "border-gray-300 bg-gray-50 text-gray-700 group-hover:bg-gray-100 group-hover:text-gray-800 peer-focus-visible:ring-1 peer-focus-visible:ring-primary-100 peer-focus-visible:ring-inset peer-checked:border-primary-600 peer-checked:bg-primary-600 peer-checked:text-gray-50 peer-checked:group-hover:bg-primary-700 peer-checked:group-hover:text-gray-50",
+        "border-gray-300 bg-gray-50 text-gray-700 group-hover:bg-gray-100 group-hover:text-gray-800 group-active:bg-primary-100 group-active:text-primary-900 peer-focus-visible:border-primary-700 peer-focus-visible:ring-1 peer-focus-visible:ring-primary-300 peer-focus-visible:ring-inset peer-checked:border-primary-600 peer-checked:bg-primary-600 peer-checked:text-gray-50 peer-checked:group-hover:border-primary-500 peer-checked:group-hover:bg-primary-500 peer-checked:group-hover:text-gray-50 peer-checked:group-active:bg-primary-700 peer-checked:group-active:text-gray-50",
     success:
-        "border-success-400 bg-gray-50 text-success-700 group-hover:bg-success-50 group-hover:text-success-800 peer-focus-visible:ring-1 peer-focus-visible:ring-success-100 peer-focus-visible:ring-inset peer-checked:border-success-600 peer-checked:bg-success-600 peer-checked:text-gray-50 peer-checked:group-hover:bg-success-700 peer-checked:group-hover:text-gray-50",
+        "border-success-400 bg-gray-50 text-success-700 group-hover:bg-success-50 group-hover:text-success-800 group-active:bg-success-100 group-active:text-success-900 peer-focus-visible:border-success-700 peer-focus-visible:ring-1 peer-focus-visible:ring-success-300 peer-focus-visible:ring-inset peer-checked:border-success-600 peer-checked:bg-success-600 peer-checked:text-gray-50 peer-checked:group-hover:border-success-500 peer-checked:group-hover:bg-success-500 peer-checked:group-hover:text-gray-50 peer-checked:group-active:bg-success-700 peer-checked:group-active:text-gray-50",
     warning:
-        "border-warning-400 bg-gray-50 text-warning-700 group-hover:bg-warning-50 group-hover:text-warning-800 peer-focus-visible:ring-1 peer-focus-visible:ring-warning-100 peer-focus-visible:ring-inset peer-checked:border-warning-600 peer-checked:bg-warning-600 peer-checked:text-gray-50 peer-checked:group-hover:bg-warning-700 peer-checked:group-hover:text-gray-50",
+        "border-warning-400 bg-gray-50 text-warning-700 group-hover:bg-warning-50 group-hover:text-warning-800 group-active:bg-warning-100 group-active:text-warning-900 peer-focus-visible:border-warning-700 peer-focus-visible:ring-1 peer-focus-visible:ring-warning-300 peer-focus-visible:ring-inset peer-checked:border-warning-600 peer-checked:bg-warning-600 peer-checked:text-gray-50 peer-checked:group-hover:border-warning-500 peer-checked:group-hover:bg-warning-500 peer-checked:group-hover:text-gray-50 peer-checked:group-active:bg-warning-700 peer-checked:group-active:text-gray-50",
     error:
-        "border-error-400 bg-gray-50 text-error-700 group-hover:bg-error-50 group-hover:text-error-800 peer-focus-visible:ring-1 peer-focus-visible:ring-error-100 peer-focus-visible:ring-inset peer-checked:border-error-600 peer-checked:bg-error-600 peer-checked:text-gray-50 peer-checked:group-hover:bg-error-700 peer-checked:group-hover:text-gray-50",
+        "border-error-400 bg-gray-50 text-error-700 group-hover:bg-error-50 group-hover:text-error-800 group-active:bg-error-100 group-active:text-error-900 peer-focus-visible:border-error-700 peer-focus-visible:ring-1 peer-focus-visible:ring-error-300 peer-focus-visible:ring-inset peer-checked:border-error-600 peer-checked:bg-error-600 peer-checked:text-gray-50 peer-checked:group-hover:border-error-500 peer-checked:group-hover:bg-error-500 peer-checked:group-hover:text-gray-50 peer-checked:group-active:bg-error-700 peer-checked:group-active:text-gray-50",
 };
 
 const blockSizeClasses = {
@@ -173,7 +173,7 @@ const Radio = forwardRef<HTMLInputElement, RadioProps>(
 
         const blockClassName = clsx(
             "relative inline-flex items-center justify-center rounded-none border-2 font-medium uppercase transition-colors duration-300 ease-out",
-            "z-0 peer-checked:z-10",
+            "z-0 peer-focus-visible:z-10 peer-checked:z-10",
             blockSizeClasses[groupContext?.size ?? "md"],
             groupContext?.buttonStyle === "solid"
                 ? blockSolidStateClasses[state]

@@ -46,43 +46,43 @@ export type ButtonProps = LinkButtonProps | NativeButtonProps;
 const styleClasses: Record<ButtonIntent, Record<ButtonStyle, string>> = {
     default: {
         solid:
-            "border-2 border-gray-300 bg-gray-100 text-gray-700 hover:bg-gray-200 focus-visible:ring-gray-200",
+            "border-2 border-gray-300 bg-gray-100 text-gray-700 hover:bg-gray-50 hover:text-gray-800 active:border-gray-400 active:bg-gray-200 active:text-gray-900 focus-visible:border-gray-400 focus-visible:bg-gray-200 focus-visible:text-gray-900 focus-visible:ring-1 focus-visible:ring-gray-300",
         dashed:
-            "border-2 border-dashed border-gray-300 bg-gray-50 text-gray-700 hover:bg-gray-100 focus-visible:ring-gray-200",
+            "border-2 border-dashed border-gray-300 bg-gray-50 text-gray-700 hover:bg-gray-100 hover:text-gray-800 active:border-gray-400 active:bg-gray-200 active:text-gray-900 focus-visible:border-gray-400 focus-visible:bg-gray-200 focus-visible:text-gray-900 focus-visible:ring-1 focus-visible:ring-gray-300",
         outline:
-            "border-2 border-gray-300 bg-transparent text-gray-700 hover:bg-gray-100 focus-visible:ring-gray-200",
+            "border-2 border-gray-300 bg-transparent text-gray-700 hover:bg-gray-50 hover:text-gray-800 active:border-gray-400 active:bg-gray-100 active:text-gray-900 focus-visible:border-gray-400 focus-visible:bg-gray-100 focus-visible:text-gray-900 focus-visible:ring-1 focus-visible:ring-gray-300",
         ghost:
-            "border-2 border-transparent bg-transparent text-gray-700 hover:bg-gray-100 focus-visible:ring-gray-200",
+            "border-2 border-transparent bg-transparent text-gray-700 hover:bg-gray-50 hover:text-gray-800 active:bg-gray-100 active:text-gray-900 focus-visible:bg-gray-100 focus-visible:text-gray-900 focus-visible:ring-1 focus-visible:ring-gray-300",
     },
     primary: {
         solid:
-            "border-2 border-primary-600 bg-primary-600 text-gray-50 hover:bg-primary-700 focus-visible:ring-primary-100",
+            "border-2 border-primary-600 bg-primary-600 text-gray-50 hover:border-primary-500 hover:bg-primary-500 active:border-primary-700 active:bg-primary-700 focus-visible:border-primary-700 focus-visible:bg-primary-700 focus-visible:ring-1 focus-visible:ring-primary-300",
         dashed:
-            "border-2 border-dashed border-primary-400 bg-primary-50 text-primary-700 hover:bg-primary-100 focus-visible:ring-primary-100",
+            "border-2 border-dashed border-primary-400 bg-primary-50 text-primary-700 hover:bg-primary-100 hover:text-primary-800 active:border-primary-600 active:bg-primary-200 active:text-primary-900 focus-visible:border-primary-600 focus-visible:bg-primary-200 focus-visible:text-primary-900 focus-visible:ring-1 focus-visible:ring-primary-300",
         outline:
-            "border-2 border-primary-500 bg-transparent text-primary-700 hover:bg-primary-50 focus-visible:ring-primary-100",
+            "border-2 border-primary-500 bg-transparent text-primary-700 hover:bg-primary-50 hover:text-primary-800 active:border-primary-600 active:bg-primary-100 active:text-primary-900 focus-visible:border-primary-600 focus-visible:bg-primary-100 focus-visible:text-primary-900 focus-visible:ring-1 focus-visible:ring-primary-300",
         ghost:
-            "border-2 border-transparent bg-transparent text-primary-700 hover:bg-primary-50 focus-visible:ring-primary-100",
+            "border-2 border-transparent bg-transparent text-primary-700 hover:bg-primary-50 hover:text-primary-800 active:bg-primary-100 active:text-primary-900 focus-visible:bg-primary-100 focus-visible:text-primary-900 focus-visible:ring-1 focus-visible:ring-primary-300",
     },
     accent: {
         solid:
-            "border-2 border-accent-600 bg-accent-600 text-gray-50 hover:bg-accent-700 focus-visible:ring-accent-100",
+            "border-2 border-accent-600 bg-accent-600 text-gray-50 hover:border-accent-500 hover:bg-accent-500 active:border-accent-700 active:bg-accent-700 focus-visible:border-accent-700 focus-visible:bg-accent-700 focus-visible:ring-1 focus-visible:ring-accent-300",
         dashed:
-            "border-2 border-dashed border-accent-400 bg-accent-50 text-accent-700 hover:bg-accent-100 focus-visible:ring-accent-100",
+            "border-2 border-dashed border-accent-400 bg-accent-50 text-accent-700 hover:bg-accent-100 hover:text-accent-800 active:border-accent-600 active:bg-accent-200 active:text-accent-900 focus-visible:border-accent-600 focus-visible:bg-accent-200 focus-visible:text-accent-900 focus-visible:ring-1 focus-visible:ring-accent-300",
         outline:
-            "border-2 border-accent-500 bg-transparent text-accent-700 hover:bg-accent-50 focus-visible:ring-accent-100",
+            "border-2 border-accent-500 bg-transparent text-accent-700 hover:bg-accent-50 hover:text-accent-800 active:border-accent-600 active:bg-accent-100 active:text-accent-900 focus-visible:border-accent-600 focus-visible:bg-accent-100 focus-visible:text-accent-900 focus-visible:ring-1 focus-visible:ring-accent-300",
         ghost:
-            "border-2 border-transparent bg-transparent text-accent-700 hover:bg-accent-50 focus-visible:ring-accent-100",
+            "border-2 border-transparent bg-transparent text-accent-700 hover:bg-accent-50 hover:text-accent-800 active:bg-accent-100 active:text-accent-900 focus-visible:bg-accent-100 focus-visible:text-accent-900 focus-visible:ring-1 focus-visible:ring-accent-300",
     },
     danger: {
         solid:
-            "border-2 border-error-600 bg-error-600 text-gray-50 hover:bg-error-700 focus-visible:ring-error-100",
+            "border-2 border-error-600 bg-error-600 text-gray-50 hover:border-error-500 hover:bg-error-500 active:border-error-700 active:bg-error-700 focus-visible:border-error-700 focus-visible:bg-error-700 focus-visible:ring-1 focus-visible:ring-error-300",
         dashed:
-            "border-2 border-dashed border-error-400 bg-error-50 text-error-700 hover:bg-error-100 focus-visible:ring-error-100",
+            "border-2 border-dashed border-error-400 bg-error-50 text-error-700 hover:bg-error-100 hover:text-error-800 active:border-error-600 active:bg-error-200 active:text-error-900 focus-visible:border-error-600 focus-visible:bg-error-200 focus-visible:text-error-900 focus-visible:ring-1 focus-visible:ring-error-300",
         outline:
-            "border-2 border-error-500 bg-transparent text-error-700 hover:bg-error-50 focus-visible:ring-error-100",
+            "border-2 border-error-500 bg-transparent text-error-700 hover:bg-error-50 hover:text-error-800 active:border-error-600 active:bg-error-100 active:text-error-900 focus-visible:border-error-600 focus-visible:bg-error-100 focus-visible:text-error-900 focus-visible:ring-1 focus-visible:ring-error-300",
         ghost:
-            "border-2 border-transparent bg-transparent text-error-700 hover:bg-error-50 focus-visible:ring-error-100",
+            "border-2 border-transparent bg-transparent text-error-700 hover:bg-error-50 hover:text-error-800 active:bg-error-100 active:text-error-900 focus-visible:bg-error-100 focus-visible:text-error-900 focus-visible:ring-1 focus-visible:ring-error-300",
     },
 };
 
@@ -121,7 +121,7 @@ const Button = ({
     const isDisabled = disabled || loading;
 
     const buttonClassName = clsx(
-        "relative inline-flex items-center justify-center rounded-md font-medium uppercase focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-offset-1 focus-visible:ring-offset-gray-50 transition-colors duration-300 ease-out",
+        "relative inline-flex items-center justify-center rounded-md font-medium uppercase focus-visible:outline-none transition-colors duration-300 ease-out",
         styleClasses[intent][buttonStyle],
         hasLabel ? sizeClasses[size] : noLabelSizeClasses[size],
         isDisabled ? "pointer-events-none opacity-50 cursor-not-allowed" : "cursor-pointer",

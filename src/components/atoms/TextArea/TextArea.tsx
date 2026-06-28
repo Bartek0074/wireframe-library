@@ -41,13 +41,13 @@ const sizeClasses: Record<TextAreaSize, string> = {
 
 const stateClasses: Record<TextAreaState, string> = {
     default:
-        "border-gray-300 hover:border-gray-400 focus:border-primary-500 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-primary-100 focus-visible:ring-offset-1 focus-visible:ring-offset-gray-50",
+        "border-gray-300 hover:border-primary-300 focus:border-primary-600 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-primary-300",
     success:
-        "border-success-400 hover:border-success-500 focus:border-success-600 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-success-100 focus-visible:ring-offset-1 focus-visible:ring-offset-gray-50",
+        "border-success-400 hover:border-success-500 focus:border-success-600 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-success-300",
     warning:
-        "border-warning-400 hover:border-warning-500 focus:border-warning-600 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-warning-100 focus-visible:ring-offset-1 focus-visible:ring-offset-gray-50",
+        "border-warning-400 hover:border-warning-500 focus:border-warning-600 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-warning-300",
     error:
-        "border-error-400 hover:border-error-500 focus:border-error-600 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-error-100 focus-visible:ring-offset-1 focus-visible:ring-offset-gray-50",
+        "border-error-400 hover:border-error-500 focus:border-error-600 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-error-300",
 };
 
 const countColorClasses: Record<TextAreaState, string> = {

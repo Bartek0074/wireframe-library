@@ -44,7 +44,7 @@ const Link = ({
     ...props
 }: LinkProps) => {
     const linkClassName = clsx(
-        "inline-flex items-center gap-2 rounded-sm font-body font-medium text-primary-600 cursor-pointer transition-colors duration-300 ease-out hover:text-primary-700 active:text-primary-800 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-400 focus-visible:ring-offset-1 focus-visible:ring-offset-gray-50",
+        "inline-flex items-center gap-2 rounded-sm font-body font-medium text-primary-600 cursor-pointer transition-colors duration-300 ease-out hover:text-primary-500 active:text-primary-800 focus-visible:text-primary-700 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-primary-300",
         sizeClasses[size],
         className,
     );

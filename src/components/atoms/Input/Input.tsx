@@ -61,24 +61,24 @@ const iconInsetTrailing: Record<InputSize, string> = {
 
 const stateClasses: Record<InputState, string> = {
     default:
-        "border-gray-300 hover:border-gray-400 focus:border-primary-500 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-primary-100 focus-visible:ring-offset-1 focus-visible:ring-offset-gray-50",
+        "border-gray-300 hover:border-primary-300 focus:border-primary-600 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-primary-300",
     success:
-        "border-success-400 hover:border-success-500 focus:border-success-600 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-success-100 focus-visible:ring-offset-1 focus-visible:ring-offset-gray-50",
+        "border-success-400 hover:border-success-500 focus:border-success-600 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-success-300",
     warning:
-        "border-warning-400 hover:border-warning-500 focus:border-warning-600 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-warning-100 focus-visible:ring-offset-1 focus-visible:ring-offset-gray-50",
+        "border-warning-400 hover:border-warning-500 focus:border-warning-600 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-warning-300",
     error:
-        "border-error-400 hover:border-error-500 focus:border-error-600 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-error-100 focus-visible:ring-offset-1 focus-visible:ring-offset-gray-50",
+        "border-error-400 hover:border-error-500 focus:border-error-600 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-error-300",
 };
 
 const iconColorClasses: Record<InputState, string> = {
     default:
-        "text-gray-400 group-hover:text-gray-500 group-focus-within:text-primary-500",
+        "text-gray-400 group-hover:text-gray-500 group-focus-within:text-primary-600",
     success:
-        "text-success-500 group-hover:text-success-600 group-focus-within:text-success-600",
+        "text-gray-400 group-hover:text-gray-500 group-focus-within:text-success-600",
     warning:
-        "text-warning-500 group-hover:text-warning-600 group-focus-within:text-warning-600",
+        "text-gray-400 group-hover:text-gray-500 group-focus-within:text-warning-600",
     error:
-        "text-error-500 group-hover:text-error-600 group-focus-within:text-error-600",
+        "text-gray-400 group-hover:text-gray-500 group-focus-within:text-error-600",
 };
 
 const Input = forwardRef<HTMLInputElement, InputProps>(
@@ -129,7 +129,7 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
                         className={clsx(
                             iconBaseClassName,
                             iconInsetLeading[size],
-                            iconColorClasses[state],
+                            disabled ? "text-gray-300" : iconColorClasses[state],
                         )}
                     >
                         {leadingIcon}
@@ -151,7 +151,7 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
                         className={clsx(
                             iconBaseClassName,
                             iconInsetTrailing[size],
-                            iconColorClasses[state],
+                            disabled ? "text-gray-300" : iconColorClasses[state],
                         )}
                     >
                         {trailingIcon}
