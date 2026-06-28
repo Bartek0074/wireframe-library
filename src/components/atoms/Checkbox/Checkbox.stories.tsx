@@ -43,11 +43,19 @@ const meta: Meta<StoryArgs> = {
         classNames: {
             table: { disable: true },
         },
-    },
+    }
+};
+
+export default meta;
+type Story = StoryObj<StoryArgs>;
+
+export const Playground: Story = {
+    name: "Playground",
+    render: (args) => <Checkbox {...args} />,
     args: {
         state: "default",
-        label: "Accept terms",
-        description: "You can unsubscribe at any time.",
+        label: "Checkbox",
+        description: "This is a checkbox description.",
         defaultChecked: false,
         indeterminate: false,
         disabled: false,
@@ -56,89 +64,45 @@ const meta: Meta<StoryArgs> = {
     },
 };
 
-export default meta;
-type Story = StoryObj<StoryArgs>;
-
-export const Default: Story = {
-    render: (args) => <Checkbox {...args} />,
+export const CheckedAndUnchecked: Story = {
+    name: "Checked/Unchecked/Indeterminate",
+    render: (_) => (
+        <div className="flex flex-col gap-3 items-start">
+            <Checkbox checked={true} label="Checkbox" description="This checkbox is checked." />
+            <Checkbox indeterminate={true} checked={false} label="Checkbox" description="This checkbox is indeterminate." />
+            <Checkbox checked={false} label="Checkbox" description="This checkbox is unchecked." />
+        </div>
+    ),
 };
 
-export const Checked: Story = {
-    args: {
-        checked: true,
-        defaultChecked: undefined,
-        label: "Email updates",
-        description: "Receive product updates by email.",
-    },
-    render: (args) => <Checkbox {...args} />,
+export const States: Story = {
+    name: "States",
+    render: (_) => (
+        <div className="flex flex-col gap-3 items-start">
+            <Checkbox state="default" label="Checkbox" description="This is a default checkbox." />
+            <Checkbox state="success" label="Checkbox" description="This is a success checkbox." />
+            <Checkbox state="warning" label="Checkbox" description="This is a warning checkbox." />
+            <Checkbox state="error" label="Checkbox" description="This is an error checkbox." />
+        </div>
+    ),
 };
 
-export const Indeterminate: Story = {
-    args: {
-        indeterminate: true,
-        checked: false,
-        defaultChecked: undefined,
-        label: "Partially selected",
-        description: "Some nested options are selected.",
-    },
-    render: (args) => <Checkbox {...args} />,
+export const DisabledAndReadOnly: Story = {
+    name: "Disabled/Read-Only",
+    render: (_) => (
+        <div className="flex flex-col gap-3 items-start">
+            <Checkbox disabled={true} label="Checkbox" description="This checkbox is disabled." />
+            <Checkbox readOnly={true} label="Checkbox" description="This checkbox is read-only." />
+        </div>
+    ),
 };
 
-export const Disabled: Story = {
-    args: {
-        disabled: true,
-        defaultChecked: true,
-        label: "Disabled option",
-        description: "This option is not currently editable.",
-    },
-    render: (args) => <Checkbox {...args} />,
-};
-
-export const SuccessState: Story = {
-    args: {
-        state: "success",
-        defaultChecked: true,
-        label: "Success state",
-        description: "Selection has been validated.",
-    },
-    render: (args) => <Checkbox {...args} />,
-};
-
-export const WarningState: Story = {
-    args: {
-        state: "warning",
-        defaultChecked: true,
-        label: "Warning state",
-        description: "Double-check this setting.",
-    },
-    render: (args) => <Checkbox {...args} />,
-};
-
-export const ErrorState: Story = {
-    args: {
-        state: "error",
-        defaultChecked: false,
-        label: "Error state",
-        description: "You must accept this option.",
-    },
-    render: (args) => <Checkbox {...args} />,
-};
-
-export const WithFormField: Story = {
-    args: {
-        label: "Subscribe to newsletter",
-        description: "Get product updates once a week.",
-        state: "default",
-        defaultChecked: false,
-    },
-    render: (args) => (
-        <FormField
-            label="Preferences"
-            message="Choose at least one channel."
-            state={args.state}
-            layout="vertical"
-        >
-            <Checkbox {...args} />
-        </FormField>
+export const TextVariations: Story = {
+    name: "Text Variations",
+    render: (_) => (
+        <div className="flex flex-col gap-3 items-start">
+            <Checkbox label="Checkbox" description="This is a checkbox with a description." />
+            <Checkbox label="Checkbox" />
+        </div>
     ),
 };
