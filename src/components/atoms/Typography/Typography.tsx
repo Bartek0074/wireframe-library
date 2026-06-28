@@ -1,7 +1,7 @@
 import clsx from "clsx";
 
 type PlaceholderProps = {
-    children?: string;
+    children?: string | React.ReactNode;
     className?: {
         text?: string;
     };

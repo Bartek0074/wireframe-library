@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/nextjs-vite";
 import { ArrowRight, ExternalLink, Home, Mail } from "feather-icons-react";
 import { Link } from "./index";
+import { Typography } from "../../atoms/Typography";
 
 const iconOptions = {
     Home: <Home />,
@@ -54,16 +55,7 @@ const meta: Meta<StoryArgs> = {
                 disable: true,
             },
         },
-    },
-    args: {
-        label: "Read more",
-        href: "#",
-        size: "md",
-        target: "_self",
-        rel: undefined,
-        leadingIconOption: undefined,
-        trailingIconOption: undefined,
-    },
+    }
 };
 
 export default meta;
@@ -77,85 +69,49 @@ const renderLink = ({ leadingIconOption, trailingIconOption, ...args }: StoryArg
     />
 );
 
-export const Default: Story = {
-    name: "Link / Basic / Default",
+export const Playground: Story = {
+    name: "Playground",
     render: renderLink,
     args: {
-        label: "Read more",
+        label: "Link",
         href: "#",
-        target: "_self",
-        rel: undefined,
-    },
-};
-
-export const External: Story = {
-    name: "Link / Basic / External",
-    render: renderLink,
-    args: {
-        label: "Open docs",
-        href: "https://example.com",
-        target: "_blank",
-        rel: "noopener noreferrer",
-        trailingIconOption: "ExternalLink",
-    },
-};
-
-export const WithLeadingIcon: Story = {
-    name: "Link / With Icons / Leading Icon",
-    render: renderLink,
-    args: {
-        label: "Go to homepage",
-        href: "#",
-        leadingIconOption: "Home",
-        trailingIconOption: undefined,
-    },
-};
-
-export const WithTrailingIcon: Story = {
-    name: "Link / With Icons / Trailing Icon",
-    render: renderLink,
-    args: {
-        label: "Continue",
-        href: "#",
-        leadingIconOption: undefined,
-        trailingIconOption: "ArrowRight",
-    },
-};
-
-export const WithBothIcons: Story = {
-    name: "Link / With Icons / Both Icons",
-    render: renderLink,
-    args: {
-        label: "Contact support",
-        href: "#",
-        leadingIconOption: "Mail",
-        trailingIconOption: "ExternalLink",
-    },
-};
-
-export const Small: Story = {
-    name: "Link / Sizes / Small",
-    render: renderLink,
-    args: {
-        size: "sm",
-        label: "Small link",
-    },
-};
-
-export const Medium: Story = {
-    name: "Link / Sizes / Medium",
-    render: renderLink,
-    args: {
         size: "md",
-        label: "Medium link",
+        target: "_self",
     },
 };
 
-export const Large: Story = {
-    name: "Link / Sizes / Large",
-    render: renderLink,
-    args: {
-        size: "lg",
-        label: "Large link",
-    },
+export const Sizes: Story = {
+    name: "Sizes",
+    // eslint-disable-next-line
+    render: (_) => (
+        <div className="flex flex-col gap-3 items-start">
+            <Link size="lg" label="Link" href="#" />
+            <Link size="md" label="Link" href="#" />
+            <Link size="sm" label="Link" href="#" />
+        </div>
+    ),
+};
+
+export const Icons: Story = {
+    name: "With Icons",
+    // eslint-disable-next-line
+    render: (_) => (
+        <div className="flex flex-col gap-3 items-start">
+            <Link label="Link" href="#" leadingIcon={<Home />} />
+            <Link label="Link" href="#" trailingIcon={<ArrowRight />} />
+            <Link label="Link" href="#" leadingIcon={<Mail />} trailingIcon={<ExternalLink />} />
+        </div>
+    ),
+};
+
+export const UsageExample: Story = {
+    name: "Usage Example",
+    // eslint-disable-next-line
+    render: (_) => (
+        <Typography.P2>
+            For more information, visit our{" "}
+            <Link label="documentation" href="#" />.
+        </Typography.P2>
+
+    ),
 };
