@@ -5,22 +5,18 @@ import { Radio, RadioGroup } from "./index";
 
 type StoryArgs = React.ComponentProps<typeof RadioGroup>;
 
-const ControlledGroup = ({ onChange, ...args }: StoryArgs) => {
-    const [value, setValue] = useState<"email" | "sms" | "push">("email");
+const ControlledUsage = () => {
+    const [channel, setChannel] = useState<"email" | "sms" | "push">("email");
 
     return (
-        <RadioGroup
-            {...args}
-            value={value}
-            onChange={(nextValue) => {
-                setValue(nextValue as "email" | "sms" | "push");
-                onChange?.(nextValue);
-            }}
-        >
-            <Radio value="email" label="Email" />
-            <Radio value="sms" label="SMS" />
-            <Radio value="push" label="Push" />
-        </RadioGroup>
+        <div className="inline-flex flex-col gap-2">
+            <RadioGroup value={channel} onChange={(value) => setChannel(value as typeof channel)}>
+                <Radio value="email" label="Email" description="Detailed product updates." />
+                <Radio value="sms" label="SMS" description="Critical notifications only." />
+                <Radio value="push" label="Push" description="Mobile app notifications." />
+            </RadioGroup>
+            <span className="text-sm text-gray-600">Selected: {channel}</span>
+        </div>
     );
 };
 
@@ -72,119 +68,115 @@ const meta: Meta<StoryArgs> = {
 export default meta;
 type Story = StoryObj<StoryArgs>;
 
-export const DefaultRadioGroup: Story = {
+export const Playground: Story = {
     render: (args) => (
         <RadioGroup {...args}>
-            <Radio value="email" label="Email" description="Best for detailed updates." />
-            <Radio value="sms" label="SMS" description="Fast critical alerts only." />
-            <Radio value="push" label="Push notifications" description="Updates in the mobile app." />
+            <Radio value="email" label="Radio 1" description="Description for radio 1." />
+            <Radio value="sms" label="Radio 2" description="Description for radio 2." />
+            <Radio value="push" label="Radio 3" description="Description for radio 3." />
         </RadioGroup>
     ),
 };
 
-export const ControlledRadioGroup: Story = {
-    render: (args) => <ControlledGroup {...args} />,
-};
+export const Sizes: Story = {
+    name: "Sizes (Block)",
+    // eslint-disable-next-line
+    render: (_) => (
+        <div className="inline-flex flex-col gap-3">
+            <RadioGroup mode="block" buttonStyle="outline" size="sm" defaultValue="sm-b">
+                <Radio value="sm-a" label="Button 1" />
+                <Radio value="sm-b" label="Button 2" />
+                <Radio value="sm-c" label="Button 3" />
+            </RadioGroup>
 
-export const DisabledRadioGroup: Story = {
-    args: {
-        defaultValue: "sms",
-        disabled: true,
-    },
-    render: (args) => (
-        <RadioGroup {...args}>
-            <Radio value="email" label="Email" />
-            <Radio value="sms" label="SMS" />
-            <Radio value="push" label="Push" />
-        </RadioGroup>
+            <RadioGroup mode="block" buttonStyle="outline" size="md" defaultValue="md-b">
+                <Radio value="md-a" label="Button 1" />
+                <Radio value="md-b" label="Button 2" />
+                <Radio value="md-c" label="Button 3" />
+            </RadioGroup>
+
+            <RadioGroup mode="block" buttonStyle="outline" size="lg" defaultValue="lg-b">
+                <Radio value="lg-a" label="Button 1" />
+                <Radio value="lg-b" label="Button 2" />
+                <Radio value="lg-c" label="Button 3" />
+            </RadioGroup>
+        </div>
     ),
 };
 
-export const SuccessAndErrorStates: Story = {
-    render: () => (
+export const States: Story = {
+    name: "States",
+    // eslint-disable-next-line
+    render: (_) => (
+        <div className="inline-flex flex-col gap-4 items-start">
+            <RadioGroup defaultValue="default-1">
+                <Radio value="default-1" label="Radio 1" state="default" />
+                <Radio value="default-2" label="Radio 2" state="default" />
+            </RadioGroup>
+
+            <RadioGroup defaultValue="success-1">
+                <Radio value="success-1" label="Radio 1" state="success" />
+                <Radio value="success-2" label="Radio 2" state="success" />
+            </RadioGroup>
+
+            <RadioGroup defaultValue="warning-1">
+                <Radio value="warning-1" label="Radio 1" state="warning" />
+                <Radio value="warning-2" label="Radio 2" state="warning" />
+            </RadioGroup>
+
+            <RadioGroup defaultValue="error-1">
+                <Radio value="error-1" label="Radio 1" state="error" />
+                <Radio value="error-2" label="Radio 2" state="error" />
+            </RadioGroup>
+        </div>
+    ),
+};
+
+export const Variations: Story = {
+    name: "Button Styles (Block)",
+    // eslint-disable-next-line
+    render: (_) => (
+        <div className="inline-flex flex-col gap-3">
+            <RadioGroup mode="block" buttonStyle="outline" size="md" defaultValue="md-b">
+                <Radio value="md-a" label="Button 1" />
+                <Radio value="md-b" label="Button 2" />
+                <Radio value="md-c" label="Button 3" />
+            </RadioGroup>
+
+            <RadioGroup mode="block" buttonStyle="solid" size="md" defaultValue="sm-b">
+                <Radio value="sm-a" label="Button 1" />
+                <Radio value="sm-b" label="Button 2" />
+                <Radio value="sm-c" label="Button 3" />
+            </RadioGroup>
+        </div>
+    ),
+};
+
+export const UsageExample: Story = {
+    name: "Usage Example",
+    // eslint-disable-next-line
+    render: (_) => (
         <div className="inline-flex flex-col gap-5">
             <FormField
-                label="Preferred contact"
-                message="Looks good."
-                state="success"
+                label="Preferred Contact"
+                message="Choose how we should send release notes."
+                state="default"
                 layout="vertical"
             >
-                <RadioGroup defaultValue="email">
-                    <Radio value="email" label="Email" state="success" />
-                    <Radio value="sms" label="SMS" state="success" />
-                </RadioGroup>
+                <ControlledUsage />
             </FormField>
 
             <FormField
-                label="Payment method"
-                message="Select a valid option."
-                state="error"
+                label="Plan"
+                message="You can switch plans at any time."
                 layout="vertical"
             >
-                <RadioGroup>
-                    <Radio
-                        value="card"
-                        label="Credit card"
-                        description="Currently unavailable for this account."
-                        state="error"
-                    />
-                    <Radio value="transfer" label="Bank transfer" state="error" />
+                <RadioGroup mode="block" buttonStyle="solid" defaultValue="team">
+                    <Radio value="starter" label="Starter" />
+                    <Radio value="team" label="Team" />
+                    <Radio value="business" label="Business" />
                 </RadioGroup>
             </FormField>
         </div>
-    ),
-};
-
-export const BlockMode: Story = {
-    args: {
-        mode: "block",
-        buttonStyle: "outline",
-        defaultValue: "monthly",
-    },
-    render: (args) => (
-        <RadioGroup {...args}>
-            <Radio value="weekly" label="Weekly" />
-            <Radio value="monthly" label="Monthly" />
-            <Radio value="quarterly" label="Quarterly" />
-        </RadioGroup>
-    ),
-};
-
-export const BlockModeSizes: Story = {
-    render: () => (
-        <div className="inline-flex flex-col gap-3">
-            <RadioGroup mode="block" buttonStyle="outline" size="sm" defaultValue="sm-2">
-                <Radio value="sm-1" label="Small A" />
-                <Radio value="sm-2" label="Small B" />
-                <Radio value="sm-3" label="Small C" />
-            </RadioGroup>
-
-            <RadioGroup mode="block" buttonStyle="outline" size="md" defaultValue="md-2">
-                <Radio value="md-1" label="Medium A" />
-                <Radio value="md-2" label="Medium B" />
-                <Radio value="md-3" label="Medium C" />
-            </RadioGroup>
-
-            <RadioGroup mode="block" buttonStyle="outline" size="lg" defaultValue="lg-2">
-                <Radio value="lg-1" label="Large A" />
-                <Radio value="lg-2" label="Large B" />
-                <Radio value="lg-3" label="Large C" />
-            </RadioGroup>
-        </div>
-    ),
-};
-
-export const BlockModeSolid: Story = {
-    args: {
-        mode: "block",
-        buttonStyle: "solid",
-        defaultValue: "monthly",
-    },
-    render: (args) => (
-        <RadioGroup {...args}>
-            <Radio value="weekly" label="Weekly" />
-            <Radio value="monthly" label="Monthly" />
-            <Radio value="quarterly" label="Quarterly" />
-        </RadioGroup>
     ),
 };
