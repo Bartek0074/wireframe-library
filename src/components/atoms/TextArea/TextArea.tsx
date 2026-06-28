@@ -184,7 +184,7 @@ const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(
         }, [adjustHeight, currentLength, value]);
 
         const wrapperClassName = clsx(
-            "inline-flex flex-col",
+            "relative inline-flex flex-col",
             fullWidth ? "w-full" : "w-fit",
             disabled && "pointer-events-none opacity-50",
             classNames?.wrapper,
@@ -203,7 +203,7 @@ const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(
         );
 
         const countClassName = clsx(
-            "mt-1 text-right text-sm",
+            "absolute right-0 top-full mt-0.25 text-right text-xs",
             isCountExceeded ? "text-error-600" : countColorClasses[state],
             classNames?.count,
         );
