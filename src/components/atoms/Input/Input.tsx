@@ -104,7 +104,7 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
         );
 
         const inputClassName = clsx(
-            "inline-flex items-center rounded-md border-2 border-dashed bg-gray-50 text-gray-700 font-body outline-none transition-colors duration-300 ease-out",
+            "inline-flex items-center rounded-md border-2 bg-gray-50 text-gray-700 font-body outline-none transition-colors duration-300 ease-out",
             "placeholder:text-gray-400",
             sizeClasses[size],
             stateClasses[state],

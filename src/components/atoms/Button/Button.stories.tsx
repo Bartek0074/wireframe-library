@@ -135,6 +135,7 @@ export const IntentAndStyle: Story = {
 
 export const Sizes: Story = {
     name: "Sizes",
+    // eslint-disable-next-line
     render: (_: any) => (
         <div className="flex flex-col gap-3 items-start">
             <Button size="lg" label="Button" />
@@ -146,6 +147,7 @@ export const Sizes: Story = {
 
 export const Icons: Story = {
     name: "Icons",
+    // eslint-disable-next-line
     render: (_: any) => (
         <div className="flex flex-col gap-3 items-start">
             <Button
@@ -170,6 +172,7 @@ export const Icons: Story = {
 
 export const Loading: Story = {
     name: "Loading",
+    // eslint-disable-next-line
     render: (_: any) => (
         <div className="flex flex-col gap-3 items-start">
             <Button
@@ -186,6 +189,7 @@ export const Loading: Story = {
 
 export const Disabled: Story = {
     name: "Disabled",
+    // eslint-disable-next-line
     render: (_: any) => (
         <div className="flex flex-col gap-3 items-start">
             <Button

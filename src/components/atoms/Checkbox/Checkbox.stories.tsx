@@ -1,6 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/nextjs-vite";
 import { Checkbox } from "./index";
-import { FormField } from "../../molecules";
 
 type StoryArgs = React.ComponentProps<typeof Checkbox>;
 
@@ -66,6 +65,7 @@ export const Playground: Story = {
 
 export const CheckedAndUnchecked: Story = {
     name: "Checked/Unchecked/Indeterminate",
+    // eslint-disable-next-line
     render: (_) => (
         <div className="flex flex-col gap-3 items-start">
             <Checkbox checked={true} label="Checkbox" description="This checkbox is checked." />
@@ -77,6 +77,7 @@ export const CheckedAndUnchecked: Story = {
 
 export const States: Story = {
     name: "States",
+    // eslint-disable-next-line
     render: (_) => (
         <div className="flex flex-col gap-3 items-start">
             <Checkbox state="default" label="Checkbox" description="This is a default checkbox." />
@@ -89,6 +90,7 @@ export const States: Story = {
 
 export const DisabledAndReadOnly: Story = {
     name: "Disabled/Read-Only",
+    // eslint-disable-next-line
     render: (_) => (
         <div className="flex flex-col gap-3 items-start">
             <Checkbox disabled={true} label="Checkbox" description="This checkbox is disabled." />
@@ -99,6 +101,7 @@ export const DisabledAndReadOnly: Story = {
 
 export const TextVariations: Story = {
     name: "Text Variations",
+    // eslint-disable-next-line
     render: (_) => (
         <div className="flex flex-col gap-3 items-start">
             <Checkbox label="Checkbox" description="This is a checkbox with a description." />
