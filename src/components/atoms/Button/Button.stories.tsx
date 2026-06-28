@@ -77,147 +77,125 @@ const meta: Meta<StoryArgs> = {
 export default meta;
 type Story = StoryObj<StoryArgs>;
 
-const renderButton = ({ leadingIconOption, trailingIconOption, ...args }: StoryArgs) => (
+const renderButton = ({
+    leadingIconOption,
+    trailingIconOption,
+    ...args
+}: StoryArgs) => (
     <Button
         {...args}
         leadingIcon={leadingIconOption ? iconOptions[leadingIconOption] : undefined}
-        trailingIcon={trailingIconOption ? iconOptions[trailingIconOption] : undefined}
+        trailingIcon={
+            trailingIconOption ? iconOptions[trailingIconOption] : undefined
+        }
     />
 );
 
-export const Default: Story = {
-    name: "Default",
+export const Playground: Story = {
+    name: "Playground",
     render: renderButton,
     args: {
         intent: "default",
         style: "solid",
-        label: "Default",
-        leadingIconOption: undefined,
-        trailingIconOption: undefined,
+        label: "Button",
     },
 };
 
-export const PrimarySolid: Story = {
-    name: "Primary Solid",
-    render: renderButton,
-    args: {
-        intent: "primary",
-        style: "solid",
-        label: "Primary Action",
-        leadingIconOption: undefined,
-        trailingIconOption: undefined,
-    },
+export const IntentAndStyle: Story = {
+    name: "Intent & Style",
+    render: () => (
+        <div className="inline-flex flex-col gap-3">
+            <div className="flex flex-row gap-3">
+                <Button intent="default" style="solid" label="Solid" />
+                <Button intent="default" style="outline" label="Outline" />
+                <Button intent="default" style="dashed" label="Dashed" />
+                <Button intent="default" style="ghost" label="Ghost" />
+            </div>
+            <div className="flex flex-row gap-3">
+                <Button intent="primary" style="solid" label="Solid" />
+                <Button intent="primary" style="outline" label="Outline" />
+                <Button intent="primary" style="dashed" label="Dashed" />
+                <Button intent="primary" style="ghost" label="Ghost" />
+            </div>
+            <div className="flex flex-row gap-3">
+                <Button intent="accent" style="solid" label="Solid" />
+                <Button intent="accent" style="outline" label="Outline" />
+                <Button intent="accent" style="dashed" label="Dashed" />
+                <Button intent="accent" style="ghost" label="Ghost" />
+            </div>
+            <div className="flex flex-row gap-3">
+                <Button intent="danger" style="solid" label="Solid" />
+                <Button intent="danger" style="outline" label="Outline" />
+                <Button intent="danger" style="dashed" label="Dashed" />
+                <Button intent="danger" style="ghost" label="Ghost" />
+            </div>
+        </div>
+    ),
 };
 
-export const AccentOutline: Story = {
-    name: "Accent Outline",
-    render: renderButton,
-    args: {
-        intent: "accent",
-        style: "outline",
-        label: "Accent Outline",
-        leadingIconOption: undefined,
-        trailingIconOption: undefined,
-    },
+export const Sizes: Story = {
+    name: "Sizes",
+    render: (_: any) => (
+        <div className="flex flex-col gap-3 items-start">
+            <Button size="lg" label="Button" />
+            <Button size="md" label="Button" />
+            <Button size="sm" label="Button" />
+        </div>
+    ),
 };
 
-export const DangerGhost: Story = {
-    name: "Danger Ghost",
-    render: renderButton,
-    args: {
-        intent: "danger",
-        style: "ghost",
-        label: "Delete",
-        leadingIconOption: undefined,
-        trailingIconOption: undefined,
-    },
+export const Icons: Story = {
+    name: "Icons",
+    render: (_: any) => (
+        <div className="flex flex-col gap-3 items-start">
+            <Button
+                label="BUTTON"
+                leadingIcon={<Plus />}
+            />
+            <Button
+                label="BUTTON"
+                trailingIcon={<ArrowRight />}
+            />
+            <Button
+                label="BUTTON"
+                leadingIcon={<Download />}
+                trailingIcon={<Check />}
+            />
+            <Button
+                leadingIcon={<Download />}
+            />
+        </div>
+    ),
 };
 
-export const PrimaryDashed: Story = {
-    name: "Primary Dashed",
-    render: renderButton,
-    args: {
-        intent: "primary",
-        style: "dashed",
-        label: "Dashed Action",
-        leadingIconOption: undefined,
-        trailingIconOption: undefined,
-    },
+export const Loading: Story = {
+    name: "Loading",
+    render: (_: any) => (
+        <div className="flex flex-col gap-3 items-start">
+            <Button
+                label="BUTTON"
+                loading
+            />
+            <Button
+                loading
+                leadingIcon={<Download />}
+            />
+        </div>
+    ),
 };
 
-export const LoadingSolid: Story = {
-    name: "Loading / Solid",
-    render: renderButton,
-    args: {
-        intent: "primary",
-        style: "solid",
-        label: "Saving",
-        loading: true,
-        leadingIconOption: "Download",
-        trailingIconOption: "Check",
-    },
-};
-
-export const LoadingOutline: Story = {
-    name: "Loading / Outline",
-    render: renderButton,
-    args: {
-        intent: "accent",
-        style: "outline",
-        label: "Submitting",
-        loading: true,
-        leadingIconOption: "Plus",
-        trailingIconOption: "ArrowRight",
-    },
-};
-
-export const LoadingGhost: Story = {
-    name: "Loading / Ghost",
-    render: renderButton,
-    args: {
-        intent: "danger",
-        style: "ghost",
-        label: "Removing",
-        loading: true,
-        leadingIconOption: undefined,
-        trailingIconOption: "ArrowRight",
-    },
-};
-
-export const IconOnlyLoading: Story = {
-    name: "Loading / Icon Only",
-    render: renderButton,
-    args: {
-        intent: "primary",
-        style: "solid",
-        label: undefined,
-        loading: true,
-        leadingIconOption: "Plus",
-        trailingIconOption: undefined,
-    },
-};
-
-export const WithLeadingIcon: Story = {
-    name: "Extras / With Leading Icon",
-    render: renderButton,
-    args: {
-        intent: "default",
-        style: "solid",
-        label: "Add Item",
-        leadingIconOption: "Plus",
-        trailingIconOption: undefined,
-    },
-};
-
-export const LinkButton: Story = {
-    name: "Extras / Link",
-    render: renderButton,
-    args: {
-        intent: "primary",
-        style: "outline",
-        href: "/",
-        label: "Go Home",
-        leadingIconOption: undefined,
-        trailingIconOption: "ArrowRight",
-    },
+export const Disabled: Story = {
+    name: "Disabled",
+    render: (_: any) => (
+        <div className="flex flex-col gap-3 items-start">
+            <Button
+                label="BUTTON"
+                disabled
+            />
+            <Button
+                disabled
+                leadingIcon={<Download />}
+            />
+        </div>
+    ),
 };
