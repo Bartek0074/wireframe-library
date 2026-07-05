@@ -1,7 +1,7 @@
 import type { ComponentProps, MouseEventHandler, ReactNode } from "react";
 import { cva } from "class-variance-authority";
 import NextLink from "next/link";
-import { cn } from "@/lib/utils";
+import { cx } from "@/lib/utils";
 
 export type LinkSize = "sm" | "md" | "lg";
 export type IconPosition = "left" | "right";
@@ -55,9 +55,9 @@ const Link = ({
     onClick,
     ...props
 }: LinkProps) => {
-    const linkClassName = cn(linkVariants({ size }), className);
+    const linkClassName = cx(linkVariants({ size }), className);
 
-    const iconClassName = cn(
+    const iconClassName = cx(
         "flex shrink-0 items-center justify-center [&_svg]:h-full [&_svg]:w-full",
         iconSizeClasses[size],
     );

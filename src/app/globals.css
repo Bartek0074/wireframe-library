@@ -7,14 +7,6 @@
   --font-body: var(--font-body);
 }
 
-@layer utilities {
-  .text-button-14 {
-    font-size: var(--text-button-14);
-    line-height: var(--text-button-14--line-height);
-    letter-spacing: var(--text-button-14--letter-spacing);
-  }
-}
-
 @theme {
   /* Breakpoints */
   --breakpoint-xxs: 360px;

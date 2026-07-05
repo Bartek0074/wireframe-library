@@ -7,7 +7,7 @@ import type {
 import { Slot } from "@radix-ui/react-slot";
 import { cva } from "class-variance-authority";
 import Link from "next/link";
-import { cn } from "@/lib/utils";
+import { cx } from "@/lib/utils";
 
 export type ButtonIntent = "default" | "primary" | "accent" | "danger";
 export type ButtonVariant = "solid" | "dashed" | "outline" | "ghost";
@@ -162,8 +162,6 @@ const buttonVariants = cva(
     },
 );
 
-console.log(buttonVariants({ size: "md" }))
-
 const iconSizeClasses: Record<ButtonSize, string> = {
     sm: "h-3.5 w-3.5",
     md: "h-4 w-4",
@@ -203,7 +201,10 @@ type LinkButtonProps = BaseButtonProps &
     };
 
 type NativeButtonProps = BaseButtonProps &
-    Omit<ButtonHTMLAttributes<HTMLButtonElement>, "className" | "children" | "style"> & {
+    Omit<
+        ButtonHTMLAttributes<HTMLButtonElement>,
+        "className" | "children" | "style"
+    > & {
         href?: undefined;
         onClick?: MouseEventHandler<HTMLButtonElement>;
     };
@@ -238,27 +239,32 @@ const Button = ({
         console.warn("Icon-only Button requires aria-label for accessibility.");
     }
 
-    const buttonClassName = cn(
+    const buttonClassName = cx(
         buttonVariants({
             intent,
             variant,
             size,
             iconOnly,
         }),
-        isDisabled ? "pointer-events-none cursor-not-allowed opacity-50" : "cursor-pointer",
+        isDisabled
+            ? "pointer-events-none cursor-not-allowed opacity-50"
+            : "cursor-pointer",
         className,
     );
 
     const content = (
         <span
-            className={cn(
+            className={cx(
                 "inline-flex items-center justify-center",
                 hasLabel && icon && "gap-2",
                 loading && "opacity-0",
             )}
         >
             {hasLabel && iconPosition === "left" && icon ? (
-                <span aria-hidden="true" className={cn(iconContainerClassName, iconSizeClasses[size])}>
+                <span
+                    aria-hidden="true"
+                    className={cx(iconContainerClassName, iconSizeClasses[size])}
+                >
                     {icon}
                 </span>
             ) : null}
@@ -266,13 +272,19 @@ const Button = ({
             {hasLabel ? <span>{label}</span> : null}
 
             {hasLabel && iconPosition === "right" && icon ? (
-                <span aria-hidden="true" className={cn(iconContainerClassName, iconSizeClasses[size])}>
+                <span
+                    aria-hidden="true"
+                    className={cx(iconContainerClassName, iconSizeClasses[size])}
+                >
                     {icon}
                 </span>
             ) : null}
 
             {!hasLabel && icon ? (
-                <span aria-hidden="true" className={cn(iconContainerClassName, iconSizeClasses[size])}>
+                <span
+                    aria-hidden="true"
+                    className={cx(iconContainerClassName, iconSizeClasses[size])}
+                >
                     {icon}
                 </span>
             ) : null}
@@ -280,8 +292,11 @@ const Button = ({
     );
 
     const loadingOverlay = loading ? (
-        <span className="absolute inset-0 flex items-center justify-center" aria-hidden="true">
-            <span className={cn(spinnerClassName, iconSizeClasses[size])} />
+        <span
+            className="absolute inset-0 flex items-center justify-center"
+            aria-hidden="true"
+        >
+            <span className={cx(spinnerClassName, iconSizeClasses[size])} />
         </span>
     ) : null;
 

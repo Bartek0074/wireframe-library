@@ -98,7 +98,8 @@ export const Playground: Story = {
 
 export const IntentAndStyle: Story = {
     name: "Intent & Style",
-    render: () => (
+    //eslint-disable-next-line
+    render: (_: any) => (
         <div className="inline-flex flex-col gap-3">
             <div className="flex flex-row gap-3">
                 <Button intent="default" variant="solid" label="Solid" />
@@ -130,7 +131,8 @@ export const IntentAndStyle: Story = {
 
 export const Sizes: Story = {
     name: "Sizes",
-    render: () => (
+    //eslint-disable-next-line
+    render: (_: any) => (
         <div className="flex flex-col items-start gap-3">
             <Button size="lg" label="Button" />
             <Button size="md" label="Button" />
@@ -141,7 +143,8 @@ export const Sizes: Story = {
 
 export const Icons: Story = {
     name: "Icons",
-    render: () => (
+    //eslint-disable-next-line
+    render: (_: any) => (
         <div className="flex flex-col items-start gap-3">
             <Button label="BUTTON" icon={<Plus />} iconPosition="left" />
             <Button label="BUTTON" icon={<ArrowRight />} iconPosition="right" />
@@ -153,7 +156,8 @@ export const Icons: Story = {
 
 export const Loading: Story = {
     name: "Loading",
-    render: () => (
+    //eslint-disable-next-line
+    render: (_: any) => (
         <div className="flex flex-col items-start gap-3">
             <Button label="BUTTON" loading />
             <Button loading icon={<Download />} aria-label="Downloading" />
@@ -163,7 +167,8 @@ export const Loading: Story = {
 
 export const Disabled: Story = {
     name: "Disabled",
-    render: () => (
+    //eslint-disable-next-line
+    render: (_: any) => (
         <div className="flex flex-col items-start gap-3">
             <Button label="BUTTON" disabled />
             <Button disabled icon={<Download />} aria-label="Download disabled" />
@@ -173,7 +178,8 @@ export const Disabled: Story = {
 
 export const UsageExample: Story = {
     name: "Usage Example",
-    render: () => (
+    //eslint-disable-next-line
+    render: (_: any) => (
         <div className="inline-flex max-w-xl flex-col items-start gap-4">
             <Typography.P2>
                 Ready to publish your release notes?

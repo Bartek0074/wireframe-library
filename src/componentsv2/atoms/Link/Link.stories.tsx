@@ -79,7 +79,8 @@ export const Playground: Story = {
 
 export const Sizes: Story = {
     name: "Sizes",
-    render: () => (
+    //eslint-disable-next-line
+    render: (_: any) => (
         <div className="flex flex-col items-start gap-3">
             <Link size="lg" label="Link" href="/" />
             <Link size="md" label="Link" href="/" />
@@ -90,7 +91,8 @@ export const Sizes: Story = {
 
 export const Icons: Story = {
     name: "Icons",
-    render: () => (
+    //eslint-disable-next-line
+    render: (_: any) => (
         <div className="flex flex-col items-start gap-3">
             <Link href="/" label="Dashboard" icon={<Home />} />
             <Link href="/" label="Read more" icon={<ArrowRight />} iconPosition="right" />
@@ -102,7 +104,8 @@ export const Icons: Story = {
 
 export const UsageExample: Story = {
     name: "Usage Example",
-    render: () => (
+    //eslint-disable-next-line
+    render: (_: any) => (
         <Typography.P2>
             For more information, visit our{" "}
             <Link href="/" label="documentation" />.
