@@ -3,6 +3,7 @@
 import { useState } from "react";
 
 import { Select } from "@/components/atoms/Select";
+import {Button} from "@/componentsv2/atoms/Button";
 
 export default function Home() {
 
@@ -15,12 +16,23 @@ export default function Home() {
   ];
   return (
     <div>
+      <p className="text-button-14">hej</p>
       <Select
         multiple
         options={options}
         value={selectedValues}
         onChange={(value) => setSelectedValues(value)}
         placeholder="Select an option"
+      />
+      <Button
+        label="Click me"
+        size="md"
+        intent="primary"
+      />
+      <Button
+        label="Click me"
+        size="lg"
+        intent="primary"
       />
 
       Main Page

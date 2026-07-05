@@ -31,9 +31,9 @@ const buttonVariants = cva(
                 ghost: "",
             },
             size: {
-                sm: "h-8 px-3 text-sm",
-                md: "h-10 px-4 text-base",
-                lg: "h-12 px-5 text-lg",
+                sm: "h-8 px-3 text-button-12",
+                md: "h-10 px-4 text-button-14",
+                lg: "h-12 px-5 text-button-16",
             },
             iconOnly: {
                 true: "",
@@ -161,6 +161,8 @@ const buttonVariants = cva(
         },
     },
 );
+
+console.log(buttonVariants({ size: "md" }))
 
 const iconSizeClasses: Record<ButtonSize, string> = {
     sm: "h-3.5 w-3.5",
