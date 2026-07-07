@@ -18,7 +18,7 @@ import {
 import '@/app/storybook.css'
 
 const meta: Meta<typeof Drawer> = {
-    title: 'Molecules/Drawer',
+    title: 'Components/Molecules/Drawer',
     component: Drawer,
     tags: ['autodocs'],
     parameters: {

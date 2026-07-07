@@ -31,7 +31,9 @@ export default function RootLayout({
       lang="en"
       className={cn("h-full", "antialiased", inter.variable, geist.variable)}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        {children}
+      </body>
     </html>
   );
 }

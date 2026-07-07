@@ -11,7 +11,7 @@ type StoryArgs = React.ComponentProps<typeof DropdownTrigger> & {
 }
 
 const meta: Meta<StoryArgs> = {
-    title: 'Molecules/Dropdown',
+    title: 'Components/Molecules/Dropdown',
     component: DropdownTrigger,
     tags: ['autodocs'],
     argTypes: {

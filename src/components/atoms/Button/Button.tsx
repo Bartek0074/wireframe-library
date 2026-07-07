@@ -29,9 +29,14 @@ const buttonVariants = cva(
         },
         compoundVariants: [
             {
+                variant: "default",
+                active: true,
+                class: "bg-accent/40 font-bold text-foreground",
+            },
+            {
                 variant: "link",
                 active: true,
-                class: "font-semibold text-brand",
+                class: "font-bold",
             },
         ],
 
