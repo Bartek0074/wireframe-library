@@ -1,58 +1,54 @@
-import type { Meta, StoryObj } from "@storybook/nextjs-vite";
-import { ArrowRight, Check, Download, Plus } from "feather-icons-react";
-import { Button } from "./index";
-import { Typography } from "@/components/atoms/Typography";
+import type { Meta, StoryObj } from '@storybook/nextjs-vite'
+import { ArrowRight, Check, Download, Plus } from 'lucide-react'
+import { Button } from './Button'
+import '@/app/storybook.css'
 
 const iconOptions = {
+    none: null,
     Plus: <Plus />,
     Check: <Check />,
     Download: <Download />,
     ArrowRight: <ArrowRight />,
-} as const;
+} as const
 
-type IconOption = keyof typeof iconOptions;
+type IconOption = keyof typeof iconOptions
 
-type StoryArgs = React.ComponentProps<typeof Button> & {
-    iconOption?: IconOption;
-};
+type StoryArgs = Omit<React.ComponentProps<typeof Button>, 'children'> & {
+    label: string
+    iconOption: IconOption
+    iconPosition: 'left' | 'right'
+}
 
 const meta: Meta<StoryArgs> = {
-    title: "ComponentsV2/Atoms/Button",
+    title: 'ComponentsV2/Atoms/Button',
     component: Button,
-    tags: ["autodocs"],
+    tags: ['autodocs'],
     argTypes: {
-        intent: {
-            control: "inline-radio",
-            options: ["default", "primary", "accent", "danger"],
-        },
         variant: {
-            control: "inline-radio",
-            options: ["solid", "dashed", "outline", "ghost"],
+            control: 'inline-radio',
+            options: ['default', 'secondary', 'brand', 'ghost', 'destructive', 'link'],
         },
         size: {
-            control: "inline-radio",
-            options: ["sm", "md", "lg"],
+            control: 'inline-radio',
+            options: ['default', 'sm', 'lg', 'icon'],
+        },
+        active: {
+            control: 'boolean',
         },
         label: {
-            control: "text",
-        },
-        href: {
-            control: "text",
-        },
-        loading: {
-            control: "boolean",
+            control: 'text',
         },
         disabled: {
-            control: "boolean",
+            control: 'boolean',
         },
         iconPosition: {
-            control: "inline-radio",
-            options: ["left", "right"],
+            control: 'inline-radio',
+            options: ['left', 'right'],
         },
         iconOption: {
-            control: "select",
-            options: [undefined, ...Object.keys(iconOptions)],
-            name: "icon",
+            control: 'select',
+            options: Object.keys(iconOptions),
+            name: 'icon',
         },
         asChild: {
             table: {
@@ -60,141 +56,108 @@ const meta: Meta<StoryArgs> = {
             },
         },
         onClick: {
-            action: "clicked",
+            action: 'clicked',
             table: {
                 disable: true,
             },
         },
     },
     args: {
-        label: "Button",
-        intent: "default",
-        variant: "solid",
-        size: "md",
-        loading: false,
+        label: 'Button',
+        variant: 'default',
+        size: 'default',
         disabled: false,
-        iconPosition: "left",
-        iconOption: undefined,
+        iconPosition: 'left',
+        iconOption: 'none',
     },
-};
+}
 
-export default meta;
-type Story = StoryObj<StoryArgs>;
+export default meta
 
-const renderButton = ({
-    iconOption,
-    ...args
-}: StoryArgs) => <Button {...args} icon={iconOption ? iconOptions[iconOption] : undefined} />;
+type Story = StoryObj<StoryArgs>
+
+function renderButton({ iconOption, iconPosition, label, size, ...args }: StoryArgs) {
+    const icon = iconOptions[iconOption]
+    const isIconOnly = size === 'icon'
+
+    return (
+        <Button size={size} {...args}>
+            {isIconOnly ? (
+                icon ?? <Plus />
+            ) : (
+                <>
+                    {iconPosition === 'left' ? icon : null}
+                    {label && <span>{label}</span>}
+                    {iconPosition === 'right' ? icon : null}
+                </>
+            )}
+        </Button>
+    )
+}
 
 export const Playground: Story = {
-    name: "Playground",
     render: renderButton,
-    args: {
-        intent: "default",
-        variant: "solid",
-        label: "Button",
-    },
-};
+}
 
-export const IntentAndStyle: Story = {
-    name: "Intent & Style",
-    //eslint-disable-next-line
-    render: (_: any) => (
-        <div className="inline-flex flex-col gap-3">
-            <div className="flex flex-row gap-3">
-                <Button intent="default" variant="solid" label="Solid" />
-                <Button intent="default" variant="outline" label="Outline" />
-                <Button intent="default" variant="dashed" label="Dashed" />
-                <Button intent="default" variant="ghost" label="Ghost" />
-            </div>
-            <div className="flex flex-row gap-3">
-                <Button intent="primary" variant="solid" label="Solid" />
-                <Button intent="primary" variant="outline" label="Outline" />
-                <Button intent="primary" variant="dashed" label="Dashed" />
-                <Button intent="primary" variant="ghost" label="Ghost" />
-            </div>
-            <div className="flex flex-row gap-3">
-                <Button intent="accent" variant="solid" label="Solid" />
-                <Button intent="accent" variant="outline" label="Outline" />
-                <Button intent="accent" variant="dashed" label="Dashed" />
-                <Button intent="accent" variant="ghost" label="Ghost" />
-            </div>
-            <div className="flex flex-row gap-3">
-                <Button intent="danger" variant="solid" label="Solid" />
-                <Button intent="danger" variant="outline" label="Outline" />
-                <Button intent="danger" variant="dashed" label="Dashed" />
-                <Button intent="danger" variant="ghost" label="Ghost" />
-            </div>
+export const Variants: Story = {
+    render: (_) => (
+        <div className="flex flex-col gap-3 items-start">
+            <Button variant="default">Default</Button>
+            <Button variant="secondary">Secondary</Button>
+            <Button variant="brand">Brand</Button>
+            <Button variant="ghost">Ghost</Button>
+            <Button variant="destructive">Destructive</Button>
+            <Button variant="link">Link</Button>
         </div>
     ),
-};
+}
 
 export const Sizes: Story = {
-    name: "Sizes",
-    //eslint-disable-next-line
-    render: (_: any) => (
-        <div className="flex flex-col items-start gap-3">
-            <Button size="lg" label="Button" />
-            <Button size="md" label="Button" />
-            <Button size="sm" label="Button" />
+    render: () => (
+        <div className="flex flex-col gap-3 items-start">
+            <Button size="lg">Large</Button>
+            <Button size="default">Default</Button>
+            <Button size="sm">Small</Button>
+            <Button size="icon" aria-label="Add item">
+                <Plus />
+            </Button>
         </div>
     ),
-};
+}
 
-export const Icons: Story = {
-    name: "Icons",
-    //eslint-disable-next-line
-    render: (_: any) => (
+export const WithIcons: Story = {
+    render: () => (
         <div className="flex flex-col items-start gap-3">
-            <Button label="BUTTON" icon={<Plus />} iconPosition="left" />
-            <Button label="BUTTON" icon={<ArrowRight />} iconPosition="right" />
-            <Button label="BUTTON" icon={<Download />} iconPosition="left" />
-            <Button icon={<Download />} aria-label="Download" />
+            <Button>
+                <Plus />
+                <span>Create new</span>
+            </Button>
+            <Button variant="secondary">
+                <span>Download report</span>
+                <Download />
+            </Button>
+            <Button size="icon" variant="secondary" aria-label="Confirm action">
+                <Check />
+            </Button>
         </div>
     ),
-};
-
-export const Loading: Story = {
-    name: "Loading",
-    //eslint-disable-next-line
-    render: (_: any) => (
-        <div className="flex flex-col items-start gap-3">
-            <Button label="BUTTON" loading />
-            <Button loading icon={<Download />} aria-label="Downloading" />
-        </div>
-    ),
-};
+}
 
 export const Disabled: Story = {
-    name: "Disabled",
-    //eslint-disable-next-line
-    render: (_: any) => (
+    render: (_) => (
         <div className="flex flex-col items-start gap-3">
-            <Button label="BUTTON" disabled />
-            <Button disabled icon={<Download />} aria-label="Download disabled" />
+            <Button disabled>Disabled button</Button>
         </div>
     ),
-};
+}
 
-export const UsageExample: Story = {
-    name: "Usage Example",
-    //eslint-disable-next-line
-    render: (_: any) => (
-        <div className="inline-flex max-w-xl flex-col items-start gap-4">
-            <Typography.P2>
-                Ready to publish your release notes?
-            </Typography.P2>
-
-            <div className="inline-flex gap-3">
-                <Button intent="default" variant="outline" label="Save Draft" />
-                <Button
-                    intent="primary"
-                    variant="solid"
-                    label="Publish"
-                    icon={<ArrowRight />}
-                    iconPosition="right"
-                />
-            </div>
-        </div>
+export const AsLink: Story = {
+    render: (_) => (
+        <Button asChild variant="link">
+            <a href="#">
+                Learn more
+                <ArrowRight />
+            </a>
+        </Button>
     ),
-};
+}
