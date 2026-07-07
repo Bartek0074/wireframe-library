@@ -1,223 +1,163 @@
-import type { Meta, StoryObj } from "@storybook/nextjs-vite";
-import { ArrowRight, Check, Download, Plus } from "feather-icons-react";
-import { Button } from "./index";
-import { Typography } from "../Typography";
+import type { Meta, StoryObj } from '@storybook/nextjs-vite'
+import { ArrowRight, Check, Download, Plus } from 'lucide-react'
+import { Button } from './Button'
+import '@/app/storybook.css'
 
 const iconOptions = {
+    none: null,
     Plus: <Plus />,
     Check: <Check />,
     Download: <Download />,
     ArrowRight: <ArrowRight />,
-} as const;
+} as const
 
-type IconOption = keyof typeof iconOptions;
+type IconOption = keyof typeof iconOptions
 
-type StoryArgs = React.ComponentProps<typeof Button> & {
-    leadingIconOption?: IconOption;
-    trailingIconOption?: IconOption;
-};
+type StoryArgs = Omit<React.ComponentProps<typeof Button>, 'children'> & {
+    label: string
+    iconOption: IconOption
+    iconPosition: 'left' | 'right'
+}
 
 const meta: Meta<StoryArgs> = {
-    title: "Components/Atoms/Button",
+    title: 'Components/Atoms/Button',
     component: Button,
-    tags: ["autodocs"],
+    tags: ['autodocs'],
     argTypes: {
-        intent: {
-            control: "inline-radio",
-            options: ["default", "primary", "accent", "danger"],
-        },
-        style: {
-            control: "inline-radio",
-            options: ["solid", "dashed", "outline", "ghost"],
+        variant: {
+            control: 'inline-radio',
+            options: ['default', 'secondary', 'brand', 'ghost', 'destructive', 'link'],
         },
         size: {
-            control: "inline-radio",
-            options: ["sm", "md", "lg"],
+            control: 'inline-radio',
+            options: ['default', 'sm', 'lg', 'icon'],
+        },
+        active: {
+            control: 'boolean',
         },
         label: {
-            control: "text",
-        },
-        href: {
-            control: "text",
-        },
-        loading: {
-            control: "boolean",
+            control: 'text',
         },
         disabled: {
-            control: "boolean",
+            control: 'boolean',
         },
-        leadingIconOption: {
-            control: "select",
-            options: [undefined, ...Object.keys(iconOptions)],
-            name: "leadingIcon",
+        iconPosition: {
+            control: 'inline-radio',
+            options: ['left', 'right'],
         },
-        trailingIconOption: {
-            control: "select",
-            options: [undefined, ...Object.keys(iconOptions)],
-            name: "trailingIcon",
+        iconOption: {
+            control: 'select',
+            options: Object.keys(iconOptions),
+            name: 'icon',
+        },
+        asChild: {
+            table: {
+                disable: true,
+            },
         },
         onClick: {
-            action: "clicked",
+            action: 'clicked',
             table: {
                 disable: true,
             },
         },
     },
     args: {
-        label: "Button",
-        intent: "default",
-        style: "solid",
-        size: "md",
-        loading: false,
+        label: 'Button',
+        variant: 'default',
+        size: 'default',
         disabled: false,
-        leadingIconOption: undefined,
-        trailingIconOption: undefined,
+        iconPosition: 'left',
+        iconOption: 'none',
     },
-};
+}
 
-export default meta;
-type Story = StoryObj<StoryArgs>;
+export default meta
 
-const renderButton = ({
-    leadingIconOption,
-    trailingIconOption,
-    ...args
-}: StoryArgs) => (
-    <Button
-        {...args}
-        leadingIcon={leadingIconOption ? iconOptions[leadingIconOption] : undefined}
-        trailingIcon={
-            trailingIconOption ? iconOptions[trailingIconOption] : undefined
-        }
-    />
-);
+type Story = StoryObj<StoryArgs>
+
+function renderButton({ iconOption, iconPosition, label, size, ...args }: StoryArgs) {
+    const icon = iconOptions[iconOption]
+    const isIconOnly = size === 'icon'
+
+    return (
+        <Button size={size} {...args}>
+            {isIconOnly ? (
+                icon ?? <Plus />
+            ) : (
+                <>
+                    {iconPosition === 'left' ? icon : null}
+                    {label && <span>{label}</span>}
+                    {iconPosition === 'right' ? icon : null}
+                </>
+            )}
+        </Button>
+    )
+}
 
 export const Playground: Story = {
-    name: "Playground",
     render: renderButton,
-    args: {
-        intent: "default",
-        style: "solid",
-        label: "Button",
-    },
-};
+}
 
-export const IntentAndStyle: Story = {
-    name: "Intent & Style",
-    render: () => (
-        <div className="inline-flex flex-col gap-3">
-            <div className="flex flex-row gap-3">
-                <Button intent="default" style="solid" label="Solid" />
-                <Button intent="default" style="outline" label="Outline" />
-                <Button intent="default" style="dashed" label="Dashed" />
-                <Button intent="default" style="ghost" label="Ghost" />
-            </div>
-            <div className="flex flex-row gap-3">
-                <Button intent="primary" style="solid" label="Solid" />
-                <Button intent="primary" style="outline" label="Outline" />
-                <Button intent="primary" style="dashed" label="Dashed" />
-                <Button intent="primary" style="ghost" label="Ghost" />
-            </div>
-            <div className="flex flex-row gap-3">
-                <Button intent="accent" style="solid" label="Solid" />
-                <Button intent="accent" style="outline" label="Outline" />
-                <Button intent="accent" style="dashed" label="Dashed" />
-                <Button intent="accent" style="ghost" label="Ghost" />
-            </div>
-            <div className="flex flex-row gap-3">
-                <Button intent="danger" style="solid" label="Solid" />
-                <Button intent="danger" style="outline" label="Outline" />
-                <Button intent="danger" style="dashed" label="Dashed" />
-                <Button intent="danger" style="ghost" label="Ghost" />
-            </div>
+export const Variants: Story = {
+    render: (_) => (
+        <div className="flex flex-col gap-3 items-start">
+            <Button variant="default">Default</Button>
+            <Button variant="secondary">Secondary</Button>
+            <Button variant="brand">Brand</Button>
+            <Button variant="ghost">Ghost</Button>
+            <Button variant="destructive">Destructive</Button>
+            <Button variant="link">Link</Button>
         </div>
     ),
-};
+}
 
 export const Sizes: Story = {
-    name: "Sizes",
-    // eslint-disable-next-line
-    render: (_: any) => (
+    render: (_) => (
         <div className="flex flex-col gap-3 items-start">
-            <Button size="lg" label="Button" />
-            <Button size="md" label="Button" />
-            <Button size="sm" label="Button" />
+            <Button size="lg">Large</Button>
+            <Button size="default">Default</Button>
+            <Button size="sm">Small</Button>
+            <Button size="icon" aria-label="Add item">
+                <Plus />
+            </Button>
         </div>
     ),
-};
+}
 
-export const Icons: Story = {
-    name: "Icons",
-    // eslint-disable-next-line
-    render: (_: any) => (
-        <div className="flex flex-col gap-3 items-start">
-            <Button
-                label="BUTTON"
-                leadingIcon={<Plus />}
-            />
-            <Button
-                label="BUTTON"
-                trailingIcon={<ArrowRight />}
-            />
-            <Button
-                label="BUTTON"
-                leadingIcon={<Download />}
-                trailingIcon={<Check />}
-            />
-            <Button
-                leadingIcon={<Download />}
-            />
+export const WithIcons: Story = {
+    render: (_) => (
+        <div className="flex flex-col items-start gap-3">
+            <Button>
+                <Plus />
+                <span>Create new</span>
+            </Button>
+            <Button variant="secondary">
+                <span>Download report</span>
+                <Download />
+            </Button>
+            <Button size="icon" variant="secondary" aria-label="Confirm action">
+                <Check />
+            </Button>
         </div>
     ),
-};
-
-export const Loading: Story = {
-    name: "Loading",
-    // eslint-disable-next-line
-    render: (_: any) => (
-        <div className="flex flex-col gap-3 items-start">
-            <Button
-                label="BUTTON"
-                loading
-            />
-            <Button
-                loading
-                leadingIcon={<Download />}
-            />
-        </div>
-    ),
-};
+}
 
 export const Disabled: Story = {
-    name: "Disabled",
-    // eslint-disable-next-line
-    render: (_: any) => (
-        <div className="flex flex-col gap-3 items-start">
-            <Button
-                label="BUTTON"
-                disabled
-            />
-            <Button
-                disabled
-                leadingIcon={<Download />}
-            />
+    render: (_) => (
+        <div className="flex flex-col items-start gap-3">
+            <Button disabled>Disabled button</Button>
         </div>
     ),
-};
+}
 
-export const UsageExample: Story = {
-    name: "Usage Example",
-    // eslint-disable-next-line
-    render: (_: any) => (
-        <div className="inline-flex flex-col gap-4 items-start max-w-xl">
-            <Typography.P2>
-                Ready to publish your release notes?
-            </Typography.P2>
-
-            <div className="inline-flex gap-3">
-                <Button intent="default" style="outline" label="Save Draft" />
-                <Button intent="primary" style="solid" label="Publish" trailingIcon={<ArrowRight />} />
-            </div>
-        </div>
+export const AsLink: Story = {
+    render: (_) => (
+        <Button asChild variant="link">
+            <a href="#">
+                Learn more
+                <ArrowRight />
+            </a>
+        </Button>
     ),
-};
+}
