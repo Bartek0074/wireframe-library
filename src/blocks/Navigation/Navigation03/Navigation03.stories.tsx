@@ -3,7 +3,7 @@ import { Navigation03 } from './Navigation03'
 import '@/app/storybook.css'
 
 const meta: Meta<typeof Navigation03> = {
-    title: 'Blocks/Navigation 03 (Centered)',
+    title: 'Blocks/Navigation/Centered',
     component: Navigation03,
     tags: ['autodocs'],
     parameters: {
