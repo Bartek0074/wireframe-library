@@ -3,6 +3,7 @@ import { Geist } from "next/font/google";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
+import { Navigation03 } from "@/blocks/Navigation/Navigation03/Navigation03";
 
 const geist = Geist({
   subsets: ['latin'],
@@ -32,6 +33,7 @@ export default function RootLayout({
       className={cn("h-full", "antialiased", inter.variable, geist.variable)}
     >
       <body className="min-h-full flex flex-col">
+        <Navigation03 />
         {children}
       </body>
     </html>

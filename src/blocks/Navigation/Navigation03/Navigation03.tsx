@@ -16,9 +16,13 @@ import {
 
 import { Menu, X } from "lucide-react";
 
-const links = [
+
+const leftLinks = [
     { href: "/link_1", label: "Link 1" },
     { href: "/link_2", label: "Link 2" },
+];
+
+const rightLinks = [
     { href: "/link_3", label: "Link 3" },
     { href: "/link_4", label: "Link 4" },
 ];
@@ -33,6 +37,7 @@ const LogoLink = () => {
         </Link>
     );
 };
+
 const MobileDrawer = ({ pathname }: { pathname: string }) => {
     return <Drawer direction="right">
         <DrawerTrigger asChild>
@@ -50,7 +55,7 @@ const MobileDrawer = ({ pathname }: { pathname: string }) => {
                 </Button>
             </DrawerHeader>
             <div className="flex flex-col gap-2 p-4 md:px-5">
-                {links.map((link) => {
+                {[...leftLinks, ...rightLinks].map((link) => {
                     return (
                         <Button key={link.href} variant="default" active={pathname === link.href} asChild>
                             <Link href={link.href}>{link.label}</Link>
@@ -62,29 +67,41 @@ const MobileDrawer = ({ pathname }: { pathname: string }) => {
     </Drawer>
 }
 
-const Navigation01 = () => {
+const Navigation03 = () => {
     const pathname = usePathname();
 
     return (
         <nav className="flex items-center justify-center p-4 border-b border-border">
             <div className="flex items-center justify-between gap-4 flex-1 max-w-7xl">
-                <div>
-                    <LogoLink />
+                <div className="flex-1">
+                    <div className="hidden md:flex items-center justify-end gap-4">
+                        {leftLinks.map((link) => (
+                            <Button
+                                key={link.href}
+                                variant={"link"}
+                                active={pathname === link.href}
+                                asChild
+                            >
+                                <Link href={link.href}>{link.label}</Link>
+                            </Button>
+                        ))}
+                    </div>
                 </div>
-                <div className="hidden md:flex items-center gap-4">
-                    {links.map((link) => (
-                        <Button
-                            key={link.href}
-                            variant={"link"}
-                            active={pathname === link.href}
-                            asChild
-                        >
-                            <Link href={link.href}>{link.label}</Link>
-                        </Button>
-                    ))}
-                </div>
-                <div>
-                    <div className="md:hidden">
+                <div><LogoLink /></div>
+                <div className="flex-1">
+                    <div className="hidden md:flex items-center justify-start gap-4">
+                        {rightLinks.map((link) => (
+                            <Button
+                                key={link.href}
+                                variant={"link"}
+                                active={pathname === link.href}
+                                asChild
+                            >
+                                <Link href={link.href}>{link.label}</Link>
+                            </Button>
+                        ))}
+                    </div>
+                    <div className="flex justify-end md:hidden">
                         <MobileDrawer pathname={pathname} />
                     </div>
                 </div>
@@ -93,4 +110,4 @@ const Navigation01 = () => {
     );
 };
 
-export { Navigation01 };
+export { Navigation03 };
