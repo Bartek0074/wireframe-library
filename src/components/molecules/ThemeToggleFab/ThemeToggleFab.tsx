@@ -23,8 +23,8 @@ export function ThemeToggleFab() {
             aria-label="Toggle dark/light mode"
             title="Toggle dark/light mode"
         >
-            <Sun className="size-5 dark:hidden" aria-hidden="true" />
-            <Moon className="hidden size-5 dark:block" aria-hidden="true" />
+            <Moon className="size-5 dark:hidden" aria-hidden="true" />
+            <Sun className="hidden size-5 dark:block" aria-hidden="true" />
         </Button>
     );
 }
