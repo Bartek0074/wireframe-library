@@ -3,8 +3,9 @@ import { Geist } from "next/font/google";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
-import { Navigation04 } from "@/blocks/Navigation/Navigation04/Navigation04";
 import { ThemeToggleFab } from "@/components/molecules/ThemeToggleFab/ThemeToggleFab";
+import { Navigation04 } from "@/blocks/Navigation/Navigation04/Navigation04";
+import { Footer01 } from "@/blocks/Footer/Footer01/Footer01";
 
 const geist = Geist({
   subsets: ['latin'],
@@ -47,7 +48,10 @@ export default function RootLayout({
       </head>
       <body className="min-h-full flex flex-col">
         <Navigation04 />
-        {children}
+        <main className="flex-1">
+          {children}
+        </main>
+        <Footer01 />
         <ThemeToggleFab />
       </body>
     </html>
