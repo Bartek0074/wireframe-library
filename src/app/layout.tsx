@@ -6,7 +6,6 @@ import { cn } from "@/lib/utils";
 import { ThemeToggleFab } from "@/components/molecules/ThemeToggleFab/ThemeToggleFab";
 import { Navigation04 } from "@/blocks/Navigation/Navigation04/Navigation04";
 import { Footer10 } from "@/blocks/Footer/Footer10/Footer10";
-import {PlaceholderImage} from "@/components/atoms/PlaceholderImage/PlaceholderImage";
 
 const geist = Geist({
   subsets: ['latin'],
@@ -50,7 +49,6 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col">
         <Navigation04 />
         <main className="flex-1">
-          <PlaceholderImage/>
           {children}
         </main>
         <Footer10 />
