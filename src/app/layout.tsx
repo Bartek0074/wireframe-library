@@ -5,7 +5,7 @@ import "./globals.css";
 import { cn } from "@/lib/utils";
 import { ThemeToggleFab } from "@/components/molecules/ThemeToggleFab/ThemeToggleFab";
 import { Navigation04 } from "@/blocks/Navigation/Navigation04/Navigation04";
-import { Footer04 } from "@/blocks/Footer/Footer04/Footer04";
+import { Footer05 } from "@/blocks/Footer/Footer05/Footer05";
 
 const geist = Geist({
   subsets: ['latin'],
@@ -51,7 +51,7 @@ export default function RootLayout({
         <main className="flex-1">
           {children}
         </main>
-        <Footer04 />
+        <Footer05 />
         <ThemeToggleFab />
       </body>
     </html>
