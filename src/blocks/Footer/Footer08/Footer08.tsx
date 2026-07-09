@@ -5,7 +5,7 @@ import Link from "next/link";
 import { Button } from "@/components/atoms/Button";
 import { Label } from "@/components/atoms/Label";
 import { Input } from "@/components/atoms/Input";
-import { Logo } from "@/components/atoms/Logo";
+import { LogoLink } from "@/components/molecules/LogoLink/LogoLink";
 
 const links = [
     { href: "/overview", label: "Overview" },
@@ -22,16 +22,6 @@ const secondaryLinks = [
     { href: "/cookies", label: "Cookies" },
 ];
 
-const LogoLink = () => {
-    return (
-        <Link href="/">
-            <Logo
-                variant="wideNeutral"
-                className="hover:border-brand/60 hover:text-brand transition-colors cursor-pointer"
-            />
-        </Link>
-    );
-};
 
 const Footer08 = () => {
     return (
@@ -39,7 +29,7 @@ const Footer08 = () => {
             <div className="flex flex-col flex-1 max-w-7xl">
                 <div className="flex flex-col justify-between lg:items-center gap-x-8 gap-y-12 lg:flex-row">
                     <div className="flex flex-col gap-6 md:items-start">
-                        <LogoLink />
+                        <LogoLink href="/" />
                         <div className="grid grid-cols-2 gap-x-8 gap-y-3 sm:grid-cols-[repeat(6,max-content)]">
                             {links.map((link) => (
                                 <Button

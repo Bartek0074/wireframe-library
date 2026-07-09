@@ -4,8 +4,8 @@ import { usePathname } from "next/navigation";
 
 import Link from "next/link";
 
-import { Logo } from "@/components/atoms/Logo";
 import { Button } from "@/components/atoms/Button";
+import { LogoLink } from "@/components/molecules/LogoLink/LogoLink";
 import {
     Drawer,
     DrawerTrigger,
@@ -27,17 +27,6 @@ const rightLinks = [
     { href: "/contact", label: "Contact" },
 ];
 
-const LogoLink = () => {
-    return (
-        <Link href="/">
-            <Logo
-                variant="wideNeutral"
-                className="hover:border-brand/60 hover:text-brand transition-colors cursor-pointer"
-            />
-        </Link>
-    );
-};
-
 const MobileDrawer = ({ pathname }: { pathname: string }) => {
     return <Drawer direction="right">
         <DrawerTrigger asChild>
@@ -47,7 +36,7 @@ const MobileDrawer = ({ pathname }: { pathname: string }) => {
         </DrawerTrigger>
         <DrawerContent>
             <DrawerHeader className="flex flex-row items-baseline justify-between gap-4">
-                <LogoLink />
+                <LogoLink href="/" />
                 <Button size="icon" aria-label="Close navigation" asChild>
                     <DrawerClose>
                         <X />
@@ -87,7 +76,9 @@ const Navigation03 = () => {
                         ))}
                     </div>
                 </div>
-                <div><LogoLink /></div>
+                <div>
+                    <LogoLink href="/" />
+                </div>
                 <div className="flex-1">
                     <div className="hidden md:flex items-center justify-start gap-12">
                         {rightLinks.map((link) => (

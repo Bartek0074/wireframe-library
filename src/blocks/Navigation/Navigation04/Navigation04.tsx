@@ -4,8 +4,8 @@ import { usePathname } from "next/navigation";
 
 import Link from "next/link";
 
-import { Logo } from "@/components/atoms/Logo";
 import { Button } from "@/components/atoms/Button";
+import { LogoLink } from "@/components/molecules/LogoLink/LogoLink";
 import { Dropdown, DropdownTrigger, DropdownContent, DropdownItem } from "@/components/molecules/Dropdown";
 import {
     Drawer,
@@ -35,16 +35,6 @@ const links = [
     { href: "/contact", label: "Contact", type: "single" },
 ];
 
-const LogoLink = () => {
-    return (
-        <Link href="/">
-            <Logo
-                variant="wideNeutral"
-                className="hover:border-brand/60 hover:text-brand transition-colors cursor-pointer"
-            />
-        </Link>
-    );
-};
 const MobileDrawer = ({ pathname }: { pathname: string }) => {
     return <Drawer direction="right">
         <DrawerTrigger asChild>
@@ -54,7 +44,7 @@ const MobileDrawer = ({ pathname }: { pathname: string }) => {
         </DrawerTrigger>
         <DrawerContent>
             <DrawerHeader className="flex flex-row items-baseline justify-between gap-4">
-                <LogoLink />
+                <LogoLink href="/" />
                 <Button size="icon" aria-label="Close navigation" asChild>
                     <DrawerClose>
                         <X />
@@ -99,7 +89,7 @@ const Navigation04 = () => {
         <nav className="flex items-center justify-center p-4 border-b border-border">
             <div className="flex items-center justify-between gap-12 flex-1 max-w-7xl">
                 <div>
-                    <LogoLink />
+                    <LogoLink href="/" />
                 </div>
                 <div className="hidden md:flex items-center gap-12">
                     {links.map((link) => {

@@ -3,7 +3,7 @@
 import Link from "next/link";
 
 import { Button } from "@/components/atoms/Button";
-import { Logo } from "@/components/atoms/Logo";
+import { LogoLink } from "@/components/molecules/LogoLink/LogoLink";
 
 const links = [
     { href: "/overview", label: "Overview" },
@@ -20,16 +20,6 @@ const secondaryLinks = [
     { href: "/cookies", label: "Cookies" },
 ];
 
-const LogoLink = () => {
-    return (
-        <Link href="/">
-            <Logo
-                variant="wideNeutral"
-                className="hover:border-brand/60 hover:text-brand transition-colors cursor-pointer"
-            />
-        </Link>
-    );
-};
 
 const Footer06 = () => {
     return (
@@ -37,7 +27,7 @@ const Footer06 = () => {
             <div className="flex flex-col flex-1 max-w-7xl">
                 <div className="flex flex-col gap-8 md:items-center">
                     <div>
-                        <LogoLink />
+                        <LogoLink href="/" />
                     </div>
                     <div className="grid grid-cols-2 gap-x-8 gap-y-3 sm:grid-cols-[repeat(6,max-content)]">
                         {links.map((link) => (

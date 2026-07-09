@@ -4,7 +4,7 @@ import Link from "next/link";
 
 import { Button } from "@/components/atoms/Button";
 import { Input } from "@/components/atoms/Input";
-import { Logo } from "@/components/atoms/Logo";
+import { LogoLink } from "@/components/molecules/LogoLink/LogoLink";
 
 const links = [
     { href: "/overview", label: "Overview" },
@@ -15,30 +15,13 @@ const links = [
     { href: "/contact", label: "Contact" },
 ];
 
-const secondaryLinks = [
-    { href: "/terms", label: "Terms" },
-    { href: "/privacy", label: "Privacy" },
-    { href: "/cookies", label: "Cookies" },
-];
-
-const LogoLink = () => {
-    return (
-        <Link href="/">
-            <Logo
-                variant="wideNeutral"
-                className="hover:border-brand/60 hover:text-brand transition-colors cursor-pointer"
-            />
-        </Link>
-    );
-};
-
 const Footer07 = () => {
     return (
         <footer className="flex items-center justify-center p-4 py-8 border-t border-border">
             <div className="flex flex-col flex-1 max-w-7xl">
                 <div className="flex flex-col gap-8 md:items-center">
                     <div>
-                        <LogoLink />
+                        <LogoLink href="/" />
                     </div>
                     <div className="grid grid-cols-2 gap-x-8 gap-y-3 sm:grid-cols-[repeat(6,max-content)]">
                         {links.map((link) => (
