@@ -17,10 +17,10 @@ import {
 import { Menu, X } from "lucide-react";
 
 const links = [
-    { href: "/link_1", label: "Link 1" },
-    { href: "/link_2", label: "Link 2" },
-    { href: "/link_3", label: "Link 3" },
-    { href: "/link_4", label: "Link 4" },
+    { href: "/features", label: "Features" },
+    { href: "/pricing", label: "Pricing" },
+    { href: "/about", label: "About" },
+    { href: "/contact", label: "Contact" },
 ];
 
 const LogoLink = () => {

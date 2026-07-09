@@ -18,15 +18,21 @@ import {
 import { Menu, X, ChevronDown } from "lucide-react";
 
 const links = [
-    { href: "/link_1", label: "Link 1", type: "single" },
     {
-        href: "", label: "Group", type: "group", items: [
-            { href: "/group/link_1", label: "Group Link 1", type: "single" },
-            { href: "/group/link_2", label: "Group Link 2", type: "single" },
+        href: "", label: "Products", type: "group", items: [
+            { href: "/analytics", label: "Analytics", type: "single" },
+            { href: "/automation", label: "Automation", type: "single" },
+            { href: "/engagement", label: "Engagement", type: "single" },
         ]
     },
-    { href: "/link_2", label: "Link 2", type: "single" },
-    { href: "/link_3", label: "Link 3", type: "single" },
+    {
+        href: "", label: "Resources", type: "group", items: [
+            { href: "/documentation", label: "Documentation", type: "single" },
+            { href: "/blog  ", label: "Blog", type: "single" },
+        ]
+    },
+    { href: "/about", label: "About", type: "single" },
+    { href: "/contact", label: "Contact", type: "single" },
 ];
 
 const LogoLink = () => {

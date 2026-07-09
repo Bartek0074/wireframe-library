@@ -6,18 +6,18 @@ import { Button } from "@/components/atoms/Button";
 import { Logo } from "@/components/atoms/Logo";
 
 const links = [
-    { href: "/link_1", label: "Link 1" },
-    { href: "/link_2", label: "Link 2" },
-    { href: "/link_3", label: "Link 3" },
-    { href: "/link_4", label: "Link 4" },
-    { href: "/link_5", label: "Link 5" },
-    { href: "/link_6", label: "Link 6" },
+    { href: "/overview", label: "Overview" },
+    { href: "/features", label: "Features" },
+    { href: "/pricing", label: "Pricing" },
+    { href: "/careers", label: "Careers" },
+    { href: "/blog", label: "Blog" },
+    { href: "/contact", label: "Contact" },
 ];
 
 const secondaryLinks = [
-    { href: "/small_link_1", label: "Small Link 1" },
-    { href: "/small_link_2", label: "Small Link 2" },
-    { href: "/small_link_3", label: "Small Link 3" },
+    { href: "/terms", label: "Terms" },
+    { href: "/privacy", label: "Privacy" },
+    { href: "/cookies", label: "Cookies" },
 ];
 
 const LogoLink = () => {
