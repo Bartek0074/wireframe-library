@@ -26,7 +26,7 @@ const Footer05 = () => {
                         <LogoLink />
                     </div>
                     <div className="flex flex-col xs:flex-row gap-4">
-                        <Input placeholder="Enter your email" />
+                        <Input placeholder="Enter your email" className="sm:w-fit" />
                         <Button variant="brand">Subscribe</Button>
                     </div>
                 </div>
