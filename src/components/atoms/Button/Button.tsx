@@ -15,6 +15,7 @@ const buttonVariants = cva(
                 ghost: 'hover:bg-accent hover:text-foreground',
                 destructive: 'border border-destructive bg-destructive/10 text-destructive hover:bg-destructive/15',
                 link: 'text-primary underline-offset-4 hover:underline',
+                mutedLink: 'text-muted-foreground underline-offset-4 hover:underline',
             },
             size: {
                 default: 'h-10 px-6 py-2',
@@ -51,7 +52,7 @@ const buttonVariants = cva(
 export interface ButtonProps
     extends React.ComponentProps<'button'>,
     VariantProps<typeof buttonVariants> {
-    variant?: 'default' | 'secondary' | 'brand' | 'ghost' | 'destructive' | 'link'
+    variant?: 'default' | 'secondary' | 'brand' | 'ghost' | 'destructive' | 'link' | 'mutedLink'
     size?: 'default' | 'sm' | 'lg' | 'icon'
     active?: boolean
     asChild?: boolean

@@ -57,7 +57,7 @@ const Footer06 = () => {
                     <div> <p className="text-sm text-muted-foreground">© {new Date().getFullYear()} Your Company. All rights reserved.</p></div>
                     <div className="flex gap-2">
                         {secondaryLinks.map((link) => (
-                            <Button key={link.href} asChild variant="link" size="sm">
+                            <Button key={link.href} asChild variant="mutedLink" size="sm">
                                 <Link href={link.href}>{link.label}</Link>
                             </Button>
                         ))}

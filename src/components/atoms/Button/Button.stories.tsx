@@ -26,7 +26,7 @@ const meta: Meta<StoryArgs> = {
     argTypes: {
         variant: {
             control: 'inline-radio',
-            options: ['default', 'secondary', 'brand', 'ghost', 'destructive', 'link'],
+            options: ['default', 'secondary', 'brand', 'ghost', 'destructive', 'link', 'mutedLink'],
         },
         size: {
             control: 'inline-radio',
@@ -108,6 +108,7 @@ export const Variants: Story = {
             <Button variant="ghost">Ghost</Button>
             <Button variant="destructive">Destructive</Button>
             <Button variant="link">Link</Button>
+            <Button variant="mutedLink">Muted Link</Button>
         </div>
     ),
 }
