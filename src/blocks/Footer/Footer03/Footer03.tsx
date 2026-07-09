@@ -26,12 +26,11 @@ const LogoLink = () => {
 const Footer03 = () => {
     return (
         <footer className="flex items-center justify-center p-4 border-t border-border">
-            <div className="flex flex-col md:flex-row items-center justify-between gap-4 flex-1 max-w-7xl">
+            <div className="flex flex-col md:flex-row items-center justify-between gap-4 md:gap-8 flex-1 max-w-7xl">
                 <div className="md:flex-1">
-
                 <LogoLink />
                 </div>
-                <div className="grid mt-4 md:mt-0 gap-4 grid-cols-2 sm:grid-cols-4 md:flex">
+                <div className="grid mt-4 md:mt-0 gap-x-8 gap-y-3 grid-cols-2 sm:grid-cols-4 md:flex">
                     {links.map((link) => (
                         <Button key={link.href} asChild variant="link" size="sm">
                             <Link href={link.href}>{link.label}</Link>

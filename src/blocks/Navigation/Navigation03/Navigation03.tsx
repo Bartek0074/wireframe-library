@@ -72,9 +72,9 @@ const Navigation03 = () => {
 
     return (
         <nav className="flex items-center justify-center p-4 border-b border-border">
-            <div className="flex items-center justify-between gap-4 flex-1 max-w-7xl">
+            <div className="flex items-center justify-between gap-12 flex-1 max-w-7xl">
                 <div className="flex-1">
-                    <div className="hidden md:flex items-center justify-end gap-4">
+                    <div className="hidden md:flex items-center justify-end gap-12">
                         {leftLinks.map((link) => (
                             <Button
                                 key={link.href}
@@ -89,7 +89,7 @@ const Navigation03 = () => {
                 </div>
                 <div><LogoLink /></div>
                 <div className="flex-1">
-                    <div className="hidden md:flex items-center justify-start gap-4">
+                    <div className="hidden md:flex items-center justify-start gap-12">
                         {rightLinks.map((link) => (
                             <Button
                                 key={link.href}

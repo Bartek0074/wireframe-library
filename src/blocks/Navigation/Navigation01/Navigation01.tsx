@@ -67,11 +67,11 @@ const Navigation01 = () => {
 
     return (
         <nav className="flex items-center justify-center p-4 border-b border-border">
-            <div className="flex items-center justify-between gap-4 flex-1 max-w-7xl">
+            <div className="flex items-center justify-between gap-12 flex-1 max-w-7xl">
                 <div>
                     <LogoLink />
                 </div>
-                <div className="hidden md:flex items-center gap-4">
+                <div className="hidden md:flex items-center gap-12">
                     {links.map((link) => (
                         <Button
                             key={link.href}

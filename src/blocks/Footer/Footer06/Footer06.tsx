@@ -55,7 +55,7 @@ const Footer06 = () => {
                 </div>
                 <div className="mt-12 flex flex-col-reverse justify-between gap-4 border-t border-border/40 pt-8 md:mt-12 md:flex-row md:gap-6">
                     <div> <p className="text-sm text-muted-foreground">© {new Date().getFullYear()} Your Company. All rights reserved.</p></div>
-                    <div className="flex gap-2">
+                    <div className="flex gap-4">
                         {secondaryLinks.map((link) => (
                             <Button key={link.href} asChild variant="mutedLink" size="sm">
                                 <Link href={link.href}>{link.label}</Link>
