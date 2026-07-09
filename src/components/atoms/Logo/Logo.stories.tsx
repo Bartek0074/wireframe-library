@@ -29,6 +29,7 @@ type Story = StoryObj<typeof Logo>
 export const Playground: Story = {}
 
 export const Variants: Story = {
+    // eslint-disable-next-line
     render: (_) => (
         <div className="flex flex-col items-start gap-3">
             <Logo variant="squareNeutral" size="default" />
@@ -40,6 +41,7 @@ export const Variants: Story = {
 }
 
 export const Sizes: Story = {
+    // eslint-disable-next-line
     render: (_) => (
         <div className="flex flex-col items-start gap-3">
             <Logo size="sm" />

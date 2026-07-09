@@ -100,6 +100,7 @@ export const Playground: Story = {
 }
 
 export const Variants: Story = {
+    // eslint-disable-next-line
     render: (_) => (
         <div className="flex flex-col gap-3 items-start">
             <Button variant="default">Default</Button>
@@ -114,6 +115,7 @@ export const Variants: Story = {
 }
 
 export const Sizes: Story = {
+    // eslint-disable-next-line
     render: (_) => (
         <div className="flex flex-col gap-3 items-start">
             <Button size="lg">Large</Button>
@@ -127,6 +129,7 @@ export const Sizes: Story = {
 }
 
 export const WithIcons: Story = {
+    // eslint-disable-next-line
     render: (_) => (
         <div className="flex flex-col items-start gap-3">
             <Button>
@@ -145,6 +148,7 @@ export const WithIcons: Story = {
 }
 
 export const Disabled: Story = {
+    // eslint-disable-next-line
     render: (_) => (
         <div className="flex flex-col items-start gap-3">
             <Button disabled>Disabled button</Button>
@@ -153,6 +157,7 @@ export const Disabled: Story = {
 }
 
 export const AsLink: Story = {
+    // eslint-disable-next-line
     render: (_) => (
         <Button asChild variant="link">
             <a href="#">

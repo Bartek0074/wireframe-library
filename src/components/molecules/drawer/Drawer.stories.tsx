@@ -33,6 +33,7 @@ type Story = StoryObj<typeof Drawer>
 
 export const Default: Story = {
     name: 'Default',
+    // eslint-disable-next-line
     render: (_) => (
         <div className="p-8">
             <Drawer direction="right">
@@ -58,6 +59,7 @@ export const Default: Story = {
 }
 
 export const MobileNavigationExample: Story = {
+    // eslint-disable-next-line
     render: (_) => (
         <div className="p-8">
             <Drawer direction="right">
@@ -101,6 +103,7 @@ export const MobileNavigationExample: Story = {
 
 export const LongContent: Story = {
     name: 'Long Content Example',
+    // eslint-disable-next-line
     render: (_) => (
         <div className="p-8">
             <Drawer>

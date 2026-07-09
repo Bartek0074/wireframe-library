@@ -14,6 +14,7 @@ type Story = StoryObj<typeof Footer05>
 
 export const Default: Story = {
     name: 'Default',
+    // eslint-disable-next-line
     render: (_) => (
         <Footer05 />
     ),

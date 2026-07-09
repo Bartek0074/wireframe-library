@@ -41,6 +41,7 @@ type Story = StoryObj<StoryArgs>
 export const Playground: Story = {}
 
 export const Variants: Story = {
+    // eslint-disable-next-line
     render: (_) => (
         <div className="flex w-full max-w-sm flex-col gap-4">
             <Input variant="default" placeholder="Default input" />
@@ -50,6 +51,7 @@ export const Variants: Story = {
 }
 
 export const Disabled: Story = {
+    // eslint-disable-next-line
     render: (_) => (
         <div className="flex w-full max-w-sm flex-col gap-4">
             <Input disabled placeholder="Disabled default" />

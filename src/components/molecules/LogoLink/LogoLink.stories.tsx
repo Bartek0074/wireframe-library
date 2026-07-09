@@ -15,6 +15,7 @@ type Story = StoryObj<typeof LogoLink>
 
 export const Default: Story = {
     name: 'Default',
+    // eslint-disable-next-line
     render: (_) => (
         <LogoLink href="/" />
     ),

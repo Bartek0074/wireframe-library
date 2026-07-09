@@ -36,6 +36,7 @@ type Story = StoryObj<StoryArgs>
 export const Playground: Story = {}
 
 export const Variants: Story = {
+    // eslint-disable-next-line
     render: (_) => (
         <div className="flex w-full max-w-sm flex-col gap-3">
             <Label variant="default">Email address</Label>
