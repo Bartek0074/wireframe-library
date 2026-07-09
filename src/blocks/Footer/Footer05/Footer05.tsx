@@ -19,7 +19,7 @@ const LogoLink = () => {
 
 const Footer05 = () => {
     return (
-        <footer className="flex items-center justify-center p-4 border-t border-border">
+        <footer className="flex items-center justify-center p-4 py-8 border-t border-border">
             <div className="flex flex-col gap-8 flex-1 max-w-7xl">
                 <div className="flex flex-col md:flex-row justify-between gap-8 flex-1">
                     <div>

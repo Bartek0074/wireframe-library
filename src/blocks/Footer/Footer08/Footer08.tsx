@@ -35,7 +35,7 @@ const LogoLink = () => {
 
 const Footer08 = () => {
     return (
-        <footer className="flex items-center justify-center p-4 border-t border-border">
+        <footer className="flex items-center justify-center p-4 py-8 border-t border-border">
             <div className="flex flex-col flex-1 max-w-7xl">
                 <div className="flex flex-col justify-between lg:items-center gap-x-8 gap-y-12 lg:flex-row">
                     <div className="flex flex-col gap-6 md:items-start">
