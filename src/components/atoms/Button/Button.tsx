@@ -14,8 +14,8 @@ const buttonVariants = cva(
                 brand: 'border border-brand bg-brand/10 text-brand hover:bg-brand/15',
                 ghost: 'hover:bg-accent hover:text-foreground',
                 destructive: 'border border-destructive bg-destructive/10 text-destructive hover:bg-destructive/15',
-                link: 'text-primary underline-offset-4 hover:underline',
-                mutedLink: 'text-muted-foreground underline-offset-4 hover:underline',
+                link: 'relative rounded-none text-primary after:pointer-events-none after:absolute after:bottom-[20%] after:left-0 after:h-[1px] after:right-0 after:origin-left after:opacity-0 after:bg-primary hover:after:opacity-100 focus-visible:after:opacity-100 after:transition-opacity',
+                mutedLink: 'relative rounded-none text-muted-foreground after:pointer-events-none after:absolute after:bottom-[20%] after:left-0 after:h-[1px] after:right-0 after:origin-left after:opacity-0 after:bg-muted-foreground hover:after:opacity-100 focus-visible:after:opacity-100 after:transition-opacity',
             },
             size: {
                 default: 'h-10 px-6 py-2',
@@ -36,6 +36,29 @@ const buttonVariants = cva(
             },
             {
                 variant: "link",
+                class: "px-0",
+            },
+            {
+                variant: "mutedLink",
+                class: "px-0",
+            },
+            {
+                variant: "link",
+                size: 'lg',
+                class: "after:bottom-[30%]",
+            },
+            {
+                variant: "mutedLink",
+                size: 'lg',
+                class: "after:bottom-[30%]",
+            },
+            {
+                variant: "link",
+                active: true,
+                class: "font-bold",
+            },
+            {
+                variant: "mutedLink",
                 active: true,
                 class: "font-bold",
             },

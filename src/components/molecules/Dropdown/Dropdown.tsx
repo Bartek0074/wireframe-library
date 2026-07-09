@@ -11,7 +11,8 @@ const dropdownTriggerVariants = cva(
         variants: {
             variant: {
                 default: 'border border-border bg-card text-foreground hover:bg-accent',
-                link: 'text-primary underline-offset-4 hover:underline',
+                link: 'relative rounded-none text-primary after:pointer-events-none after:absolute after:bottom-[20%] after:left-0 after:h-[1px] after:right-0 after:origin-left after:opacity-0 after:bg-primary hover:after:opacity-100 focus-visible:after:opacity-100 after:transition-opacity',
+
             },
             size: {
                 default: 'h-10 px-6 py-2',
@@ -19,6 +20,17 @@ const dropdownTriggerVariants = cva(
                 lg: 'h-12 rounded-lg px-8',
             },
         },
+        compoundVariants: [
+            {
+                variant: "link",
+                class: "px-0",
+            },
+            {
+                variant: "link",
+                size: 'lg',
+                class: "after:bottom-[30%]",
+            },
+        ],
         defaultVariants: {
             variant: 'default',
             size: 'default',
