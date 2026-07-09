@@ -6,22 +6,6 @@ const meta: Meta<typeof Navigation03> = {
     title: 'Blocks/Navigation/Centered',
     component: Navigation03,
     tags: ['autodocs'],
-    parameters: {
-        docs: {
-            description: {
-                component: `
-### A balanced and responsive top navigation with a centered logo, navigation links on both sides, and a mobile drawer.
-
-### When to use:
-- Portfolio
-- Creative websites
-- Personal websites
-- Luxury products
-- Small to medium-sized projects
-    `,
-            },
-        },
-    },
 }
 
 export default meta

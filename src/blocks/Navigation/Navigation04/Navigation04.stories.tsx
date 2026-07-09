@@ -6,22 +6,6 @@ const meta: Meta<typeof Navigation04> = {
     title: 'Blocks/Navigation/Dropdown',
     component: Navigation04,
     tags: ['autodocs'],
-    parameters: {
-        docs: {
-            description: {
-                component: `
-### A responsive top navigation with a logo, navigation links, support for grouped navigation items, and a mobile drawer.
-
-### When to use:
-- Saas applications
-- E-commerce websites
-- Documentation websites
-- Corporate websites
-- Medium to large-sized projects
-    `,
-            },
-        },
-    },
 }
 
 export default meta
