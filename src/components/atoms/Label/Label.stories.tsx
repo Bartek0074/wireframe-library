@@ -10,11 +10,21 @@ const meta: Meta<StoryArgs> = {
     component: Label,
     tags: ['autodocs'],
     argTypes: {
+        variant: {
+            control: 'inline-radio',
+            options: ['default', 'wireframe'],
+        },
+        skeletonWidthClass: {
+            control: 'select',
+            options: ['', 'w-16', 'w-24', 'w-32', 'w-40', 'w-full'],
+        },
         children: {
             control: 'text',
         },
     },
     args: {
+        variant: 'default',
+        skeletonWidthClass: '',
         children: 'Email address',
     },
 }
@@ -24,6 +34,15 @@ export default meta
 type Story = StoryObj<StoryArgs>
 
 export const Playground: Story = {}
+
+export const Variants: Story = {
+    render: (_) => (
+        <div className="flex w-full max-w-sm flex-col gap-3">
+            <Label variant="default">Email address</Label>
+            <Label variant="wireframe">Email address</Label>
+        </div>
+    ),
+}
 
 export const WithInput: Story = {
     render: (args) => (
