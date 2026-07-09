@@ -6,15 +6,6 @@ import { Button } from "@/components/atoms/Button";
 import { Input } from "@/components/atoms/Input";
 import { Logo } from "@/components/atoms/Logo";
 
-import { Facebook, Instagram, Twitter, Youtube } from 'feather-icons-react';
-
-const socials = [
-    { href: "https://www.facebook.com", icon: <Facebook />, label: "Facebook" },
-    { href: "https://www.instagram.com", icon: <Instagram />, label: "Instagram" },
-    { href: "https://www.twitter.com", icon: <Twitter />, label: "Twitter" },
-    { href: "https://www.youtube.com", icon: <Youtube />, label: "YouTube" },
-];
-
 const LogoLink = () => {
     return (
         <Link href="/">
