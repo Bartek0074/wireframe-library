@@ -1,6 +1,5 @@
 # Available Blocks
 
-
 ## Navigations
 
 ### Navigation01
@@ -18,7 +17,6 @@ Centered logo navigation with links distributed on both sides. Ideal for premium
 ### Navigation04
 
 Navigation with dropdown groups for websites with more complex information architecture. Ideal for SaaS products, platforms, marketplaces and documentation websites. Supports grouped menus, responsive mobile navigation and optional CTA actions.
-
 
 ## Footers
 
@@ -62,16 +60,19 @@ Large multi-column footer with brand section, social links and grouped navigatio
 
 Large multi-column footer with grouped navigation, newsletter subscription and social links. Best suited for SaaS platforms, enterprise websites and large marketing websites that need full navigation and conversion elements.
 
-
 ## Header Sections
 
 ### HeaderSection01
 
-Simple page header with a heading and supporting description. Best suited for internal pages such as About, Pricing, Contact, Blog and Documentation. Can be combined with existing content Blocks or used as a standalone introduction before the main page content. Can be extended with visual backgrounds such as background images with overlays, videos, gradients or other decorative elements.
+Simple page header with a heading and supporting description. Best suited for internal pages such as About, Pricing, Contact, Blog and Documentation. Can be used as a standalone page introduction or combined with other content Blocks. Can be extended with background images, overlay effects, videos, gradients or other decorative backgrounds.
 
 ### HeaderSection02
 
-Page header with an eyebrow label, heading and supporting description. Best suited for internal pages such as About, Pricing, Contact, Blog and Documentation where additional context or section categorization is beneficial. Can be combined with existing content Blocks or used as a standalone introduction before the main page content. Can be extended with visual backgrounds such as background images with overlays, videos, gradients or other decorative elements.
+Page header with an eyebrow label, heading and supporting description. Best suited for internal pages such as About, Pricing, Contact, Blog and Documentation where additional context or content categorization is helpful. Can be used as a standalone page introduction or combined with other content Blocks. Can be extended with background images, overlay effects, videos, gradients or other decorative backgrounds.
+
+### HeaderSection03
+
+Page header with breadcrumb navigation, heading and supporting description. Best suited for documentation, help centers, blogs and other websites with deeper navigation hierarchies. Can be used as a standalone page introduction or combined with other content Blocks. Can be extended with background images, overlay effects, videos, gradients or other decorative backgrounds.
 
 ## Hero Sections
 
