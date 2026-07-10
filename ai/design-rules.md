@@ -169,6 +169,21 @@ Avoid too many visually heavy sections in sequence.
 
 ---
 
+# Headings
+
+Every page should have only one main heading (`h1`).
+
+The `h1` can be placed in:
+- Hero Section
+- Page Header
+- Main content Block
+
+Do not add a PageHeader automatically if the first content Block already provides a strong page introduction.
+
+PageHeaders are optional. Use them when a page benefits from a dedicated introduction, or combine them with existing Blocks if it improves the overall hierarchy.
+
+---
+
 # Navigation
 
 Navigation should remain compact.
