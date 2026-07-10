@@ -63,6 +63,13 @@ Large multi-column footer with brand section, social links and grouped navigatio
 Large multi-column footer with grouped navigation, newsletter subscription and social links. Best suited for SaaS platforms, enterprise websites and large marketing websites that need full navigation and conversion elements.
 
 
+## Header Sections
+
+### HeaderSection01
+
+Simple page header with a heading and supporting description. Best suited for internal pages such as About, Pricing, Contact, Blog and Documentation. Can be combined with existing content Blocks or used as a standalone introduction before the main page content.
+
+
 ## Hero Sections
 
 ### HeroSection01
