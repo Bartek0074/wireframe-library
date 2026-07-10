@@ -3,7 +3,7 @@ import { Footer03 } from './Footer03'
 import '@/app/storybook.css'
 
 const meta: Meta<typeof Footer03> = {
-    title: 'Blocks/Footer/Small With Links',
+    title: 'Blocks/Footer/Small with Links',
     component: Footer03,
     tags: ['autodocs'],
 }
