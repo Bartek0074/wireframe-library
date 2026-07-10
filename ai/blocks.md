@@ -78,6 +78,10 @@ Page header with breadcrumb navigation, heading and supporting description. Best
 
 Page header with CTA actions, heading and supporting description. Best suited for Pricing, Contact, Enterprise and product pages that require clear conversion actions. Can also include optional elements such as an eyebrow label, background images with overlays, videos, gradients or other decorative elements.
 
+### HeaderSection05
+
+Centered page header with a heading and supporting description. Best suited for About, Pricing, Contact, Blog and other marketing pages that benefit from a more balanced and visually focused introduction. Can be used as a standalone page introduction or combined with other content Blocks. Can be extended with background images, overlay effects, videos, gradients or other decorative backgrounds.
+
 ## Hero Sections
 
 ### HeroSection01
