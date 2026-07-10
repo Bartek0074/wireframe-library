@@ -86,6 +86,10 @@ Centered page header with a heading and supporting description. Best suited for 
 
 Centered page header with an eyebrow label, heading and supporting description. Best suited for About, Pricing, Contact, Blog and other marketing pages where additional context or content categorization improves the visual hierarchy. Can be used as a standalone page introduction or combined with other content Blocks. Can be extended with background images, overlay effects, videos, gradients or other decorative backgrounds.
 
+### HeaderSection07
+
+Centered page header with CTA actions, heading and supporting description. Best suited for Pricing, Contact, Enterprise and product pages that require clear conversion actions while maintaining a balanced, marketing-focused layout. Can also include optional elements such as an eyebrow label, background images, overlay effects, videos, gradients or other decorative backgrounds.
+
 ## Hero Sections
 
 ### HeroSection01
