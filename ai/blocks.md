@@ -74,6 +74,10 @@ Page header with an eyebrow label, heading and supporting description. Best suit
 
 Page header with breadcrumb navigation, heading and supporting description. Best suited for documentation, help centers, blogs and other websites with deeper navigation hierarchies. Can be used as a standalone page introduction or combined with other content Blocks. Can be extended with background images, overlay effects, videos, gradients or other decorative backgrounds.
 
+### HeaderSection04
+
+Page header with CTA actions, heading and supporting description. Best suited for Pricing, Contact, Enterprise and product pages that require clear conversion actions. Can also include optional elements such as an eyebrow label, background images with overlays, videos, gradients or other decorative elements.
+
 ## Hero Sections
 
 ### HeroSection01

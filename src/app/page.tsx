@@ -1,9 +1,9 @@
-import { HeaderSection03 } from "@/blocks/HeaderSection/HeaderSection03/HeaderSection03";
+import { HeaderSection04 } from "@/blocks/HeaderSection/HeaderSection04/HeaderSection04";
 
 export default function Home() {
   return (
     <main className="flex-1">
-      <HeaderSection03 />
+      <HeaderSection04 />
     </main>
   );
 }
