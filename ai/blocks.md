@@ -67,8 +67,11 @@ Large multi-column footer with grouped navigation, newsletter subscription and s
 
 ### HeaderSection01
 
-Simple page header with a heading and supporting description. Best suited for internal pages such as About, Pricing, Contact, Blog and Documentation. Can be combined with existing content Blocks or used as a standalone introduction before the main page content.
+Simple page header with a heading and supporting description. Best suited for internal pages such as About, Pricing, Contact, Blog and Documentation. Can be combined with existing content Blocks or used as a standalone introduction before the main page content. Can be extended with visual backgrounds such as background images with overlays, videos, gradients or other decorative elements.
 
+### HeaderSection02
+
+Page header with an eyebrow label, heading and supporting description. Best suited for internal pages such as About, Pricing, Contact, Blog and Documentation where additional context or section categorization is beneficial. Can be combined with existing content Blocks or used as a standalone introduction before the main page content. Can be extended with visual backgrounds such as background images with overlays, videos, gradients or other decorative elements.
 
 ## Hero Sections
 

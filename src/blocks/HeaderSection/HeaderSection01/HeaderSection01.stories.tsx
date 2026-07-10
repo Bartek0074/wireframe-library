@@ -3,7 +3,7 @@ import { HeaderSection01 } from './HeaderSection01'
 import '@/app/storybook.css'
 
 const meta: Meta<typeof HeaderSection01> = {
-    title: 'Blocks/Header Section/Centered',
+    title: 'Blocks/Header Section/Simple',
     component: HeaderSection01,
     tags: ['autodocs'],
 }
