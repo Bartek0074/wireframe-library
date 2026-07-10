@@ -1,7 +1,9 @@
+import { HeroSection01 } from "@/blocks/HeroSection/HeroSection01/HeroSection01";
+
 export default function Home() {
   return (
-    <div>
-      Main Page
-    </div>
+    <main className="flex-1">
+      <HeroSection01 />
+    </main>
   );
 }

@@ -4,8 +4,8 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 import { ThemeToggleFab } from "@/components/molecules/ThemeToggleFab/ThemeToggleFab";
-import { Navigation04 } from "@/blocks/Navigation/Navigation04/Navigation04";
-import { Footer10 } from "@/blocks/Footer/Footer10/Footer10";
+import { Navigation01 } from "@/blocks/Navigation/Navigation01/Navigation01";
+import { Footer01 } from "@/blocks/Footer/Footer01/Footer01";
 
 const geist = Geist({
   subsets: ['latin'],
@@ -47,11 +47,9 @@ export default function RootLayout({
         <script dangerouslySetInnerHTML={{ __html: initThemeScript }} />
       </head>
       <body className="min-h-full flex flex-col">
-        <Navigation04 />
-        <main className="flex-1">
-          {children}
-        </main>
-        <Footer10 />
+        <Navigation01 />
+        {children}
+        <Footer01 />
         <ThemeToggleFab />
       </body>
     </html>
