@@ -135,3 +135,7 @@ Split hero section with a heading, supporting description and a large visual are
 ### HeroSection03
 
 Asymmetric hero section with an offset visual, heading, supporting description and an integrated newsletter signup form. Best suited for SaaS products, startups, blogs and marketing websites that want to combine a strong first impression with lead generation. Can optionally include elements such as an eyebrow label, announcement badge, CTA actions, trust indicators or other supporting content. The visual area can display product screenshots, illustrations, mockups, videos or decorative imagery.
+
+### HeroSection04
+
+Split hero section with a heading, supporting description and a staggered image tile layout on the right. Best suited for SaaS products, agencies, portfolios, travel websites and marketing pages that benefit from showcasing multiple visuals instead of a single featured image. Can optionally include elements such as an announcement badge, eyebrow label, CTA actions, newsletter signup, trust indicators or other supporting content. The visual area can display placeholder screenshots, mockups, illustrations, photographs or other decorative imagery arranged in a staggered grid.
