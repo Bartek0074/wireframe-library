@@ -108,4 +108,8 @@ Page header with quick navigation links, supporting statistics, heading and desc
 
 ### HeroSection01
 
-Centered hero section with an announcement badge, heading, supporting description and CTA actions. Best suited for landing pages, SaaS products and marketing websites that require a strong first impression and clear conversion focus. Can be extended with background images, overlay effects, videos, gradients or other decorative backgrounds.
+Centered hero section with a heading and supporting description. Best suited for landing pages, SaaS products and marketing websites that require a strong first impression and clear conversion focus. Can optionally include elements such as an announcement badge, eyebrow label, CTA actions, newsletter signup, trust indicators or other supporting content. Can be extended with background images, overlay effects, videos, gradients or other decorative backgrounds.
+
+### HeroSection02
+
+Split hero section with a heading, supporting description and a large visual area. Best suited for SaaS products, startups, AI tools and product websites that combine marketing content with a visual preview. Can optionally include elements such as an announcement badge, eyebrow label, CTA actions, newsletter signup, trust indicators or other supporting content. The visual area can display product screenshots, dashboard previews, mockups, illustrations, videos or images.

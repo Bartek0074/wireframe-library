@@ -1,9 +1,9 @@
-import { HeaderSection09 } from "@/blocks/HeaderSection/HeaderSection09/HeaderSection09";
+import { HeroSection02 } from "@/blocks/HeroSection/HeroSection02/HeroSection02";
 
 export default function Home() {
   return (
     <main className="flex-1">
-      <HeaderSection09 />
+      <HeroSection02 />
     </main>
   );
 }
