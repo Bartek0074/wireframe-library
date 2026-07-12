@@ -1,5 +1,11 @@
 # Available Blocks
 
+This document describes the reusable Blocks available in the project.
+
+Each Block includes a short description explaining its purpose, typical use cases and possible variations.
+
+When generating pages, prefer using existing Blocks whenever possible. Small modifications are encouraged, such as changing content, images, CTA actions or combining elements from multiple Blocks to better match the requested design.
+
 ## Navigations
 
 ### Navigation01
@@ -102,4 +108,4 @@ Page header with quick navigation links, supporting statistics, heading and desc
 
 ### HeroSection01
 
-Centered hero section with announcement badge, heading, description and CTA buttons. Best suited for landing pages, SaaS products and marketing websites that need a clear primary message and conversion-focused introduction. Can be extended with visual backgrounds such as background images with overlays, videos, gradients or other decorative elements.
+Centered hero section with an announcement badge, heading, supporting description and CTA actions. Best suited for landing pages, SaaS products and marketing websites that require a strong first impression and clear conversion focus. Can be extended with background images, overlay effects, videos, gradients or other decorative backgrounds.
