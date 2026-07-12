@@ -27,9 +27,9 @@ const HeroSection03 = () => {
                         <Button variant="brand">Subscribe</Button>
                     </div>
                 </div>
-                <div className="flex items-center relative lg:absolute lg:top-0 lg:right-8 lg:h-full lg:w-140">
+                <div className="flex items-center relative lg:absolute lg:top-16 lg:right-8 lg:bottom-16 lg:w-140">
                     <PlaceholderImage
-                        className="inset-0 h-60 w-full rounded-tr-[4rem] rounded-bl-[4rem] object-cover md:h-110 md:rounded-tr-[8rem] md:rounded-bl-[8rem] lg:h-[80%]"
+                        className="inset-0 h-60 w-full rounded-tr-[4rem] rounded-bl-[4rem] object-cover md:h-110 md:rounded-tr-[8rem] md:rounded-bl-[8rem] lg:h-full"
                         iconSize="large"
                     />
                 </div>
