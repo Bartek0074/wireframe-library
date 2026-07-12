@@ -10,8 +10,8 @@ import { ArrowRight } from "lucide-react";
 
 const HeroSection02 = () => {
     return (
-        <section className="lg:min-h-[calc(100svh-7.75rem)] px-4">
-            <div className="grid grid-cols-1 items-center gap-16 lg:grid-cols-2 lg:gap-8 lg:min-h-[calc(100svh-7.75rem)] max-w-7xl py-16 mx-auto">
+        <section className="lg:min-h-[calc(100svh-4.5rem)] px-4">
+            <div className="grid grid-cols-1 items-center gap-16 lg:grid-cols-2 lg:gap-8 lg:min-h-[calc(100svh-4.5rem)] max-w-7xl py-16 mx-auto">
                 <div className="flex flex-col items-start mx-auto">
                     <AnnouncmentLink
                         href="/blog/link"

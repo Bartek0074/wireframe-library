@@ -7,8 +7,8 @@ import { PlaceholderImage } from "@/components/atoms/PlaceholderImage/Placeholde
 
 const HeroSection03 = () => {
     return (
-        <section className="lg:min-h-[calc(100svh-7.75rem)] px-4">
-            <div className="relative grid max-w-container grid-cols-1 gap-16 lg:items-center lg:min-h-[calc(100svh-7.75rem)] max-w-7xl py-16 mx-auto">
+        <section className="lg:min-h-[calc(100svh-4.5rem)] px-4">
+            <div className="relative grid max-w-container grid-cols-1 gap-16 lg:items-center lg:min-h-[calc(100svh-4.5rem)] max-w-7xl py-16 mx-auto">
                 <div className="z-10 flex max-w-200 flex-col items-start">
                     <div className="flex flex-col items-start justify-center">
                         <p className="text-base font-semibold tracking-wide text-balance text-brand uppercase mb-8">

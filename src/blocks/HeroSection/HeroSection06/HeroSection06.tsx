@@ -32,8 +32,8 @@ const stats = [
 
 const HeroSection06 = () => {
     return (
-        <section className="min-h-[calc(100svh-7.75rem)] px-4">
-            <div className="flex flex-col items-center justify-center min-h-[calc(100svh-7.75rem)] max-w-7xl py-16 mx-auto">
+        <section className="min-h-[calc(100svh-4.5rem)] px-4">
+            <div className="flex flex-col items-center justify-center min-h-[calc(100svh-4.5rem)] max-w-7xl py-16 mx-auto">
                 <AnnouncmentLink
                     href="/blog/link"
                     title="Announcing our new feature"
