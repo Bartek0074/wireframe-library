@@ -139,3 +139,7 @@ Asymmetric hero section with an offset visual, heading, supporting description a
 ### HeroSection04
 
 Split hero section with a heading, supporting description and a staggered image tile layout on the right. Best suited for SaaS products, agencies, portfolios, travel websites and marketing pages that benefit from showcasing multiple visuals instead of a single featured image. Can optionally include elements such as an announcement badge, eyebrow label, CTA actions, newsletter signup, trust indicators or other supporting content. The visual area can display placeholder screenshots, mockups, illustrations, photographs or other decorative imagery arranged in a staggered grid.
+
+### HeroSection05
+
+Centered hero section with a heading, supporting description and a dedicated trust section below the primary content. Best suited for SaaS products, startups and marketing websites that want to establish credibility early in the user journey. Can optionally include elements such as an announcement badge, eyebrow label, CTA actions, newsletter signup or trust indicators. The trust section can display placeholder brand logos, partner logos, customer logos, ratings, certifications, statistics or other credibility-building content.
