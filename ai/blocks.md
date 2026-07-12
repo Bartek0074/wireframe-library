@@ -94,6 +94,10 @@ Centered page header with CTA actions, heading and supporting description. Best 
 
 Page header with supporting statistics, heading and description. Best suited for About, Company, Careers, Enterprise and marketing pages where key metrics reinforce credibility and communicate company scale. Can be used as a standalone page introduction or combined with other content Blocks. Can be extended with background images, overlay effects, videos, gradients or other decorative backgrounds.
 
+### HeaderSection09
+
+Page header with quick navigation links, supporting statistics, heading and description. Best suited for Careers, Company, Enterprise and documentation pages where users should be guided toward key sections while reinforcing credibility with important metrics. Can be used as a standalone page introduction or combined with other content Blocks. Can be extended with background images, overlay effects, videos, gradients or other decorative backgrounds.
+
 ## Hero Sections
 
 ### HeroSection01
