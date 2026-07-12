@@ -142,4 +142,8 @@ Split hero section with a heading, supporting description and a staggered image 
 
 ### HeroSection05
 
-Centered hero section with a heading, supporting description and a dedicated trust section below the primary content. Best suited for SaaS products, startups and marketing websites that want to establish credibility early in the user journey. Can optionally include elements such as an announcement badge, eyebrow label, CTA actions, newsletter signup or trust indicators. The trust section can display placeholder brand logos, partner logos, customer logos, ratings, certifications, statistics or other credibility-building content.
+Centered hero section with a heading, supporting description and a dedicated trust section below the primary content. Best suited for SaaS products, startups and marketing websites that want to establish credibility early in the user journey. Can optionally include elements such as an announcement badge, eyebrow label, CTA actions, newsletter signup or trust indicators. The trust section can display placeholder brand logos, partner logos, customer logos, ratings, certifications or awards.
+
+### HeroSection06
+
+Centered hero section with a heading, supporting description and a statistics section below the primary content. Best suited for SaaS products, startups, enterprise websites and marketing pages that want to reinforce credibility with key metrics. Can optionally include elements such as an announcement badge, eyebrow label, CTA actions, newsletter signup or trust indicators. The statistics section can highlight placeholder metrics such as customers, revenue, uptime, ratings, integrations or global presence.
