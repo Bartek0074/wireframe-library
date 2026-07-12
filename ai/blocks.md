@@ -2,15 +2,33 @@
 
 This document describes the reusable Blocks available in the project.
 
-Each Block includes a short description explaining its purpose, typical use cases and possible variations.
+Each Block includes a short description explaining its purpose, typical use cases and common variations.
 
-When generating pages, prefer using existing Blocks whenever possible. Small modifications are encouraged, such as changing content, images, CTA actions or combining elements from multiple Blocks to better match the requested design.
+When generating pages, prefer using existing Blocks whenever possible.
+
+Blocks are intended to be flexible rather than fixed templates.
+
+AI is encouraged to:
+
+- modify placeholder content
+- change CTA labels, links and actions
+- add or remove optional elements (such as eyebrow labels, announcement badges, breadcrumbs, newsletter forms, trust indicators or statistics)
+- combine ideas from multiple Blocks when appropriate
+- keep all visual media as placeholder elements suitable for wireframes
+
+The goal is to reuse existing layouts while adapting them to the specific requirements of each page, avoiding unnecessary duplication.
+
+The numbering does not indicate quality or preference.
+
+When generating pages, AI should choose the Block that best matches the required layout rather than always selecting the lowest available number.
+
+When no Block perfectly matches the requested layout, prefer adapting or combining existing Blocks instead of creating entirely new ones.
 
 ## Navigations
 
 ### Navigation01
 
-Classic left-aligned navigation with a logo and horizontal navigation links. Ideal for landing pages, marketing websites and small business websites. Supports responsive mobile navigation and can be extended with CTA buttons, sticky positioning or a transparent background.
+Classic left-aligned navigation with a logo and horizontal navigation links. Ideal for landing pages, marketing websites and small business websites. Supports responsive mobile navigation and can optionally include CTA buttons, sticky positioning or a transparent background.
 
 ### Navigation02
 
@@ -70,15 +88,15 @@ Large multi-column footer with grouped navigation, newsletter subscription and s
 
 ### HeaderSection01
 
-Simple page header with a heading and supporting description. Best suited for internal pages such as About, Pricing, Contact, Blog and Documentation. Can be used as a standalone page introduction or combined with other content Blocks. Can be extended with background images, overlay effects, videos, gradients or other decorative backgrounds.
+Simple page header with a heading and supporting description. Best suited for internal pages such as About, Pricing, Contact, Blog and Documentation. Can be used as a standalone page introduction or combined with other content Blocks. Can optionally include background images, overlay effects, videos, gradients or other decorative backgrounds.
 
 ### HeaderSection02
 
-Page header with an eyebrow label, heading and supporting description. Best suited for internal pages such as About, Pricing, Contact, Blog and Documentation where additional context or content categorization is helpful. Can be used as a standalone page introduction or combined with other content Blocks. Can be extended with background images, overlay effects, videos, gradients or other decorative backgrounds.
+Page header with an eyebrow label, heading and supporting description. Best suited for internal pages such as About, Pricing, Contact, Blog and Documentation where additional context or content categorization is helpful. Can be used as a standalone page introduction or combined with other content Blocks. Can optionally include background images, overlay effects, videos, gradients or other decorative backgrounds.
 
 ### HeaderSection03
 
-Page header with breadcrumb navigation, heading and supporting description. Best suited for documentation, help centers, blogs and other websites with deeper navigation hierarchies. Can be used as a standalone page introduction or combined with other content Blocks. Can be extended with background images, overlay effects, videos, gradients or other decorative backgrounds.
+Page header with breadcrumb navigation, heading and supporting description. Best suited for documentation, help centers, blogs and other websites with deeper navigation hierarchies. Can be used as a standalone page introduction or combined with other content Blocks. Can optionally include background images, overlay effects, videos, gradients or other decorative backgrounds.
 
 ### HeaderSection04
 
@@ -86,11 +104,11 @@ Page header with CTA actions, heading and supporting description. Best suited fo
 
 ### HeaderSection05
 
-Centered page header with a heading and supporting description. Best suited for About, Pricing, Contact, Blog and other marketing pages that benefit from a more balanced and visually focused introduction. Can be used as a standalone page introduction or combined with other content Blocks. Can be extended with background images, overlay effects, videos, gradients or other decorative backgrounds.
+Centered page header with a heading and supporting description. Best suited for About, Pricing, Contact, Blog and other marketing pages that benefit from a more balanced and visually focused introduction. Can be used as a standalone page introduction or combined with other content Blocks. Can optionally include background images, overlay effects, videos, gradients or other decorative backgrounds.
 
 ### HeaderSection06
 
-Centered page header with an eyebrow label, heading and supporting description. Best suited for About, Pricing, Contact, Blog and other marketing pages where additional context or content categorization improves the visual hierarchy. Can be used as a standalone page introduction or combined with other content Blocks. Can be extended with background images, overlay effects, videos, gradients or other decorative backgrounds.
+Centered page header with an eyebrow label, heading and supporting description. Best suited for About, Pricing, Contact, Blog and other marketing pages where additional context or content categorization improves the visual hierarchy. Can be used as a standalone page introduction or combined with other content Blocks. Can optionally include background images, overlay effects, videos, gradients or other decorative backgrounds.
 
 ### HeaderSection07
 
@@ -98,18 +116,22 @@ Centered page header with CTA actions, heading and supporting description. Best 
 
 ### HeaderSection08
 
-Page header with supporting statistics, heading and description. Best suited for About, Company, Careers, Enterprise and marketing pages where key metrics reinforce credibility and communicate company scale. Can be used as a standalone page introduction or combined with other content Blocks. Can be extended with background images, overlay effects, videos, gradients or other decorative backgrounds.
+Page header with supporting statistics, heading and description. Best suited for About, Company, Careers, Enterprise and marketing pages where key metrics reinforce credibility and communicate company scale. Can be used as a standalone page introduction or combined with other content Blocks. Can optionally include background images, overlay effects, videos, gradients or other decorative backgrounds.
 
 ### HeaderSection09
 
-Page header with quick navigation links, supporting statistics, heading and description. Best suited for Careers, Company, Enterprise and documentation pages where users should be guided toward key sections while reinforcing credibility with important metrics. Can be used as a standalone page introduction or combined with other content Blocks. Can be extended with background images, overlay effects, videos, gradients or other decorative backgrounds.
+Page header with quick navigation links, supporting statistics, heading and description. Best suited for Careers, Company, Enterprise and documentation pages where users should be guided toward key sections while reinforcing credibility with important metrics. Can be used as a standalone page introduction or combined with other content Blocks. Can optionally include background images, overlay effects, videos, gradients or other decorative backgrounds.
 
 ## Hero Sections
 
 ### HeroSection01
 
-Centered hero section with a heading and supporting description. Best suited for landing pages, SaaS products and marketing websites that require a strong first impression and clear conversion focus. Can optionally include elements such as an announcement badge, eyebrow label, CTA actions, newsletter signup, trust indicators or other supporting content. Can be extended with background images, overlay effects, videos, gradients or other decorative backgrounds.
+Centered hero section with a heading and supporting description. Best suited for landing pages, SaaS products and marketing websites that require a strong first impression and clear conversion focus. Can optionally include elements such as an announcement badge, eyebrow label, CTA actions, newsletter signup, trust indicators or other supporting content. Can optionally include background images, overlay effects, videos, gradients or other decorative backgrounds.
 
 ### HeroSection02
 
 Split hero section with a heading, supporting description and a large visual area. Best suited for SaaS products, startups, AI tools and product websites that combine marketing content with a visual preview. Can optionally include elements such as an announcement badge, eyebrow label, CTA actions, newsletter signup, trust indicators or other supporting content. The visual area can display product screenshots, dashboard previews, mockups, illustrations, videos or images.
+
+### HeroSection03
+
+Asymmetric hero section with an offset visual, heading, supporting description and an integrated newsletter signup form. Best suited for SaaS products, startups, blogs and marketing websites that want to combine a strong first impression with lead generation. Can optionally include elements such as an eyebrow label, announcement badge, CTA actions, trust indicators or other supporting content. The visual area can display product screenshots, illustrations, mockups, videos or decorative imagery.
