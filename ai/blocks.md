@@ -147,3 +147,9 @@ Centered hero section with a heading, supporting description and a dedicated tru
 ### HeroSection06
 
 Centered hero section with a heading, supporting description and a statistics section below the primary content. Best suited for SaaS products, startups, enterprise websites and marketing pages that want to reinforce credibility with key metrics. Can optionally include elements such as an announcement badge, eyebrow label, CTA actions, newsletter signup or trust indicators. The statistics section can highlight placeholder metrics such as customers, revenue, uptime, ratings, integrations or global presence.
+
+## FAQ Sections
+
+### FAQSection01
+
+Two-column FAQ section with an offset introduction and a list of frequently asked questions. Best suited for SaaS products, documentation, product websites and marketing pages that need to answer common questions while providing additional context or support information. The introduction area can optionally include supporting text, contact links, CTA actions or trust indicators. The FAQ list can be displayed as expanded content or adapted into an accordion if required.
