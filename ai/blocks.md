@@ -153,3 +153,7 @@ Centered hero section with a heading, supporting description and a statistics se
 ### FAQSection01
 
 Two-column FAQ section with an offset introduction and a list of frequently asked questions. Best suited for SaaS products, documentation, product websites and marketing pages that need to answer common questions while providing additional context or support information. The introduction area can optionally include supporting text, contact links, CTA actions or trust indicators. The FAQ list can be displayed as expanded content or adapted into an accordion if required.
+
+### FAQSection02
+
+Two-column FAQ section with an offset heading and an accordion-based question list. Best suited for SaaS products, documentation, help centers and marketing websites that need to present frequently asked questions in a compact, scannable format. The introduction area can optionally include supporting text, contact links, CTA actions or trust indicators. The accordion can be configured to allow single or multiple expanded items depending on the desired user experience.
