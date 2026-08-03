@@ -27,7 +27,7 @@ const FAQSection01 = () => {
                     <h2 className="text-3xl font-semibold tracking-tight text-balance text-primary sm:text-4xl">
                         Frequently asked questions
                     </h2>
-                    <p className="mt-4 text-base max-w-[48ch] text-muted-foreground">
+                    <p className="mt-4 text-lg max-w-[48ch] text-muted-foreground">
                         Can’t find the answer you’re looking for? Reach out to our <Link href="/support" className="text-brand/90 hover:text-brand font-medium">customer support</Link> team.
                     </p>
                 </div>

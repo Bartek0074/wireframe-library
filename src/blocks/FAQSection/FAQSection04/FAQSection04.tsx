@@ -49,7 +49,7 @@ const FAQSection04 = () => {
                     <h2 className="text-3xl font-semibold text-center tracking-tight text-balance text-primary sm:text-4xl">
                         Frequently asked questions
                     </h2>
-                    <p className="mt-4 text-base max-w-[72ch] text-center text-muted-foreground">
+                    <p className="mt-4 text-lg max-w-[72ch] text-center text-muted-foreground">
                         Have a different question and can’t find the answer you’re looking for? Reach out to our support team by <Link href="/support" className="text-brand/90 hover:text-brand font-medium">sending us an email</Link> and we’ll get back to you as soon as we can.
                     </p>
                 </div>
