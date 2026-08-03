@@ -62,7 +62,7 @@ export const ClosedByDefault: Story = {
 }
 
 export const SupportLinks: Story = {
-    render: (_) => (
+    render: () => (
         <div className="max-w-2xl">
             <Accordion
                 defaultOpenIndex={1}

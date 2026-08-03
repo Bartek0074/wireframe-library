@@ -16,6 +16,10 @@ const eslintConfig = defineConfig([
     "next-env.d.ts",
     // Build outputs
     "storybook-static/**",
+
+    // Generated / external components
+    "src/components/ui/**",
+    "src/lib/wireframe-types.ts",
   ]),
 ]);
 

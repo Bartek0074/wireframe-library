@@ -10,11 +10,11 @@ import { BrandLogo } from "@/components/atoms/BrandLogo/BrandLogo";
 import { ArrowRight } from "lucide-react";
 
 const brands = [
-    <BrandLogo name="Brand 1" />,
-    <BrandLogo name="Brand 2" />,
-    <BrandLogo name="Brand 3" />,
-    <BrandLogo name="Brand 4" />,
-    <BrandLogo name="Brand 5" />,
+    <BrandLogo key={0} name="Brand 1" />,
+    <BrandLogo key={1} name="Brand 2" />,
+    <BrandLogo key={2} name="Brand 3" />,
+    <BrandLogo key={3} name="Brand 4" />,
+    <BrandLogo key={4} name="Brand 5" />,
 ]
 
 const HeroSection05 = () => {

@@ -229,6 +229,7 @@ function DropdownContent({ className, children, ...props }: DropdownContentProps
     const [position, setPosition] = React.useState({ top: 0, left: 0, minWidth: 0 })
 
     React.useEffect(() => {
+        // eslint-disable-next-line react-hooks/set-state-in-effect
         setMounted(true)
     }, [])
 
