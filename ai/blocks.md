@@ -169,3 +169,7 @@ Centered FAQ section with an introductory heading, supporting description and a 
 ### FAQSection05
 
 FAQ section with a centered introduction and a responsive grid of question cards. Best suited for SaaS products, startups, marketing websites and help centers that want to present frequently asked questions in a visually distinct, card-based layout. The introduction area can optionally include supporting text, contact links, CTA actions or trust indicators. Each FAQ item is displayed inside an individual card, making the section easy to scan and suitable for varying answer lengths.
+
+### FAQSection06
+
+Split FAQ section with a centered introduction, accordion question list and a supporting visual area. Best suited for SaaS products, product websites, agencies and marketing pages that combine educational content with visual storytelling. The visual area can display placeholder images, illustrations, product screenshots or decorative imagery. The layout can adapt responsively between side-by-side and stacked arrangements.
