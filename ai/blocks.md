@@ -165,3 +165,7 @@ Side-by-side FAQ section with questions and answers displayed in separate column
 ### FAQSection04
 
 Centered FAQ section with an introductory heading, supporting description and a responsive grid of frequently asked questions. Best suited for landing pages, SaaS products, startups and marketing websites that need to present a larger number of questions in a compact, easy-to-scan layout. The introduction area can optionally include supporting text, contact links, CTA actions or trust indicators. The FAQ grid can adapt responsively to different column layouts depending on the available space.
+
+### FAQSection05
+
+FAQ section with a centered introduction and a responsive grid of question cards. Best suited for SaaS products, startups, marketing websites and help centers that want to present frequently asked questions in a visually distinct, card-based layout. The introduction area can optionally include supporting text, contact links, CTA actions or trust indicators. Each FAQ item is displayed inside an individual card, making the section easy to scan and suitable for varying answer lengths.
