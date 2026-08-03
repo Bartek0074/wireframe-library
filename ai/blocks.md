@@ -161,3 +161,7 @@ Two-column FAQ section with an offset heading and an accordion-based question li
 ### FAQSection03
 
 Side-by-side FAQ section with questions and answers displayed in separate columns. Best suited for documentation, enterprise websites, product pages and marketing websites that prioritize readability and quick scanning over interactive accordions. Can optionally include supporting text, CTA actions or contact information above the FAQ list. Each question is paired with its corresponding answer in a structured side-by-side layout and can optionally be separated with dividers.
+
+### FAQSection04
+
+Centered FAQ section with an introductory heading, supporting description and a responsive grid of frequently asked questions. Best suited for landing pages, SaaS products, startups and marketing websites that need to present a larger number of questions in a compact, easy-to-scan layout. The introduction area can optionally include supporting text, contact links, CTA actions or trust indicators. The FAQ grid can adapt responsively to different column layouts depending on the available space.
