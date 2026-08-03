@@ -44,8 +44,8 @@ const items = [
 const FAQSection04 = () => {
     return (
         <section className="px-4">
-            <div className="flex flex-col max-w-7xl gap-8 py-16 mx-auto">
-                <div className="flex flex-col items-center mb-12">
+            <div className="flex flex-col max-w-7xl py-16 mx-auto">
+                <div className="flex flex-col items-center mb-16">
                     <h2 className="text-3xl font-semibold text-center tracking-tight text-balance text-primary sm:text-4xl">
                         Frequently asked questions
                     </h2>
