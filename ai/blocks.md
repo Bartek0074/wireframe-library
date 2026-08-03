@@ -177,3 +177,9 @@ Split FAQ section with a centered introduction, accordion question list and a su
 ### FAQSection07
 
 FAQ section with a centered introduction, a responsive question grid and a dedicated contact CTA card below. Best suited for SaaS products, support pages, product websites and marketing websites that need to answer common questions while encouraging users to reach out for additional help. The CTA area can optionally include supporting text, contact links, buttons or other conversion-focused actions.
+
+## Features Section
+
+### FeaturesSection01
+
+Feature section displaying a simple responsive grid of icon-based feature items without a dedicated section heading. Best suited for landing pages, SaaS products, product websites and marketing pages where the surrounding content already introduces the section. Each feature can optionally include an icon, title, supporting description or other lightweight visual elements.
