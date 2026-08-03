@@ -183,3 +183,7 @@ FAQ section with a centered introduction, a responsive question grid and a dedic
 ### FeaturesSection01
 
 Feature section displaying a simple responsive grid of icon-based feature items without a dedicated section heading. Best suited for landing pages, SaaS products, product websites and marketing pages where the surrounding content already introduces the section. Each feature can optionally include an icon, title, supporting description or other lightweight visual elements.
+
+### FeaturesSection02
+
+Feature section with a left-aligned introduction followed by a responsive grid of icon-based feature items. Best suited for SaaS products, startups, product websites and marketing pages that need to introduce a group of features with supporting context. The introduction area can optionally include an eyebrow label, heading, supporting description or CTA actions. Each feature can optionally include an icon, title, description or other lightweight visual elements.
