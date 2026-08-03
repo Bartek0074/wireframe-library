@@ -3,6 +3,7 @@
 import * as React from 'react'
 import { MinusIcon, PlusIcon } from '@heroicons/react/24/outline'
 
+import { Separator } from '@/components/atoms/Separator'
 import { cn } from '@/lib/utils'
 
 export interface AccordionItem {
@@ -34,10 +35,7 @@ function Accordion({ className, items, defaultOpenIndex = 0, ...props }: Accordi
                 return (
                     <React.Fragment key={item.id ?? index}>
                         {index > 0 ? (
-                            <div
-                                aria-hidden="true"
-                                className="h-px bg-linear-to-r from-border/80 via-border/60 to-transparent opacity-70 transition-opacity duration-300"
-                            />
+                            <Separator />
                         ) : null}
 
                         <div
