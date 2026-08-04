@@ -75,11 +75,11 @@ const TestimonialsSection07 = () => {
                     </p>
                 </div>
 
-                <div className="columns-1 gap-6 space-y-6 md:columns-2 xl:columns-3">
+                <div className="columns-1 gap-6 md:columns-2 xl:columns-3">
                     {testimonials.map((testimonial, index) => (
                         <TestimonialCard
                             key={testimonial.author}
-                            className="break-inside-avoid border-border shadow-none"
+                            className="mb-6 inline-block w-full break-inside-avoid border-border shadow-none"
                             showQuoteMark
                             classNames={{
                                 quote: index % 3 === 0 ? 'sm:text-lg sm:leading-8' : '',
