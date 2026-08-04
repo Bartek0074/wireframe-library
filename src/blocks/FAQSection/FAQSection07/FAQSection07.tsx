@@ -79,7 +79,7 @@ const FAQSection07 = () => {
                                 Still have questions?
                             </h3>
                             <p className="text-sm text-muted-foreground">
-                                Can't find the answer you're looking for? Please chat to our
+                                Can&apos;t find the answer you&apos;re looking for? Please chat to our
                                 friendly team.
                             </p>
                         </div>

@@ -212,6 +212,22 @@ Masonry-style testimonial section with variable-height quote cards arranged in a
 
 Testimonial section with a logo cloud followed by a responsive testimonial grid. Best suited for SaaS products, enterprise websites and marketing pages that want to establish trust with recognizable brand names before showing customer quotes. Can optionally include a centered introduction, supporting description or CTA actions above the logo cloud. The testimonial grid can display author avatars, names, roles, companies and quote content in a flexible multi-column layout.
 
+### TestimonialsSection09
+
+Simple testimonial carousel with looping behavior, drag interaction and previous/next controls. Best suited for landing pages, SaaS products and marketing websites that want to present customer proof one story at a time in a focused, compact format. Can optionally include a centered heading above the carousel. The carousel cards can display an author avatar, name, role, company and supporting quote content in a horizontal layout suitable for reused wireframe sections.
+
+### TestimonialsSection10
+
+Statistics-focused testimonial section with a row of supporting metrics and one featured quote below. Best suited for SaaS products, startups and product marketing pages that want to combine social proof with a strong credibility signal. Can optionally include an eyebrow label and additional supporting description above the statistics. The featured testimonial card can display an author avatar, name, role, company and prominent quote content in a centered layout.
+
+### TestimonialsSection11
+
+Testimonial section with a placeholder logo cloud followed by a responsive testimonial grid. Best suited for SaaS products, enterprise websites and marketing pages that want to establish trust with company names before presenting customer quotes. Can optionally include a centered heading and supporting description above the logo grid. The testimonial cards can display an author avatar, name, role, company and quote content in a clean multi-column layout.
+
+### TestimonialsSection12
+
+Bento-style testimonial section with one featured quote and multiple smaller testimonial cards in an asymmetrical responsive grid. Best suited for modern landing pages, SaaS products and marketing websites that want a more editorial social proof layout. Can optionally include a centered introduction above the grid. The cards can display an author avatar, name, role, company and quote content while varying in size and emphasis across the layout.
+
 ## Features Sections
 
 ### FeaturesSection01

@@ -22,7 +22,7 @@ const TestimonialsSection04 = () => {
                             <p className="text-sm font-semibold tracking-wide uppercase text-brand">
                                 Featured testimonial
                             </p>
-                            <blockquote className="text-2xl font-medium leading-9 text-pretty text-foreground sm:text-3xl sm:leading-[2.5rem]">
+                            <blockquote className="text-2xl font-medium leading-9 text-pretty text-foreground sm:text-3xl sm:leading-10">
                                 {testimonial.quote}
                             </blockquote>
                             <div className="flex items-center gap-4">
