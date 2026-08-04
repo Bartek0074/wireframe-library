@@ -195,3 +195,7 @@ Centered feature section with an eyebrow label, heading, supporting description 
 ### FeaturesSection04
 
 Feature section with a split layout combining a text introduction, a vertical list of highlighted features and a supporting visual area. Best suited for SaaS products, startups, product websites and marketing pages that want to explain key capabilities alongside supporting visual media. The introduction area can optionally include an eyebrow label, heading, supporting description, CTA actions or trust indicators. The visual area can display placeholder product screenshots, dashboard previews, illustrations, videos or other decorative media. Each feature can optionally include an icon, title, description or other supporting content.
+
+### FeaturesSection05
+
+Feature section with an offset heading and a responsive two-column grid of feature items. Best suited for SaaS products, startups, product websites and marketing pages that need to highlight multiple capabilities while giving extra emphasis to the section heading. The introduction area can optionally include an eyebrow label, supporting description or CTA actions. Each feature can optionally include an icon, title, description or other lightweight supporting content.
