@@ -186,8 +186,12 @@ Feature section displaying a simple responsive grid of icon-based feature items 
 
 ### FeaturesSection02
 
-Feature section with a left-aligned introduction followed by a responsive grid of icon-based feature items. Best suited for SaaS products, startups, product websites and marketing pages that need to introduce a group of features with supporting context. The introduction area can optionally include an eyebrow label, heading, supporting description or CTA actions. Each feature can optionally include an icon, title, description or other lightweight visual elements.
+Feature section with a left-aligned introduction followed by a responsive grid of icon-based feature items. Best suited for SaaS products, startups, product websites and marketing pages that need to introduce a group of features with supporting context. The introduction area can optionally include an eyebrow label, heading, supporting description, CTA actions or trust indicators. Each feature can optionally include an icon, title, description or other lightweight visual elements.
 
 ### FeaturesSection03
 
 Centered feature section with an eyebrow label, heading, supporting description and a responsive grid of icon-based feature items. Best suited for SaaS products, startups, product websites and marketing pages that present key product capabilities in a balanced, visually focused layout. The introduction area can optionally include CTA actions, trust indicators or supporting statistics. Each feature can optionally include an icon, title, description or other lightweight visual elements.
+
+### FeaturesSection04
+
+Feature section with a split layout combining a text introduction, a vertical list of highlighted features and a supporting visual area. Best suited for SaaS products, startups, product websites and marketing pages that want to explain key capabilities alongside supporting visual media. The introduction area can optionally include an eyebrow label, heading, supporting description, CTA actions or trust indicators. The visual area can display placeholder product screenshots, dashboard previews, illustrations, videos or other decorative media. Each feature can optionally include an icon, title, description or other supporting content.
