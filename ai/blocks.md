@@ -178,6 +178,40 @@ Split FAQ section with a centered introduction, accordion question list and a su
 
 FAQ section with a centered introduction, a responsive question grid and a dedicated contact CTA card below. Best suited for SaaS products, support pages, product websites and marketing websites that need to answer common questions while encouraging users to reach out for additional help. The CTA area can optionally include supporting text, contact links, buttons or other conversion-focused actions.
 
+## Testimonials Sections
+
+### TestimonialsSection01
+
+Centered testimonial section with a single featured quote and author attribution. Best suited for landing pages, SaaS products, product websites and marketing websites that want to present one strong customer story with a focused, editorial feel. Can optionally include an eyebrow label, supporting description, trust indicators or subtle decorative accents. The testimonial area can display an author avatar, name, role, company and supporting quote content in a compact centered layout.
+
+### TestimonialsSection02
+
+Split testimonial section with an introduction on one side and a featured quote card on the other. Best suited for SaaS products, startup websites and marketing pages that need to explain the value proposition before reinforcing it with a prominent customer quote. Can optionally include CTA actions, supporting notes or trust indicators in the introduction area. The featured testimonial card can display an author avatar, name, role, company and supporting context in a balanced two-column layout.
+
+### TestimonialsSection03
+
+Offset testimonial section with a left-aligned introduction and a single quote card positioned beside it. Best suited for marketing pages, agencies and product websites that want a slightly more editorial composition than a centered testimonial block. Can optionally include supporting text, eyebrow labels or trust indicators in the introduction area. The testimonial card can display an author avatar, name, role, company and prominent quote content while preserving a clean asymmetrical layout.
+
+### TestimonialsSection04
+
+Featured testimonial section with a prominent quote card and a CTA area below it. Best suited for SaaS products, startups and product pages that want to combine social proof with a clear conversion action. Can optionally include supporting copy, buttons or secondary messaging in the CTA area. The featured testimonial card can display an author avatar, name, role, company and large quote content in a highly visible layout.
+
+### TestimonialsSection05
+
+Responsive testimonial grid with multiple quote cards arranged in an even card layout. Best suited for SaaS products, startups, marketing websites and company pages that need to present several testimonials at once in a clean, scannable format. Can optionally include a centered introduction, eyebrow label or supporting description above the grid. Each testimonial card can display an author avatar, name, role, company and quote content while adapting responsively across breakpoints.
+
+### TestimonialsSection06
+
+Offset testimonial section with a separate introduction column and a responsive testimonial grid. Best suited for SaaS products, agencies and marketing pages that need to balance contextual copy with a denser set of customer quotes. Can optionally include CTA actions or trust indicators in the introduction area. Each testimonial card can display an author avatar, name, role, company and quote content while the grid adapts cleanly to different screen sizes.
+
+### TestimonialsSection07
+
+Masonry-style testimonial section with variable-height quote cards arranged in a responsive staggered grid. Best suited for SaaS products, content-heavy marketing websites and brand pages that want a more editorial testimonial presentation. Can optionally include a centered introduction, eyebrow label or supporting description above the grid. Each testimonial card can display an author avatar, name, role, company and additional supporting text, creating a varied visual rhythm without using external media.
+
+### TestimonialsSection08
+
+Testimonial section with a logo cloud followed by a responsive testimonial grid. Best suited for SaaS products, enterprise websites and marketing pages that want to establish trust with recognizable brand names before showing customer quotes. Can optionally include a centered introduction, supporting description or CTA actions above the logo cloud. The testimonial grid can display author avatars, names, roles, companies and quote content in a flexible multi-column layout.
+
 ## Features Sections
 
 ### FeaturesSection01
