@@ -24,7 +24,7 @@ const items = [
 const FeaturesSection02 = () => {
     return (
         <section className="px-4">
-            <div className="flex flex-col max-w-7xl py-16 mx-auto">
+            <div className="flex flex-col max-w-7xl py-20 lg:py-24 mx-auto">
                 <div className="flex flex-col mb-16">
                     <p className="text-sm font-semibold tracking-wide text-brand uppercase">
                         Features

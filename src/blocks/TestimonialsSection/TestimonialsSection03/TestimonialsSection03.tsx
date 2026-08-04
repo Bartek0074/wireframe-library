@@ -12,7 +12,7 @@ const testimonial = {
 const TestimonialsSection03 = () => {
     return (
         <section className="px-4">
-            <div className="grid max-w-7xl grid-cols-1 gap-10 py-16 mx-auto lg:grid-cols-[minmax(0,0.85fr)_minmax(0,1.15fr)] lg:items-start">
+            <div className="grid max-w-7xl grid-cols-1 gap-0 py-20 lg:py-24 mx-auto lg:grid-cols-[minmax(0,0.85fr)_minmax(0,1.15fr)] lg:items-start lg:gap-16">
                 <div className="flex flex-col mb-16 lg:mb-0 lg:pt-10">
                     <p className="text-sm font-semibold tracking-wide text-brand uppercase">
                         Testimonials
@@ -26,7 +26,7 @@ const TestimonialsSection03 = () => {
                     </p>
                 </div>
 
-                <Card className="lg:mt-8">
+                <Card>
                     <div className="flex flex-col gap-6">
                         <p className="text-5xl leading-none text-brand/40">“</p>
                         <blockquote className="text-xl leading-8 text-pretty text-foreground sm:text-2xl sm:leading-9">

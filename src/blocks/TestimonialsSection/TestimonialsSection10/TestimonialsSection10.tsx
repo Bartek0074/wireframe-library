@@ -19,7 +19,7 @@ const testimonial = {
 const TestimonialsSection10 = () => {
     return (
         <section className="px-4">
-            <div className="flex flex-col max-w-7xl py-16 mx-auto">
+            <div className="flex flex-col max-w-7xl py-20 lg:py-24 mx-auto">
                 <div className="flex flex-col items-center mb-16 text-center">
                     <p className="text-sm font-semibold tracking-wide uppercase text-brand">
                         Proof points
@@ -35,18 +35,16 @@ const TestimonialsSection10 = () => {
 
                 <div className="grid grid-cols-2 gap-4 lg:grid-cols-4">
                     {stats.map((stat) => (
-                        <Card key={stat.label} className="border-border shadow-none">
-                            <div className="flex flex-col items-center gap-2 px-4 py-6 text-center">
-                                <p className="text-3xl font-semibold tracking-tight text-primary sm:text-4xl">
-                                    {stat.value}
-                                </p>
-                                <p className="text-sm text-muted-foreground">{stat.label}</p>
-                            </div>
-                        </Card>
+                        <div key={stat.label} className="px-3 py-5 text-center">
+                            <p className="text-3xl font-semibold tracking-tight text-primary sm:text-4xl">
+                                {stat.value}
+                            </p>
+                            <p className="mt-2 text-sm text-muted-foreground">{stat.label}</p>
+                        </div>
                     ))}
                 </div>
 
-                <Card className="mx-auto mt-8 w-full max-w-4xl border-border shadow-none">
+                <Card className="mx-auto mt-16 w-full max-w-4xl border-border shadow-none">
                     <div className="flex flex-col items-center gap-6 px-6 py-10 text-center sm:px-10 sm:py-12">
                         <p className="text-5xl leading-none text-brand/40">“</p>
                         <blockquote className="text-2xl leading-9 text-pretty text-foreground sm:text-3xl sm:leading-10">

@@ -24,7 +24,7 @@ const items = [
 const FAQSection03 = () => {
     return (
         <section className="px-4">
-            <div className="flex flex-col max-w-7xl py-16 mx-auto">
+            <div className="flex flex-col max-w-7xl py-20 lg:py-24 mx-auto">
                 <div className="flex flex-col max-w-3xl mb-16">
                     <h2 className="text-3xl font-semibold tracking-tight text-balance text-primary sm:text-4xl">
                         Frequently asked questions

@@ -55,17 +55,17 @@ const stats = [
 const HeaderSection09 = () => {
     return (
         <section className="px-4">
-            <div className="flex flex-col max-w-7xl py-16 mx-auto">
+            <div className="flex flex-col max-w-7xl py-20 lg:py-24 mx-auto">
                 <div className="flex flex-col max-w-3xl">
                     <h1 className="text-5xl font-semibold tracking-tight text-balance text-primary sm:text-7xl">
                         Work with us
                     </h1>
-                    <p className="mt-8 text-lg font-medium text-pretty text-muted-foreground sm:text-xl/8">
+                    <p className="mt-4 text-lg font-medium text-pretty text-muted-foreground sm:text-xl/8">
                         Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui
                         lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat.
                     </p>
                 </div>
-                <div className="mt-10 grid grid-cols-1 gap-x-8 gap-y-6 text-base sm:grid-cols-2 md:flex lg:gap-x-10">
+                <div className="mt-16 grid grid-cols-1 gap-x-8 gap-y-6 text-base sm:grid-cols-2 md:flex lg:gap-x-10">
                     {links.map((link) => (
                         <Button key={link.id} variant="link" asChild className="w-fit">
                             <Link href={link.href}>

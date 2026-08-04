@@ -3,8 +3,8 @@ import { PlaceholderImage } from "@/components/atoms/PlaceholderImage/Placeholde
 const FeaturesSection07 = () => {
     return (
         <section className="px-4">
-            <div className="flex flex-col max-w-7xl py-16 gap-16 mx-auto">
-                <div className="flex flex-col items-center">
+            <div className="flex flex-col max-w-7xl py-20 lg:py-24 mx-auto">
+                <div className="flex flex-col items-center mb-16">
                     <h2 className="text-3xl font-semibold text-center tracking-tight text-primary sm:text-4xl">
                         Packed with thousands of features
                     </h2>

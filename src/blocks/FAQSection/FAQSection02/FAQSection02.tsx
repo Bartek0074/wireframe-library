@@ -22,8 +22,8 @@ const items = [
 const FAQSection02 = () => {
     return (
         <section className="px-4">
-            <div className="flex flex-col lg:grid lg:grid-cols-12 max-w-7xl gap-8 py-16 mx-auto">
-                <div className="flex flex-col lg:col-span-4 xl:col-span-5 max-w-3xl">
+            <div className="flex flex-col lg:grid lg:grid-cols-12 max-w-7xl gap-0 lg:gap-8 py-20 lg:py-24 mx-auto">
+                <div className="flex flex-col mb-16 lg:mb-0 lg:col-span-4 xl:col-span-5 max-w-3xl">
                     <h2 className="text-3xl font-semibold tracking-tight text-balance text-primary sm:text-4xl">
                         Frequently asked questions
                     </h2>

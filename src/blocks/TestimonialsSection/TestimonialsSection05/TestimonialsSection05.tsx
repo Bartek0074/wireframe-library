@@ -54,7 +54,7 @@ const testimonials = [
 const TestimonialsSection05 = () => {
     return (
         <section className="px-4">
-            <div className="flex flex-col max-w-7xl gap-12 py-16 mx-auto">
+            <div className="flex flex-col max-w-7xl py-20 lg:py-24 mx-auto">
                 <div className="flex flex-col items-center mb-16 text-center">
                     <p className="text-sm font-semibold tracking-wide uppercase text-brand">
                         Testimonials

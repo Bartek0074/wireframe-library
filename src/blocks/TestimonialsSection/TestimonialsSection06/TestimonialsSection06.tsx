@@ -38,7 +38,7 @@ const testimonials = [
 const TestimonialsSection06 = () => {
     return (
         <section className="px-4">
-            <div className="grid max-w-7xl grid-cols-1 gap-12 py-16 mx-auto lg:grid-cols-[minmax(0,0.75fr)_minmax(0,1.25fr)] lg:gap-16">
+            <div className="grid max-w-7xl grid-cols-1 gap-0 py-20 lg:py-24 mx-auto lg:grid-cols-[minmax(0,0.75fr)_minmax(0,1.25fr)] lg:gap-16">
                 <div className="flex flex-col mb-16 lg:mb-0 lg:pt-4">
                     <p className="text-sm font-semibold tracking-wide uppercase text-brand">
                         Testimonials

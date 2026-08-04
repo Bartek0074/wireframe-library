@@ -35,8 +35,8 @@ const items = [
 const FeaturesSection05 = () => {
     return (
         <section className="px-4">
-            <div className="flex flex-col max-w-7xl py-16 gap-16 mx-auto lg:grid lg:grid-cols-12">
-                <div className="lg:col-span-4 xl:col-span-5">
+            <div className="flex flex-col max-w-7xl py-20 lg:py-24 gap-0 lg:gap-16 mx-auto lg:grid lg:grid-cols-12">
+                <div className="mb-16 lg:mb-0 lg:col-span-4 xl:col-span-5">
                     <h2 className="text-3xl font-semibold tracking-tight text-balance text-primary sm:text-4xl">
                         Stay on top of customer support
                     </h2>

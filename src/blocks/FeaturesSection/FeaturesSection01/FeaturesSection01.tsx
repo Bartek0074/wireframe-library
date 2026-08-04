@@ -24,7 +24,7 @@ const items = [
 const FeaturesSection01 = () => {
     return (
         <section className="px-4">
-            <div className="flex max-w-7xl  py-16 mx-auto">
+            <div className="flex max-w-7xl py-20 lg:py-24 mx-auto">
                 <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
                     {items.map((item, index) => (
                         <div key={index} className="flex items-center flex-col">

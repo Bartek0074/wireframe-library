@@ -2,7 +2,6 @@ import Link from 'next/link'
 
 import { Avatar, AvatarFallback } from '@/components/atoms/Avatar'
 import { Button } from '@/components/atoms/Button/Button'
-import { Card } from '@/components/molecules/Card'
 
 const testimonial = {
     quote:
@@ -15,8 +14,8 @@ const testimonial = {
 const TestimonialsSection04 = () => {
     return (
         <section className="px-4">
-            <div className="flex flex-col max-w-7xl gap-8 py-16 mx-auto">
-                <Card className="border-border shadow-none">
+            <div className="flex flex-col max-w-7xl py-20 lg:py-24 mx-auto">
+                <div className="rounded-2xl border border-border bg-card px-5 py-4 text-foreground">
                     <div className="flex flex-col gap-8 lg:flex-row lg:items-center lg:justify-between">
                         <div className="flex flex-col gap-5 lg:max-w-3xl">
                             <p className="text-sm font-semibold tracking-wide uppercase text-brand">
@@ -48,9 +47,9 @@ const TestimonialsSection04 = () => {
                             </Button>
                         </div>
                     </div>
-                </Card>
+                </div>
 
-                <Card className="border-border bg-muted/20">
+                <div className="mt-16">
                     <div className="flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-center">
                         <div>
                             <h3 className="text-lg font-semibold text-primary">
@@ -65,7 +64,7 @@ const TestimonialsSection04 = () => {
                             <Link href="/blocks">Browse blocks</Link>
                         </Button>
                     </div>
-                </Card>
+                </div>
             </div>
         </section>
     )

@@ -46,8 +46,8 @@ const items = [
 const FeaturesSection06 = () => {
     return (
         <section className="px-4">
-            <div className="flex flex-col max-w-7xl py-16 gap-16 mx-auto lg:grid lg:grid-cols-12">
-                <div className="flex flex-col lg:col-span-4 xl:col-span-5">
+            <div className="flex flex-col max-w-7xl py-20 lg:py-24 gap-0 lg:gap-16 mx-auto lg:grid lg:grid-cols-12">
+                <div className="flex flex-col mb-16 lg:mb-0 lg:col-span-4 xl:col-span-5">
                     <p className="text-sm font-semibold tracking-wide text-brand uppercase">
                         Everything you need
                     </p>

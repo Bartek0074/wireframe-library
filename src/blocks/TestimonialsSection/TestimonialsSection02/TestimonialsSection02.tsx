@@ -15,7 +15,7 @@ const testimonial = {
 const TestimonialsSection02 = () => {
     return (
         <section className="px-4">
-            <div className="grid max-w-7xl grid-cols-1 items-center gap-10 py-16 mx-auto lg:grid-cols-2 lg:gap-16">
+            <div className="grid max-w-7xl grid-cols-1 items-center gap-0 py-20 lg:py-24 mx-auto lg:grid-cols-2 lg:gap-16">
                 <div className="flex flex-col mb-16 lg:mb-0 lg:max-w-xl">
                     <p className="text-sm font-semibold tracking-wide text-brand uppercase">
                         Customer stories

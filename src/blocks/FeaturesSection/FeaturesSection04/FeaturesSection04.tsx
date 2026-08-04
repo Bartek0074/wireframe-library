@@ -26,9 +26,9 @@ const items = [
 const FeaturesSection04 = () => {
     return (
         <section className="px-4">
-            <div className="flex flex-col items-center lg:items-start lg:grid lg:grid-cols-2 gap-16 max-w-7xl py-16 mx-auto">
+            <div className="flex flex-col items-center lg:items-start lg:grid lg:grid-cols-2 gap-16 max-w-7xl py-20 lg:py-24 mx-auto">
                 <div className="flex flex-col">
-                    <div className="flex flex-col mb-10">
+                    <div className="flex flex-col mb-16">
                         <p className="text-sm font-semibold tracking-wide text-brand uppercase">
                             Deploy faster
                         </p>
