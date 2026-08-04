@@ -1,5 +1,4 @@
-import { Avatar, AvatarFallback } from '@/components/atoms/Avatar'
-import { Card } from '@/components/molecules/Card'
+import { TestimonialCard } from '@/components/molecules/TestimonialCard'
 
 const testimonial = {
     quote:
@@ -26,25 +25,21 @@ const TestimonialsSection01 = () => {
                     </p>
                 </div>
 
-                <Card className="mx-auto w-full max-w-3xl">
-                    <div className="flex flex-col gap-6 p-2 sm:p-3">
-                        <p className="text-5xl leading-none text-brand/40">“</p>
-                        <blockquote className="text-xl leading-8 text-pretty text-foreground sm:text-2xl sm:leading-9">
-                            {testimonial.quote}
-                        </blockquote>
-                        <div className="flex items-center justify-center gap-4">
-                            <Avatar className="size-12 border border-border">
-                                <AvatarFallback />
-                            </Avatar>
-                            <div className="text-left">
-                                <p className="font-semibold text-primary">{testimonial.author}</p>
-                                <p className="text-sm text-muted-foreground">
-                                    {testimonial.title} · {testimonial.company}
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </Card>
+                <TestimonialCard
+                    className="mx-auto w-full max-w-3xl"
+                    sizes="lg"
+                    classNames={{
+                        content: 'p-2 sm:p-3',
+                        footer: 'flex items-center justify-center gap-4',
+                        authorMeta: 'text-left',
+                        quoteMark: 'text-brand/40',
+                    }}
+                    showQuoteMark
+                    quote={testimonial.quote}
+                    author={testimonial.author}
+                    title={testimonial.title}
+                    company={testimonial.company}
+                />
             </div>
         </section>
     )

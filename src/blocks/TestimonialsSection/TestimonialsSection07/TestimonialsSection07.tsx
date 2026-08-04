@@ -1,5 +1,4 @@
-import { Avatar, AvatarFallback } from '@/components/atoms/Avatar'
-import { Card } from '@/components/molecules/Card'
+import { TestimonialCard } from '@/components/molecules/TestimonialCard'
 
 const testimonials = [
     {
@@ -78,41 +77,25 @@ const TestimonialsSection07 = () => {
 
                 <div className="columns-1 gap-6 space-y-6 md:columns-2 xl:columns-3">
                     {testimonials.map((testimonial, index) => (
-                        <Card
+                        <TestimonialCard
                             key={testimonial.author}
                             className="break-inside-avoid border-border shadow-none"
+                            showQuoteMark
+                            classNames={{
+                                quote: index % 3 === 0 ? 'sm:text-lg sm:leading-8' : '',
+                            }}
+                            quote={testimonial.quote}
+                            author={testimonial.author}
+                            title={testimonial.title}
+                            company={testimonial.company}
                         >
-                            <div className="flex flex-col gap-5">
-                                <p className="text-4xl leading-none text-brand/35">“</p>
-                                <blockquote
-                                    className={[
-                                        'text-base leading-7 text-pretty text-foreground',
-                                        index % 3 === 0 ? 'sm:text-lg sm:leading-8' : '',
-                                    ].join(' ')}
-                                >
-                                    {testimonial.quote}
-                                </blockquote>
-                                {index % 2 === 0 ? (
-                                    <p className="text-sm text-muted-foreground">
-                                        The team used this section to highlight a consistent rollout
-                                        across multiple campaign pages.
-                                    </p>
-                                ) : null}
-                                <div className="mt-auto flex items-center gap-3 border-t border-border pt-5">
-                                    <Avatar className="size-11 border border-border">
-                                        <AvatarFallback />
-                                    </Avatar>
-                                    <div>
-                                        <p className="font-semibold text-primary">
-                                            {testimonial.author}
-                                        </p>
-                                        <p className="text-sm text-muted-foreground">
-                                            {testimonial.title} · {testimonial.company}
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </Card>
+                            {index % 2 === 0 ? (
+                                <p className="text-sm text-muted-foreground">
+                                    The team used this section to highlight a consistent rollout
+                                    across multiple campaign pages.
+                                </p>
+                            ) : null}
+                        </TestimonialCard>
                     ))}
                 </div>
             </div>

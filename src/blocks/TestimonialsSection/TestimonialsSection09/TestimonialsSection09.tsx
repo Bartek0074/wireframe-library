@@ -1,8 +1,7 @@
 'use client'
 
-import { Avatar, AvatarFallback } from '@/components/atoms/Avatar'
 import { Carousel } from '@/components/molecules/Carousel'
-import { Card } from '@/components/molecules/Card'
+import { TestimonialCard } from '@/components/molecules/TestimonialCard'
 
 const testimonials = [
     {
@@ -73,29 +72,21 @@ const TestimonialsSection09 = () => {
                     slideClassName="pl-4 basis-full md:basis-1/2 lg:basis-1/3"
                 >
                     {testimonials.map((testimonial) => (
-                        <Card key={testimonial.author} className="h-full border-border shadow-none">
-                            <div className="flex h-full flex-col gap-4 px-5 py-4 sm:px-6 sm:py-5">
-                                <div className="flex flex-col gap-3 text-center">
-                                    <p className="text-3xl leading-none text-brand/35">“</p>
-                                    <blockquote className="text-base leading-7 text-pretty text-foreground sm:text-lg sm:leading-8">
-                                        {testimonial.quote}
-                                    </blockquote>
-                                </div>
-                                <div className="flex items-center justify-center gap-3 border-t border-border pt-4">
-                                    <Avatar className="size-10 border border-border">
-                                        <AvatarFallback />
-                                    </Avatar>
-                                    <div className="text-left">
-                                        <p className="font-semibold text-primary">
-                                            {testimonial.author}
-                                        </p>
-                                        <p className="text-sm text-muted-foreground">
-                                            {testimonial.title} · {testimonial.company}
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </Card>
+                        <TestimonialCard
+                            key={testimonial.author}
+                            sizes="sm"
+                            classNames={{
+                                content: 'px-5 py-4 sm:px-6 sm:py-5',
+                                quote: 'sm:text-lg sm:leading-8',
+                                footer: 'flex items-center justify-center gap-3 border-t border-border pt-4',
+                                authorMeta: 'text-left',
+                            }}
+                            showQuoteMark
+                            quote={testimonial.quote}
+                            author={testimonial.author}
+                            title={testimonial.title}
+                            company={testimonial.company}
+                        />
                     ))}
                 </Carousel>
             </div>

@@ -1,5 +1,4 @@
-import { Avatar, AvatarFallback } from '@/components/atoms/Avatar'
-import { Card } from '@/components/molecules/Card'
+import { TestimonialCard } from '@/components/molecules/TestimonialCard'
 
 const testimonials = [
     {
@@ -54,26 +53,13 @@ const TestimonialsSection06 = () => {
 
                 <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
                     {testimonials.map((testimonial) => (
-                        <Card key={testimonial.author} className="h-full border-border shadow-none">
-                            <div className="flex h-full flex-col gap-5">
-                                <blockquote className="text-base leading-7 text-pretty text-foreground">
-                                    {testimonial.quote}
-                                </blockquote>
-                                <div className="mt-auto flex items-center gap-3 border-t border-border pt-5">
-                                    <Avatar className="size-11 border border-border">
-                                        <AvatarFallback />
-                                    </Avatar>
-                                    <div>
-                                        <p className="font-semibold text-primary">
-                                            {testimonial.author}
-                                        </p>
-                                        <p className="text-sm text-muted-foreground">
-                                            {testimonial.title} · {testimonial.company}
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </Card>
+                        <TestimonialCard
+                            key={testimonial.author}
+                            quote={testimonial.quote}
+                            author={testimonial.author}
+                            title={testimonial.title}
+                            company={testimonial.company}
+                        />
                     ))}
                 </div>
             </div>

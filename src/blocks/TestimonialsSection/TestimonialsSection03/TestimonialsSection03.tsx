@@ -1,5 +1,4 @@
-import { Avatar, AvatarFallback } from '@/components/atoms/Avatar'
-import { Card } from '@/components/molecules/Card'
+import { TestimonialCard } from '@/components/molecules/TestimonialCard'
 
 const testimonial = {
     quote:
@@ -26,25 +25,18 @@ const TestimonialsSection03 = () => {
                     </p>
                 </div>
 
-                <Card>
-                    <div className="flex flex-col gap-6">
-                        <p className="text-5xl leading-none text-brand/40">“</p>
-                        <blockquote className="text-xl leading-8 text-pretty text-foreground sm:text-2xl sm:leading-9">
-                            {testimonial.quote}
-                        </blockquote>
-                        <div className="flex items-center gap-4 pt-2">
-                            <Avatar className="size-12 border border-border">
-                                <AvatarFallback />
-                            </Avatar>
-                            <div>
-                                <p className="font-semibold text-primary">{testimonial.author}</p>
-                                <p className="text-sm text-muted-foreground">
-                                    {testimonial.title} · {testimonial.company}
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </Card>
+                <TestimonialCard
+                    sizes="lg"
+                    classNames={{
+                        footer: 'flex items-center gap-4 pt-2',
+                        quoteMark: 'text-brand/40',
+                    }}
+                    showQuoteMark
+                    quote={testimonial.quote}
+                    author={testimonial.author}
+                    title={testimonial.title}
+                    company={testimonial.company}
+                />
             </div>
         </section>
     )

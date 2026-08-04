@@ -1,5 +1,4 @@
-import { Avatar, AvatarFallback } from '@/components/atoms/Avatar'
-import { Card } from '@/components/molecules/Card'
+import { TestimonialCard } from '@/components/molecules/TestimonialCard'
 
 const featured = {
     quote:
@@ -65,28 +64,24 @@ const TestimonialsSection12 = () => {
                 </div>
 
                 <div className="grid grid-cols-1 gap-6 lg:grid-cols-12">
-                    <Card className="lg:col-span-7 lg:row-span-2 border-border shadow-none">
-                        <div className="flex h-full flex-col gap-6 p-2 sm:p-3">
-                            <p className="text-5xl leading-none text-brand/40">“</p>
-                            <blockquote className="text-2xl leading-9 text-pretty text-foreground sm:text-3xl sm:leading-10">
-                                {featured.quote}
-                            </blockquote>
-                            <div className="flex items-center gap-4">
-                                <Avatar className="size-12 border border-border">
-                                    <AvatarFallback />
-                                </Avatar>
-                                <div>
-                                    <p className="font-semibold text-primary">{featured.author}</p>
-                                    <p className="text-sm text-muted-foreground">
-                                        {featured.title} · {featured.company}
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </Card>
+                    <TestimonialCard
+                        className="lg:col-span-7 lg:row-span-2"
+                        sizes="lg"
+                        classNames={{
+                            content: 'p-2 sm:p-3',
+                            quote: 'text-2xl leading-9 sm:text-3xl sm:leading-10',
+                            footer: 'flex items-center gap-4',
+                            quoteMark: 'text-brand/40',
+                        }}
+                        showQuoteMark
+                        quote={featured.quote}
+                        author={featured.author}
+                        title={featured.title}
+                        company={featured.company}
+                    />
 
                     {testimonials.map((testimonial, index) => (
-                        <Card
+                        <TestimonialCard
                             key={testimonial.author}
                             className={[
                                 'border-border shadow-none',
@@ -96,29 +91,15 @@ const TestimonialsSection12 = () => {
                                 index === 3 ? 'lg:col-span-4' : '',
                                 index === 4 ? 'lg:col-span-4' : '',
                             ].join(' ')}
-                        >
-                            <div className={['flex h-full flex-col gap-5', index === 1 ? 'lg:py-2' : ''].join(' ')}>
-                                <blockquote className={[
-                                    'text-base leading-7 text-pretty text-foreground',
-                                    index === 0 ? 'sm:text-lg' : '',
-                                ].join(' ')}>
-                                    {testimonial.quote}
-                                </blockquote>
-                                <div className="mt-auto flex items-center gap-3 border-t border-border pt-5">
-                                    <Avatar className="size-11 border border-border">
-                                        <AvatarFallback />
-                                    </Avatar>
-                                    <div>
-                                        <p className="font-semibold text-primary">
-                                            {testimonial.author}
-                                        </p>
-                                        <p className="text-sm text-muted-foreground">
-                                            {testimonial.title} · {testimonial.company}
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </Card>
+                            classNames={{
+                                content: index === 1 ? 'lg:py-2' : undefined,
+                                quote: index === 0 ? 'sm:text-lg' : undefined,
+                            }}
+                            quote={testimonial.quote}
+                            author={testimonial.author}
+                            title={testimonial.title}
+                            company={testimonial.company}
+                        />
                     ))}
                 </div>
             </div>
