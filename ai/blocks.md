@@ -203,3 +203,7 @@ Feature section with an offset heading and a responsive two-column grid of featu
 ### FeaturesSection06
 
 Feature section with an offset introduction and a responsive checklist-style feature grid. Best suited for SaaS products, startups, product websites and marketing pages that present a concise overview of platform capabilities. The introduction area can optionally include an eyebrow label, heading, supporting description or CTA actions. Each feature is presented with a check icon, title and optional supporting description, making the section ideal for highlighting included functionality or benefits.
+
+### FeaturesSection07
+
+Bento-style feature section combining multiple highlighted feature cards with supporting visual media in a responsive grid layout. Best suited for SaaS products, AI tools, startups, product websites and modern marketing pages that want to showcase key capabilities in a visually engaging way. The section introduction can optionally include an eyebrow label, heading, supporting description, CTA actions or trust indicators. Each feature card can include a title, description and supporting visual media such as placeholder product screenshots, dashboard previews, illustrations, videos, image galleries or other decorative content. Card sizes, layouts and visual emphasis can be adapted to highlight the most important features.
