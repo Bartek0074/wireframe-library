@@ -68,6 +68,7 @@ const TestimonialsSection09 = () => {
                 <Carousel
                     autoplay
                     autoplayDelay={4500}
+                    className="px-0.5"
                     trackClassName="-ml-4"
                     slideClassName="pl-4 basis-full md:basis-1/2 lg:basis-1/3"
                 >
@@ -75,12 +76,6 @@ const TestimonialsSection09 = () => {
                         <TestimonialCard
                             key={testimonial.author}
                             sizes="sm"
-                            classNames={{
-                                content: 'px-5 py-4 sm:px-6 sm:py-5',
-                                quote: 'sm:text-lg sm:leading-8',
-                                footer: 'flex items-center justify-center gap-3 border-t border-border pt-4',
-                                authorMeta: 'text-left',
-                            }}
                             showQuoteMark
                             quote={testimonial.quote}
                             author={testimonial.author}
