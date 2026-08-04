@@ -257,3 +257,37 @@ Feature section with an offset introduction and a responsive checklist-style fea
 ### FeaturesSection07
 
 Bento-style feature section combining multiple highlighted feature cards with supporting visual media in a responsive grid layout. Best suited for SaaS products, AI tools, startups, product websites and modern marketing pages that want to showcase key capabilities in a visually engaging way. The section introduction can optionally include an eyebrow label, heading, supporting description, CTA actions or trust indicators. Each feature card can include a title, description and supporting visual media such as placeholder product screenshots, dashboard previews, illustrations, videos, image galleries or other decorative content. Card sizes, layouts and visual emphasis can be adapted to highlight the most important features.
+
+## Pricing Sections
+
+### PricingSection01
+
+Simple three-column pricing section with a centered introduction and reusable plan cards. Best suited for SaaS products, landing pages and marketing websites that need a clear side-by-side plan overview. Each plan card can include plan title, price, billing period, feature list, CTA and optional highlighted styling.
+
+### PricingSection02
+
+Centered pricing section with three plans where the middle card is highlighted for stronger conversion focus. Best suited for pricing pages and product marketing websites that want to guide users toward a recommended tier while keeping alternatives visible.
+
+### PricingSection03
+
+Offset pricing section with a left introduction column and pricing cards on the right. Best suited for pages that require contextual pricing explanation before plan comparison. Supports reusable plan cards with optional badges, highlight states and CTA actions.
+
+### PricingSection04
+
+Two-plan comparison pricing section with larger visual emphasis on side-by-side evaluation. Best suited for products offering a primary self-serve plan and an advanced business plan. Each card can include feature lists, CTAs and highlighted treatment.
+
+### PricingSection05
+
+Pricing section followed by a compact FAQ grid for common billing and subscription questions. Best suited for conversion pages where users need immediate pricing clarity and objections handled in one flow.
+
+### PricingSection06
+
+Pricing section with reusable plan cards and a feature comparison table underneath. Best suited for products where users need detailed capability comparison across plans before making a decision.
+
+### PricingSection07
+
+Enterprise-focused pricing section with one standard plan and one enterprise contact card. Best suited for SaaS and B2B products that combine self-serve pricing with custom sales-led contracts.
+
+### PricingSection08
+
+Pricing section with trust indicators, guarantees and payment method placeholders below plan cards. Best suited for checkout-oriented pricing pages that need additional confidence signals near plan selection.
