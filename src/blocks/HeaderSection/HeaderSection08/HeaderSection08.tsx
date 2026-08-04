@@ -1,3 +1,5 @@
+import { Stat } from '@/components/atoms/Stat'
+
 const stats = [
     {
         id: 1,
@@ -36,12 +38,7 @@ const HeaderSection08 = () => {
                 </div>
                 <dl className="mt-16 grid grid-cols-1 gap-8 sm:mt-20 sm:grid-cols-2 lg:grid-cols-4">
                     {stats.map((stat) => (
-                        <div key={stat.id} className="flex flex-col-reverse gap-1">
-                            <dd className="text-base text-muted-foreground">{stat.name}</dd>
-                            <dt className="text-4xl font-semibold tracking-tight text-primary">
-                                {stat.value}
-                            </dt>
-                        </div>
+                        <Stat key={stat.id} value={stat.value} label={stat.name} />
                     ))}
                 </dl>
             </div>

@@ -1,4 +1,5 @@
 import { TestimonialCard } from '@/components/molecules/TestimonialCard'
+import { Stat } from '@/components/atoms/Stat'
 
 const stats = [
     { label: 'Average lift', value: '32%' },
@@ -34,12 +35,12 @@ const TestimonialsSection10 = () => {
 
                 <div className="grid grid-cols-2 gap-4 lg:grid-cols-4">
                     {stats.map((stat) => (
-                        <div key={stat.label} className="px-3 py-5 text-center">
-                            <p className="text-3xl font-semibold tracking-tight text-primary sm:text-4xl">
-                                {stat.value}
-                            </p>
-                            <p className="mt-2 text-sm text-muted-foreground">{stat.label}</p>
-                        </div>
+                        <Stat
+                            key={stat.label}
+                            value={stat.value}
+                            label={stat.label}
+                            className="text-center"
+                        />
                     ))}
                 </div>
 
