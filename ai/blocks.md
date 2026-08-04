@@ -291,3 +291,33 @@ Enterprise-focused pricing section with one standard plan and one enterprise con
 ### PricingSection08
 
 Pricing section with trust indicators, guarantees and payment method placeholders below plan cards. Best suited for checkout-oriented pricing pages that need additional confidence signals near plan selection.
+
+## CTA Sections
+
+### CTASection01
+
+Centered CTA section with an eyebrow label, clear heading, supporting description and two action buttons. Best suited for landing pages, product pages and marketing pages that need a straightforward conversion push near key decision points.
+
+### CTASection02
+
+Split CTA section with marketing copy on the left and stacked actions on the right. Best suited for pages where the value proposition should be explained before presenting primary and secondary conversion actions.
+
+### CTASection03
+
+Centered CTA section with the primary call to action placed inside a dedicated card. Best suited for pre-footer conversion moments where a focused prompt and compact action group can increase click-through.
+
+### CTASection04
+
+Split CTA section combining action-oriented copy with an ImageComposition visual area. Best suited for modern marketing pages that need a stronger visual anchor while keeping conversion messaging prominent.
+
+### CTASection05
+
+Large full-width banner CTA designed for high-visibility conversion prompts. Best suited for growth pages, launch pages and campaign pages where one strong banner should capture attention before the next content block.
+
+### CTASection06
+
+Centered CTA section with trust indicators and supporting visual placeholders below action buttons. Best suited for signup and purchase-focused flows where additional credibility cues help reduce hesitation.
+
+### CTASection07
+
+Offset CTA section pairing an ImageComposition with stacked supporting content, feature highlights and actions. Best suited for enterprise and product-led pages that need both persuasive context and strong visual structure.
