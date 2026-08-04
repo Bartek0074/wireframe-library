@@ -178,7 +178,7 @@ Split FAQ section with a centered introduction, accordion question list and a su
 
 FAQ section with a centered introduction, a responsive question grid and a dedicated contact CTA card below. Best suited for SaaS products, support pages, product websites and marketing websites that need to answer common questions while encouraging users to reach out for additional help. The CTA area can optionally include supporting text, contact links, buttons or other conversion-focused actions.
 
-## Features Section
+## Features Sections
 
 ### FeaturesSection01
 
@@ -199,3 +199,7 @@ Feature section with a split layout combining a text introduction, a vertical li
 ### FeaturesSection05
 
 Feature section with an offset heading and a responsive two-column grid of feature items. Best suited for SaaS products, startups, product websites and marketing pages that need to highlight multiple capabilities while giving extra emphasis to the section heading. The introduction area can optionally include an eyebrow label, supporting description or CTA actions. Each feature can optionally include an icon, title, description or other lightweight supporting content.
+
+### FeaturesSection06
+
+Feature section with an offset introduction and a responsive checklist-style feature grid. Best suited for SaaS products, startups, product websites and marketing pages that present a concise overview of platform capabilities. The introduction area can optionally include an eyebrow label, heading, supporting description or CTA actions. Each feature is presented with a check icon, title and optional supporting description, making the section ideal for highlighting included functionality or benefits.
